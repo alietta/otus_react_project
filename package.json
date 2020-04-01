@@ -1,0 +1,19 @@
+{
+  "name": "otus_react_project",
+  "version": "1.0.0",
+  "description": "Project from Otus courses",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alietta/otus_react_project.git"
+  },
+  "author": "Tatiana Kudashova",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alietta/otus_react_project/issues"
+  },
+  "homepage": "https://github.com/alietta/otus_react_project#readme"
+}
