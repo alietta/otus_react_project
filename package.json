@@ -4,7 +4,9 @@
   "description": "Project from Otus courses",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx jest",
+    "test:watch": "npx jest --watch",
+    "build": "npx webpack --mode production"
   },
   "repository": {
     "type": "git",
@@ -22,7 +24,11 @@
     "@babel/preset-env": "^7.9.0",
     "@babel/preset-react": "^7.9.4",
     "@babel/preset-typescript": "^7.9.0",
-    "babel-loader": "^8.1.0"
+    "babel-loader": "^8.1.0",
+    "jest": "^25.2.6",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
   },
   "dependencies": {
     "@babel/polyfill": "^7.8.7"
