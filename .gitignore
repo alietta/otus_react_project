@@ -50,3 +50,4 @@ typings/
 # build output
 dist
 
+storybook-static
