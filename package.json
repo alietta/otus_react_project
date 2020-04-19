@@ -47,6 +47,7 @@
     "@typescript-eslint/eslint-plugin": "^2.26.0",
     "@typescript-eslint/parser": "^2.26.0",
     "babel-loader": "^8.1.0",
+    "babel-plugin-emotion": "^10.0.33",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
     "eslint": "^6.8.0",
@@ -55,6 +56,7 @@
     "html-webpack-plugin": "^4.0.4",
     "husky": "^4.2.3",
     "jest": "^25.2.6",
+    "jest-emotion": "^10.0.32",
     "loki": "^0.20.3",
     "prettier": "^2.0.2",
     "storybook": "^5.3.18",
@@ -65,6 +67,8 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.8.7",
+    "@emotion/core": "^10.0.28",
+    "@emotion/styled": "^10.0.27",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },
