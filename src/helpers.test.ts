@@ -11,4 +11,3 @@ describe("declension of nouns", () => {
     expect(declOfNum(8, ["яблоко", "яблока", "яблок"])).toBe("яблок");
   });
 });
-

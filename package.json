@@ -8,7 +8,12 @@
     "test:watch": "npx jest --watch",
     "build": "npx webpack --mode production",
     "start": "webpack-dev-server --config ./webpack.config.js --mode development",
-    "lint": "npx eslint --ext .js,.jsx,.ts,.tsx --fix src/"
+    "lint": "npx eslint --ext .js,.jsx,.ts,.tsx --fix src/",
+    "storybook": "start-storybook -p 6008",
+    "build-storybook": "build-storybook",
+    "loki:update": "npm run build-storybook && npx loki update --requireReference --reactUri file:./storybook-static",
+    "loki:approve": "npx loki approve",
+    "test:loki": "npm run build-storybook && npx loki --requireReference --reactUri file:./storybook-static"
   },
   "repository": {
     "type": "git",
@@ -32,16 +37,27 @@
     "@babel/preset-env": "^7.9.0",
     "@babel/preset-react": "^7.9.4",
     "@babel/preset-typescript": "^7.9.0",
+    "@storybook/addon-actions": "^5.3.18",
+    "@storybook/addon-knobs": "^5.3.18",
+    "@storybook/addon-links": "^5.3.18",
+    "@storybook/addon-storysource": "^5.3.18",
+    "@storybook/addons": "^5.3.18",
+    "@storybook/react": "^5.3.18",
+    "@types/enzyme": "^3.10.5",
     "@typescript-eslint/eslint-plugin": "^2.26.0",
     "@typescript-eslint/parser": "^2.26.0",
     "babel-loader": "^8.1.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.10.1",
     "eslint-plugin-prettier": "^3.1.2",
     "html-webpack-plugin": "^4.0.4",
     "husky": "^4.2.3",
     "jest": "^25.2.6",
+    "loki": "^0.20.3",
     "prettier": "^2.0.2",
+    "storybook": "^5.3.18",
     "typescript": "^3.8.3",
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11",
@@ -51,5 +67,20 @@
     "@babel/polyfill": "^7.8.7",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
+  },
+  "loki": {
+    "configurations": {
+      "chrome.laptop": {
+        "target": "chrome.docker",
+        "width": 1366,
+        "height": 768,
+        "deviceScaleFactor": 1,
+        "mobile": false
+      },
+      "chrome.iphone7": {
+        "target": "chrome.docker",
+        "preset": "iPhone 7"
+      }
+    }
   }
 }
