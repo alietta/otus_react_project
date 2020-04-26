@@ -1,6 +1,6 @@
 /**
  * @jest-environment jsdom
-*/
+ */
 import React from "react";
 import { mount, configure } from "enzyme";
 import renderer from "react-test-renderer";

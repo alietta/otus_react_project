@@ -9,8 +9,6 @@ export default {
 
 export const fieldWithCells = () => (
   <GameField
-    xSize={number("xSize", 3)}
-    ySize={number("ySize", 3)}
     field={object("field", [
       [false, true, false],
       [false, true, false],

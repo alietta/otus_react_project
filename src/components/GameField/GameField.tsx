@@ -3,8 +3,6 @@ import { Field } from "./GameFieldItems";
 import { Cell } from "./components";
 
 interface GameFildProps {
-  xSize: number;
-  ySize: number;
   field: string[][];
 }
 

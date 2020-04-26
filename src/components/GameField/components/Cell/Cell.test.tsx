@@ -1,6 +1,6 @@
 /**
  * @jest-environment jsdom
-*/
+ */
 import React from "react";
 import { mount, configure } from "enzyme";
 import renderer from "react-test-renderer";
@@ -11,9 +11,13 @@ import { Cell } from "./Cell";
 
 describe("Cell", () => {
   it("renders button for empty cell", () => {
-    expect(
-      renderer.create(<Cell onClick={jest.fn()} />).toJSON()
-    ).toMatchSnapshot();
+    expect(renderer.create(<Cell onClick={jest.fn()} />).toJSON())
+      .toMatchInlineSnapshot(`
+      <div
+        className="css-1as9ajb"
+        onClick={[Function]}
+      />
+    `);
   });
   it("renders button for filled with x cell", () => {
     expect(
@@ -30,7 +34,7 @@ describe("Cell", () => {
     const onClick = jest.fn();
     const x = 12;
     const y = 14;
-    const wrapper = mount(<Cell onClick={onClick} x={x} y={y} isFilled/>);
+    const wrapper = mount(<Cell onClick={onClick} x={x} y={y} isFilled />);
     wrapper.simulate("click");
     expect(onClick).toHaveBeenCalledWith(x, y, false);
   });
