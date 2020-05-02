@@ -14,7 +14,7 @@ describe("Life", () => {
     const life = renderer.create(<Life />).toJSON();
     expect(life).toMatchInlineSnapshot(`
       <div
-        className="css-1uvqdow"
+        className="css-tc5myo"
         color="black"
       />
     `);

@@ -36,6 +36,8 @@ describe("Cell", () => {
     const y = 14;
     const wrapper = mount(<Cell onClick={onClick} x={x} y={y} isFilled />);
     wrapper.simulate("click");
-    expect(onClick).toHaveBeenCalledWith(x, y, false);
+    setTimeout(() => {
+      expect(onClick).toHaveBeenCalledWith(x, y, false);
+    }, 1000)
   });
 });

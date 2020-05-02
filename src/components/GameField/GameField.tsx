@@ -1,5 +1,5 @@
 import React, { FunctionComponent, useState } from "react";
-import { Field } from "./GameFieldItems";
+import { Field, Row } from "./GameFieldItems";
 import { Cell } from "./components";
 
 interface GameFildProps {
@@ -25,7 +25,7 @@ const GameField: FunctionComponent<GameFildProps> = (props) => {
     <Field>
       {field.map((arr, index) => {
         return (
-          <div key={`row-${index}`}>
+          <Row key={`row-${index}`}>
             {arr.map((isFilled, ind) => {
               return (
                 <Cell
@@ -37,7 +37,7 @@ const GameField: FunctionComponent<GameFildProps> = (props) => {
                 />
               );
             })}
-          </div>
+          </Row>
         );
       })}
     </Field>

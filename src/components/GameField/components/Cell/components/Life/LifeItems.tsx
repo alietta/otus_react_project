@@ -20,4 +20,8 @@ export const LifeWrapper = styled.div`
   opacity: ${({ show }: Props) => (show ? "1" : "0")};
   background: ${({ color }: Props) => color};
   transition: opacity 1s ease-out;
+  border-radius: 50%;
+  left: 5%;
+  position: relative;
+  top: 5%;
 `;
