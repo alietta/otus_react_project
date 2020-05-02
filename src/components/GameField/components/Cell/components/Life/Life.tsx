@@ -10,17 +10,14 @@ const Life: FunctionComponent<LifeProps> = (props) => {
   const { color, willUnmount } = props;
   const [show, setShow] = useState<boolean>(false);
   useEffect(() => {
-    setShow(true);
+    setTimeout(() => setShow(true), 100);
   }, []);
 
-  useEffect(
-    (m1, m2, m3) => {
-      if (willUnmount) {
-        setShow(false);
-      }
-    },
-    [willUnmount]
-  );
+  useEffect(() => {
+    if (willUnmount) {
+      setShow(false);
+    }
+  }, [willUnmount]);
 
   return <LifeWrapper color={color} show={show}></LifeWrapper>;
 };

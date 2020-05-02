@@ -10,9 +10,9 @@ export default {
 export const fieldWithCells = () => (
   <GameField
     field={object("field", [
+      [true, false, false],
       [false, true, false],
-      [false, true, false],
-      [false, true, false],
+      [true, false, false],
     ])}
   />
 );

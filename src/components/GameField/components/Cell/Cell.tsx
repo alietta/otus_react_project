@@ -1,6 +1,6 @@
-import React, { FunctionComponent, useState } from "react";
+import React, { FunctionComponent, useState, useEffect } from "react";
 import { CellWrapper } from "./CellItems";
-import { Life } from './components';
+import { Life } from "./components";
 
 interface CellProps {
   x: number;
@@ -12,21 +12,28 @@ interface CellProps {
 const Cell: FunctionComponent<CellProps> = (props) => {
   const { isFilled, onClick, x, y } = props;
   const [willUnmount, setWillUnmount] = useState<boolean>(false);
+  const [showLife, setShowLife] = useState<boolean>(isFilled);
   const onCellClick = (): void => {
-    if (isFilled) {
-      setWillUnmount(true);
-      setTimeout(() => onClick(x, y, false), 1000);
-    } else {
-      onClick(x, y, true)
-      setWillUnmount(false);
-    }
+    onClick(x, y, !isFilled);
   };
 
-  return(
+  useEffect(() => {
+    if (!isFilled) {
+      setWillUnmount(true);
+      setTimeout(() => setShowLife(false), 1000);
+    } else {
+      setWillUnmount(false);
+      setShowLife(true);
+    }
+  }, [isFilled]);
+
+  return (
     <CellWrapper onClick={onCellClick}>
-      {isFilled && <Life willUnmount={willUnmount} color={willUnmount ? 'pink' : 'gray'}/>}
+      {showLife && (
+        <Life willUnmount={willUnmount} color={willUnmount ? "pink" : "gray"} />
+      )}
     </CellWrapper>
-  )
+  );
 };
 
 export { Cell };
