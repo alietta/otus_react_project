@@ -14,7 +14,7 @@ describe("Cell", () => {
     expect(renderer.create(<Cell onClick={jest.fn()} />).toJSON())
       .toMatchInlineSnapshot(`
       <div
-        className="css-1as9ajb"
+        className="css-6scvsp-CellWrapper-EmptyCell ej7ht1y0"
         onClick={[Function]}
       />
     `);

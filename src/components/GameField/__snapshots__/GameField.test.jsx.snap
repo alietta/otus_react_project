@@ -2,25 +2,25 @@
 
 exports[`GameField renders cells for passed empty GameField 1`] = `
 <div
-  className="css-jc15lu"
+  className="css-fwl64t-Field enkp98f0"
 >
   <div>
     <div
-      className="css-1as9ajb"
+      className="css-6scvsp-CellWrapper-EmptyCell ej7ht1y0"
       onClick={[Function]}
     />
     <div
-      className="css-1as9ajb"
+      className="css-6scvsp-CellWrapper-EmptyCell ej7ht1y0"
       onClick={[Function]}
     />
   </div>
   <div>
     <div
-      className="css-1as9ajb"
+      className="css-6scvsp-CellWrapper-EmptyCell ej7ht1y0"
       onClick={[Function]}
     />
     <div
-      className="css-1as9ajb"
+      className="css-6scvsp-CellWrapper-EmptyCell ej7ht1y0"
       onClick={[Function]}
     />
   </div>
@@ -29,25 +29,25 @@ exports[`GameField renders cells for passed empty GameField 1`] = `
 
 exports[`GameField renders filled cells snapshot check 1`] = `
 <div
-  className="css-jc15lu"
+  className="css-fwl64t-Field enkp98f0"
 >
   <div>
     <div
-      className="css-1v6gphh"
+      className="css-1imi224-CellWrapper-FilledCell ej7ht1y0"
       onClick={[Function]}
     />
     <div
-      className="css-1as9ajb"
+      className="css-6scvsp-CellWrapper-EmptyCell ej7ht1y0"
       onClick={[Function]}
     />
   </div>
   <div>
     <div
-      className="css-1as9ajb"
+      className="css-6scvsp-CellWrapper-EmptyCell ej7ht1y0"
       onClick={[Function]}
     />
     <div
-      className="css-1as9ajb"
+      className="css-6scvsp-CellWrapper-EmptyCell ej7ht1y0"
       onClick={[Function]}
     />
   </div>

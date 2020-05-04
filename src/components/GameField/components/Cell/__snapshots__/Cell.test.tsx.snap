@@ -2,7 +2,7 @@
 
 exports[`Cell renders button for filled with x cell 1`] = `
 <div
-  className="css-1as9ajb"
+  className="css-6scvsp-CellWrapper-EmptyCell ej7ht1y0"
   onClick={[Function]}
 />
 `;
