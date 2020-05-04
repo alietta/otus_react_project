@@ -10,15 +10,15 @@ exports[`GameControl renders GameControl 1`] = `
   box-shadow: none;
 }
 
-.emotion-5 button {
+.emotion-5 .Button {
   margin: 0 5px;
 }
 
-.emotion-5 button:first-of-type {
+.emotion-5 .Button:first-of-type {
   margin-left: 0px;
 }
 
-.emotion-5 button:last-of-type {
+.emotion-5 .Button:last-of-type {
   margin-right: 0px;
 }
 

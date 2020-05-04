@@ -1,12 +1,12 @@
 import { css } from "@emotion/core";
 export const LayerStyle = css`
-  button {
+  .Button {
     margin: 0 5px;
   }
-  button:first-of-type {
+  .Button:first-of-type {
     margin-left: 0px;
   }
-  button:last-of-type {
+  .Button:last-of-type {
     margin-right: 0px;
   }
   border-radius: 0;
