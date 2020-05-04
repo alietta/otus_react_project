@@ -27,7 +27,7 @@ const EnterForm: FunctionComponent<EnterFormProps> = (props = defaultProps) => {
   };
   const onSubmitForm = (e): void => {
     e.preventDefault();
-    props.onSubmit({ name: nameValue});
+    props.onSubmit({ name: nameValue });
   };
 
   return (
