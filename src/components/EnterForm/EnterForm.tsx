@@ -11,7 +11,7 @@ import {
 } from "sancho";
 
 interface EnterFormProps {
-  onSubmit: () => void;
+  onSubmit: (values?: { name: string }) => void;
 }
 const defaultProps: EnterFormProps = {
   onSubmit: (): void => {
@@ -27,7 +27,7 @@ const EnterForm: FunctionComponent<EnterFormProps> = (props = defaultProps) => {
   };
   const onSubmitForm = (e): void => {
     e.preventDefault();
-    props.onSubmit();
+    props.onSubmit({ name: nameValue});
   };
 
   return (

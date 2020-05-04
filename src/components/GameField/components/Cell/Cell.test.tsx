@@ -13,8 +13,22 @@ describe("Cell", () => {
   it("renders button for empty cell", () => {
     expect(renderer.create(<Cell onClick={jest.fn()} />).toJSON())
       .toMatchInlineSnapshot(`
+      .emotion-0 {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        border: 1px solid gray;
+        margin: 3px;
+        box-sizing: border-box;
+        background: white;
+      }
+
+      .emotion-0:hover {
+        border-width: 3px;
+      }
+
       <div
-        className="css-6scvsp-CellWrapper-EmptyCell ej7ht1y0"
+        className="emotion-0 emotion-1"
         onClick={[Function]}
       />
     `);

@@ -1,26 +1,47 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`GameField renders cells for passed empty GameField 1`] = `
+.emotion-8 {
+  box-sizing: border-box;
+  border: 3px solid gray;
+  padding: 3px;
+  display: inline-block;
+}
+
+.emotion-0 {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 1px solid gray;
+  margin: 3px;
+  box-sizing: border-box;
+  background: white;
+}
+
+.emotion-0:hover {
+  border-width: 3px;
+}
+
 <div
-  className="css-fwl64t-Field enkp98f0"
+  className="emotion-8 emotion-9"
 >
   <div>
     <div
-      className="css-6scvsp-CellWrapper-EmptyCell ej7ht1y0"
+      className="emotion-0 emotion-1"
       onClick={[Function]}
     />
     <div
-      className="css-6scvsp-CellWrapper-EmptyCell ej7ht1y0"
+      className="emotion-0 emotion-1"
       onClick={[Function]}
     />
   </div>
   <div>
     <div
-      className="css-6scvsp-CellWrapper-EmptyCell ej7ht1y0"
+      className="emotion-0 emotion-1"
       onClick={[Function]}
     />
     <div
-      className="css-6scvsp-CellWrapper-EmptyCell ej7ht1y0"
+      className="emotion-0 emotion-1"
       onClick={[Function]}
     />
   </div>
@@ -28,26 +49,61 @@ exports[`GameField renders cells for passed empty GameField 1`] = `
 `;
 
 exports[`GameField renders filled cells snapshot check 1`] = `
+.emotion-8 {
+  box-sizing: border-box;
+  border: 3px solid gray;
+  padding: 3px;
+  display: inline-block;
+}
+
+.emotion-2 {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 1px solid gray;
+  margin: 3px;
+  box-sizing: border-box;
+  background: white;
+}
+
+.emotion-2:hover {
+  border-width: 3px;
+}
+
+.emotion-0 {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 1px solid gray;
+  margin: 3px;
+  box-sizing: border-box;
+  background: lightgray;
+}
+
+.emotion-0:hover {
+  border-width: 3px;
+}
+
 <div
-  className="css-fwl64t-Field enkp98f0"
+  className="emotion-8 emotion-9"
 >
   <div>
     <div
-      className="css-1imi224-CellWrapper-FilledCell ej7ht1y0"
+      className="emotion-0 emotion-1"
       onClick={[Function]}
     />
     <div
-      className="css-6scvsp-CellWrapper-EmptyCell ej7ht1y0"
+      className="emotion-2 emotion-1"
       onClick={[Function]}
     />
   </div>
   <div>
     <div
-      className="css-6scvsp-CellWrapper-EmptyCell ej7ht1y0"
+      className="emotion-2 emotion-1"
       onClick={[Function]}
     />
     <div
-      className="css-6scvsp-CellWrapper-EmptyCell ej7ht1y0"
+      className="emotion-2 emotion-1"
       onClick={[Function]}
     />
   </div>
