@@ -11,11 +11,24 @@ import {
 } from "sancho";
 
 interface EnterFormProps {
-  onSubmit: object,
+  onSubmit: () => void;
 }
+const defaultProps: EnterFormProps = {
+  onSubmit: (): void => {
+    console.log("form submit");
+  },
+};
 
-const EnterForm: FunctionComponent<EnterFormProps> = (props) => {
+const EnterForm: FunctionComponent<EnterFormProps> = (props = defaultProps) => {
   const theme = useTheme();
+  const [nameValue, setName] = useState<string>("");
+  const changeName = (e): void => {
+    setName(e.target.value);
+  };
+  const onSubmitForm = (e): void => {
+    e.preventDefault();
+    props.onSubmit();
+  };
 
   return (
     <Layer css={{ textAlign: "center" }}>
@@ -30,9 +43,15 @@ const EnterForm: FunctionComponent<EnterFormProps> = (props) => {
           Sign in to Life Game
         </Text>
       </Toolbar>
-      <form style={{ padding: theme.spaces.lg }}>
+      <form style={{ padding: theme.spaces.lg }} onSubmit={onSubmitForm}>
         <InputGroup hideLabel label="Name">
-          <Input inputSize="lg" type="text" placeholder="Name" />
+          <Input
+            inputSize="lg"
+            type="text"
+            placeholder="Name"
+            value={nameValue}
+            onChange={changeName}
+          />
         </InputGroup>
         <Button
           style={{
@@ -49,4 +68,5 @@ const EnterForm: FunctionComponent<EnterFormProps> = (props) => {
   );
 };
 
+EnterForm.defaultProps = defaultProps;
 export { EnterForm };
