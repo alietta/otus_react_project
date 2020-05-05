@@ -9,7 +9,7 @@ interface GameMenuProps {
 /* }; */
 
 const GameMenu: FunctionComponent<GameMenuProps> = (props) => {
-  const { size } = props;
+  const { size, percent } = props;
   const theme = useTheme();
 
   return (
@@ -20,7 +20,7 @@ const GameMenu: FunctionComponent<GameMenuProps> = (props) => {
       <div css={{ margin: "15px 0" }}>
         <SizeForm {...size} />
       </div>
-      <PercentFilled />
+      <PercentFilled {...percent} />
     </Layer>
   );
 };

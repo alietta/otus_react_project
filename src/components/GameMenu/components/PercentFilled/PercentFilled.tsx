@@ -28,7 +28,8 @@ const PercentFilled: FunctionComponent<EnterFormProps> = (
 
   const onSubmitForm = (e): void => {
     e.preventDefault();
-    props.onSubmit(percent);
+    const newPercent = percent === "" ? 0 : percent;
+    props.onSubmit(newPercent);
   };
 
   return (
