@@ -25,11 +25,24 @@ const Game: FunctionComponent<> = () => {
   });
   const [field, setField] = useState<Array>([[]]);
   const [percent, setPercent] = useState<number>(50);
+  const [gameState, setGameState] = useState<object>({
+    speed: 0,
+    reset: false,
+  });
   useEffect(() => {
     let newField = preatyArray(field, fieldSize.height, [false]);
     newField = newField.map((row) => preatyArray(row, fieldSize.width, false));
     setField(newField);
   }, [fieldSize]);
+
+  useEffect(() => {
+    if (gameState.reset === true) {
+      const empty = Array(fieldSize.height)
+        .fill(false)
+        .map(() => Array(fieldSize.width).fill(false));
+      setField(empty);
+    }
+  }, [gameState]);
 
   useEffect(() => {
     const newField = randomByPercent(
@@ -47,12 +60,26 @@ const Game: FunctionComponent<> = () => {
   };
 
   return (
-    <Layer css={{ overflow: "hidden", padding: theme.spaces.md }}>
-      <GameMenu
-        size={{ ...startMock.field, passSize: setFieldSize }}
-        percent={{ onSubmit: setFieldPercent }}
-      />
-      <GameField field={field} setField={setField} />
+    <Layer
+      css={{
+        overflow: "hidden",
+        padding: theme.spaces.md,
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        width: "100%",
+      }}
+    >
+      <div css={{ width: "100%", textAlign: "center" }}>
+        <GameField field={field} setField={setField} />
+      </div>
+      <div css={{ minWidth: 422 }}>
+        <GameMenu
+          size={{ ...startMock.field, passSize: setFieldSize }}
+          percent={{ onSubmit: setFieldPercent, startPercent: 50 }}
+          controll={{ setGameState: setGameState }}
+        />
+      </div>
     </Layer>
   );
 };

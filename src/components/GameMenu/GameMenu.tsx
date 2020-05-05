@@ -9,14 +9,14 @@ interface GameMenuProps {
 /* }; */
 
 const GameMenu: FunctionComponent<GameMenuProps> = (props) => {
-  const { size, percent } = props;
+  const { size, percent, controll } = props;
   const theme = useTheme();
 
   return (
     <Layer
       css={{ overflow: "hidden", padding: theme.spaces.md, maxWidth: 422 }}
     >
-      <GameControl />
+      <GameControl {...controll} />
       <div css={{ margin: "15px 0" }}>
         <SizeForm {...size} />
       </div>
