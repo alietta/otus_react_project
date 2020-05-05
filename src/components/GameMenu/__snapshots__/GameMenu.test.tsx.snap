@@ -1,0 +1,609 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GameMenu renders GameControl 1`] = `
+.emotion-22 {
+  position: relative;
+  background: white;
+  box-shadow: 0 1px 10px 0 hsla(210,10.3%,22.7%,0.15), 0 6px 12px 0 hsla(210,10.3%,22.7%,0.1), 0 6px 15px -2px hsla(210,10.3%,22.7%,0.12);
+  border-radius: 1rem;
+  overflow: hidden;
+  padding: 1rem;
+  max-width: 422px;
+}
+
+.emotion-5 {
+  position: relative;
+  background: white;
+  box-shadow: 0 0 1px hsla(210,10.3%,22.7%,0.1), 0 0 1px 1px hsla(210,10.3%,22.7%,0.12);
+  border-radius: 1rem;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.emotion-5 .Button {
+  margin: 0 5px;
+}
+
+.emotion-5 .Button:first-of-type {
+  margin-left: 0px;
+}
+
+.emotion-5 .Button:last-of-type {
+  margin-right: 0px;
+}
+
+.emotion-0 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  white-space: nowrap;
+  -webkit-appearance: none;
+  box-sizing: border-box;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  border: none;
+  text-rendering: optimizeLegibility;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+  box-shadow: none;
+  font-weight: 500;
+  position: relative;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  border-radius: 0.25rem;
+  font-size: 1.25rem;
+  padding: 0 1.5rem;
+  height: 48px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border: 1px solid;
+  background: none;
+  color: #1971c2;
+  border-color: hsla(208.79999999999995,77.2%,42.9%,0.2);
+  box-shadow: none;
+  -webkit-transition: box-shadow 0.07s cubic-bezier(0.35,0,0.25,1),background 0.07s cubic-bezier(0.35,0,0.25,1);
+  transition: box-shadow 0.07s cubic-bezier(0.35,0,0.25,1),background 0.07s cubic-bezier(0.35,0,0.25,1);
+}
+
+.emotion-0:focus {
+  outline: 3px auto hsla(208.79999999999995,77.2%,42.9%,0.8);
+}
+
+.emotion-0:focus:not([data-focus-visible-added]) {
+  outline: none;
+}
+
+.emotion-0[aria-expanded="true"] {
+  background: hsla(208.79999999999995,77.2%,42.9%,0.15);
+}
+
+.emotion-13 {
+  margin: 15px 0;
+}
+
+.emotion-12 {
+  width: 100%;
+  max-width: 1200px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0 1rem;
+  background: white;
+  padding: 0;
+}
+
+@media (min-width:992px) {
+  .emotion-12 {
+    padding: 0 1.5rem;
+  }
+}
+
+.emotion-8 {
+  margin-top: 1rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-8:first-child {
+  margin-top: 0;
+}
+
+.emotion-7 {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: 400;
+  line-height: 1.5;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 1rem;
+  color: #212529;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #5F6871;
+  line-height: 1.5;
+}
+
+.emotion-21 {
+  position: relative;
+  background: white;
+  box-shadow: 0 0 1px hsla(210,10.3%,22.7%,0.1), 0 0 1px 1px hsla(210,10.3%,22.7%,0.12);
+  border-radius: 1rem;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.emotion-20 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+}
+
+.emotion-17 {
+  margin-top: 1rem;
+}
+
+.emotion-17:first-child {
+  margin-top: 0;
+}
+
+.emotion-16 {
+  display: block;
+  width: 100%;
+  line-height: 1.5;
+  color: #212529;
+  background-color: transparent;
+  background-image: none;
+  background-clip: padding-box;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: none;
+  box-sizing: border-box;
+  touch-action: manipulation;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  border: none;
+  box-shadow: 0 0 0 2px transparent inset,0 0 0 1px hsla(210,10.8%,14.5%,0.2) inset;
+  border-radius: 0.25rem;
+  -webkit-transition: background 0.25s cubic-bezier(0.35,0,0.25,1),border-color 0.15s cubic-bezier(0.35,0,0.25,1),box-shadow 0.15s cubic-bezier(0.35,0,0.25,1);
+  transition: background 0.25s cubic-bezier(0.35,0,0.25,1),border-color 0.15s cubic-bezier(0.35,0,0.25,1),box-shadow 0.15s cubic-bezier(0.35,0,0.25,1);
+  font-size: 1.25rem;
+  padding: 0.65rem 1rem;
+  height: 48px;
+}
+
+.emotion-16::-webkit-input-placeholder {
+  color: hsla(210,10.8%,14.5%,0.45);
+}
+
+.emotion-16::-moz-placeholder {
+  color: hsla(210,10.8%,14.5%,0.45);
+}
+
+.emotion-16:-ms-input-placeholder {
+  color: hsla(210,10.8%,14.5%,0.45);
+}
+
+.emotion-16::placeholder {
+  color: hsla(210,10.8%,14.5%,0.45);
+}
+
+.emotion-16:focus {
+  box-shadow: 0 0 0 3px hsla(209,75.4%,38.2%,0.1),inset 0 0 0 1px hsla(210,10.8%,14.5%,0.2),inset 0 -1px 1px 0 hsla(210,10.8%,14.5%,0.05);
+  outline: none;
+}
+
+.emotion-16:disabled {
+  opacity: 0.8;
+  background: #f1f3f5;
+  cursor: not-allowed;
+  box-shadow: 0 0 0 2px transparent inset,0 0 0 1px hsla(210,10.8%,14.5%,0.12) inset;
+}
+
+.emotion-16:active {
+  background: #f1f3f5;
+}
+
+.emotion-19 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  white-space: nowrap;
+  -webkit-appearance: none;
+  box-sizing: border-box;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  border: none;
+  text-rendering: optimizeLegibility;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+  box-shadow: none;
+  font-weight: 500;
+  position: relative;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  border-radius: 0.25rem;
+  font-size: 1.25rem;
+  padding: 0 1.5rem;
+  height: 48px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: #1971c2;
+  color: white;
+  background-image: linear-gradient(to top,#1971c2,hsl(208.79999999999995,77.2%,60.1%));
+  box-shadow: inset 0 0 0 1px hsla(210,10.8%,14.5%,0.2),inset 0 -1px 1px 0 hsla(210,10.8%,14.5%,0.2);
+}
+
+.emotion-19:focus {
+  outline: 3px auto hsla(208.79999999999995,77.2%,42.9%,0.8);
+}
+
+.emotion-19:focus:not([data-focus-visible-added]) {
+  outline: none;
+}
+
+.emotion-19[aria-expanded="true"] {
+  box-shadow: inset 0 0 0 1px hsla(210,10.8%,14.5%,0.5),inset 0 -1px 1px 0 hsla(210,10.8%,14.5%,0.5);
+  background-image: linear-gradient(to top,#1864ab,#1971c2);
+}
+
+.emotion-18 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+<div
+  className="emotion-22"
+>
+  <div
+    className="emotion-5"
+  >
+    <div
+      className="Button Touchable emotion-0"
+      name="reset"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseDownCapture={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchMoveCapture={[Function]}
+      onTouchStart={[Function]}
+      onTouchStartCapture={[Function]}
+      role="button"
+      tabIndex={0}
+    >
+      <svg
+        fill="none"
+        height="20px"
+        stroke="#212529"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        viewBox="0 0 24 24"
+        width="20px"
+      >
+        <polyline
+          points="23 4 23 10 17 10"
+        />
+        <polyline
+          points="1 20 1 14 7 14"
+        />
+        <path
+          d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"
+        />
+      </svg>
+    </div>
+    <div
+      className="Button Touchable emotion-0"
+      name="pause"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseDownCapture={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchMoveCapture={[Function]}
+      onTouchStart={[Function]}
+      onTouchStartCapture={[Function]}
+      role="button"
+      tabIndex={0}
+    >
+      <svg
+        fill="none"
+        height="20px"
+        stroke="#212529"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        viewBox="0 0 24 24"
+        width="20px"
+      >
+        <rect
+          height="16"
+          width="4"
+          x="6"
+          y="4"
+        />
+        <rect
+          height="16"
+          width="4"
+          x="14"
+          y="4"
+        />
+      </svg>
+    </div>
+    <div
+      className="Button Touchable emotion-0"
+      name="play"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseDownCapture={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchMoveCapture={[Function]}
+      onTouchStart={[Function]}
+      onTouchStartCapture={[Function]}
+      role="button"
+      tabIndex={0}
+    >
+      <svg
+        fill="none"
+        height="20px"
+        stroke="#212529"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        viewBox="0 0 24 24"
+        width="20px"
+      >
+        <polygon
+          points="5 3 19 12 5 21 5 3"
+        />
+      </svg>
+    </div>
+    <div
+      className="Button Touchable emotion-0"
+      name="slow"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseDownCapture={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchMoveCapture={[Function]}
+      onTouchStart={[Function]}
+      onTouchStartCapture={[Function]}
+      role="button"
+      tabIndex={0}
+    >
+      <svg
+        fill="none"
+        height="20px"
+        stroke="#212529"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        viewBox="0 0 24 24"
+        width="20px"
+      >
+        <polygon
+          points="11 19 2 12 11 5 11 19"
+        />
+        <polygon
+          points="22 19 13 12 22 5 22 19"
+        />
+      </svg>
+    </div>
+    <div
+      className="Button Touchable emotion-0"
+      name="fast"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseDownCapture={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchMoveCapture={[Function]}
+      onTouchStart={[Function]}
+      onTouchStartCapture={[Function]}
+      role="button"
+      tabIndex={0}
+    >
+      <svg
+        fill="none"
+        height="20px"
+        stroke="#212529"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        viewBox="0 0 24 24"
+        width="20px"
+      >
+        <polygon
+          points="13 19 22 12 13 5 13 19"
+        />
+        <polygon
+          points="2 19 11 12 2 5 2 19"
+        />
+      </svg>
+    </div>
+  </div>
+  <div
+    className="emotion-13"
+  >
+    <div
+      className="emotion-12"
+    >
+      <form>
+        <div
+          className="emotion-8"
+        >
+          <label
+            className="Label emotion-7"
+            htmlFor=""
+          >
+            <div
+              className="Label__text emotion-6"
+            >
+              Field width
+            </div>
+          </label>
+          <input
+            max={10}
+            min={3}
+            name="width"
+            onChange={[Function]}
+            step="1"
+            type="range"
+            value={3}
+          />
+        </div>
+        <div
+          className="emotion-8"
+        >
+          <label
+            className="Label emotion-7"
+            htmlFor=""
+          >
+            <div
+              className="Label__text emotion-6"
+            >
+              Field height
+            </div>
+          </label>
+          <input
+            max={10}
+            min={3}
+            name="height"
+            onChange={[Function]}
+            step="1"
+            type="range"
+            value={3}
+          />
+        </div>
+      </form>
+    </div>
+  </div>
+  <div
+    className="emotion-21"
+  >
+    <form
+      className="emotion-20"
+      onSubmit={[Function]}
+    >
+      <div
+        className="InputGroup emotion-17"
+      >
+        <label
+          className="Label emotion-7"
+          htmlFor=""
+        >
+          <div
+            className="Label__text emotion-6"
+          >
+            Filled percent
+          </div>
+        </label>
+        <input
+          className="Input emotion-16"
+          id=""
+          onChange={[Function]}
+          onTouchEnd={[Function]}
+          onTouchStart={[Function]}
+          placeholder="0"
+          type="number"
+        />
+      </div>
+      <button
+        className="Button Touchable emotion-19"
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseDownCapture={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchMoveCapture={[Function]}
+        onTouchStart={[Function]}
+        onTouchStartCapture={[Function]}
+        role="button"
+        style={
+          Object {
+            "marginLeft": 10,
+            "marginTop": "1.5rem",
+          }
+        }
+        tabIndex={0}
+        type="submit"
+      >
+        <span
+          aria-hidden={false}
+          className="emotion-18"
+        >
+          Set
+        </span>
+      </button>
+    </form>
+  </div>
+</div>
+`;
