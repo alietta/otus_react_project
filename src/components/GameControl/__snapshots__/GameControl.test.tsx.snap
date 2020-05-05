@@ -1,0 +1,273 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GameControl renders GameControl 1`] = `
+.emotion-5 {
+  position: relative;
+  background: white;
+  box-shadow: 0 0 1px hsla(210,10.3%,22.7%,0.1), 0 0 1px 1px hsla(210,10.3%,22.7%,0.12);
+  border-radius: 1rem;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.emotion-5 .Button {
+  margin: 0 5px;
+}
+
+.emotion-5 .Button:first-of-type {
+  margin-left: 0px;
+}
+
+.emotion-5 .Button:last-of-type {
+  margin-right: 0px;
+}
+
+.emotion-0 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  white-space: nowrap;
+  -webkit-appearance: none;
+  box-sizing: border-box;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  border: none;
+  text-rendering: optimizeLegibility;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+  box-shadow: none;
+  font-weight: 500;
+  position: relative;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  border-radius: 0.25rem;
+  font-size: 1.25rem;
+  padding: 0 1.5rem;
+  height: 48px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border: 1px solid;
+  background: none;
+  color: #1971c2;
+  border-color: hsla(208.79999999999995,77.2%,42.9%,0.2);
+  box-shadow: none;
+  -webkit-transition: box-shadow 0.07s cubic-bezier(0.35,0,0.25,1),background 0.07s cubic-bezier(0.35,0,0.25,1);
+  transition: box-shadow 0.07s cubic-bezier(0.35,0,0.25,1),background 0.07s cubic-bezier(0.35,0,0.25,1);
+}
+
+.emotion-0:focus {
+  outline: 3px auto hsla(208.79999999999995,77.2%,42.9%,0.8);
+}
+
+.emotion-0:focus:not([data-focus-visible-added]) {
+  outline: none;
+}
+
+.emotion-0[aria-expanded="true"] {
+  background: hsla(208.79999999999995,77.2%,42.9%,0.15);
+}
+
+<div
+  className="emotion-5"
+>
+  <div
+    className="Button Touchable emotion-0"
+    name="reset"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseDownCapture={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchMoveCapture={[Function]}
+    onTouchStart={[Function]}
+    onTouchStartCapture={[Function]}
+    role="button"
+    tabIndex={0}
+  >
+    <svg
+      fill="none"
+      height="20px"
+      stroke="#212529"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
+      viewBox="0 0 24 24"
+      width="20px"
+    >
+      <polyline
+        points="23 4 23 10 17 10"
+      />
+      <polyline
+        points="1 20 1 14 7 14"
+      />
+      <path
+        d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"
+      />
+    </svg>
+  </div>
+  <div
+    className="Button Touchable emotion-0"
+    name="pause"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseDownCapture={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchMoveCapture={[Function]}
+    onTouchStart={[Function]}
+    onTouchStartCapture={[Function]}
+    role="button"
+    tabIndex={0}
+  >
+    <svg
+      fill="none"
+      height="20px"
+      stroke="#212529"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
+      viewBox="0 0 24 24"
+      width="20px"
+    >
+      <rect
+        height="16"
+        width="4"
+        x="6"
+        y="4"
+      />
+      <rect
+        height="16"
+        width="4"
+        x="14"
+        y="4"
+      />
+    </svg>
+  </div>
+  <div
+    className="Button Touchable emotion-0"
+    name="play"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseDownCapture={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchMoveCapture={[Function]}
+    onTouchStart={[Function]}
+    onTouchStartCapture={[Function]}
+    role="button"
+    tabIndex={0}
+  >
+    <svg
+      fill="none"
+      height="20px"
+      stroke="#212529"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
+      viewBox="0 0 24 24"
+      width="20px"
+    >
+      <polygon
+        points="5 3 19 12 5 21 5 3"
+      />
+    </svg>
+  </div>
+  <div
+    className="Button Touchable emotion-0"
+    name="slow"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseDownCapture={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchMoveCapture={[Function]}
+    onTouchStart={[Function]}
+    onTouchStartCapture={[Function]}
+    role="button"
+    tabIndex={0}
+  >
+    <svg
+      fill="none"
+      height="20px"
+      stroke="#212529"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
+      viewBox="0 0 24 24"
+      width="20px"
+    >
+      <polygon
+        points="11 19 2 12 11 5 11 19"
+      />
+      <polygon
+        points="22 19 13 12 22 5 22 19"
+      />
+    </svg>
+  </div>
+  <div
+    className="Button Touchable emotion-0"
+    name="fast"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseDownCapture={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchMoveCapture={[Function]}
+    onTouchStart={[Function]}
+    onTouchStartCapture={[Function]}
+    role="button"
+    tabIndex={0}
+  >
+    <svg
+      fill="none"
+      height="20px"
+      stroke="#212529"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
+      viewBox="0 0 24 24"
+      width="20px"
+    >
+      <polygon
+        points="13 19 22 12 13 5 13 19"
+      />
+      <polygon
+        points="2 19 11 12 2 5 2 19"
+      />
+    </svg>
+  </div>
+</div>
+`;

@@ -9,7 +9,8 @@ module.exports = {
       }
     ],
     '@babel/preset-react',
-    '@babel/preset-typescript'
+    '@babel/preset-typescript',
+    '@emotion/babel-preset-css-prop',
   ],
   env: {
     production: {
