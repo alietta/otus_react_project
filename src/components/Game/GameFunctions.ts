@@ -23,15 +23,15 @@ export const randomIntWithoutRepeat = (
   }
   return rand;
 };
-export const makeCell = (
+export const makeFieldPos = (data: {
   cell: number,
-  x: number,
-  y: number
-): { x: number; y: number } => {
-  const line = Math.trunc(cell / x);
+  width: number,
+}): { x: number; y: number } => {
+  const { cell, width } = data;
+  const line = Math.trunc(cell / width);
   return {
     y: line,
-    x: cell - line * x,
+    x: cell - line * width,
   };
 };
 export const randomByPercent = (
@@ -50,7 +50,7 @@ export const randomByPercent = (
     .fill(false)
     .map(() => Array(x).fill(false));
   filled.forEach((cell) => {
-    const pos = makeCell(cell, x, y);
+    const pos = makeFieldPos({ cell, width: x });
     filledArray[pos.y][pos.x] = true;
   });
   return filledArray;
