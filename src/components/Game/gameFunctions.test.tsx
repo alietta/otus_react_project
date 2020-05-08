@@ -6,7 +6,7 @@ import {
   makeFieldPos,
   preatyArray,
   randomIntWithoutRepeat,
-} from "./GameFunctions";
+} from "./gameFunctions";
 
 describe("Game functions", () => {
   describe("preatyArray", () => {

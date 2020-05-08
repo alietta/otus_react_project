@@ -2,7 +2,7 @@ import React, { FunctionComponent, useState, useEffect } from "react";
 import { useTheme, Layer } from "sancho";
 import { GameMenu } from "../GameMenu";
 import { GameField } from "../GameField";
-import { preatyArray, randomByPercent } from "./GameFunctions";
+import { preatyArray, randomByPercent } from "./gameFunctions";
 
 const startMock = {
   field: {
@@ -12,20 +12,22 @@ const startMock = {
     maxHeight: 5,
   },
 };
-/* interface GameMenuProps { */
-/* } */
-/* const defaultProps: GameMenuProps = { */
-/* }; */
+interface GameState {
+  speed: number;
+  reset: boolean;
+}
 
 const Game: FunctionComponent<> = () => {
   const theme = useTheme();
-  const [fieldSize, setFieldSize] = useState<object>({
-    width: startMock.minWidth,
-    height: startMock.minHeight,
-  });
-  const [field, setField] = useState<Array>([[]]);
+  const [fieldSize, setFieldSize] = useState<{ width: number; height: number }>(
+    {
+      width: startMock.minWidth,
+      height: startMock.minHeight,
+    }
+  );
+  const [field, setField] = useState<boolean[][]>([[]]);
   const [percent, setPercent] = useState<number>(50);
-  const [gameState, setGameState] = useState<object>({
+  const [gameState, setGameState] = useState<GameState>({
     speed: 0,
     reset: false,
   });
@@ -50,6 +52,7 @@ const Game: FunctionComponent<> = () => {
       startMock.field.minHeight,
       50
     );
+    console.log(newField);
     setField(newField);
   }, []);
 

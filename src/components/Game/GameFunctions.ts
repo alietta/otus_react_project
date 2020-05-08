@@ -24,8 +24,8 @@ export const randomIntWithoutRepeat = (
   return rand;
 };
 export const makeFieldPos = (data: {
-  cell: number,
-  width: number,
+  cell: number;
+  width: number;
 }): { x: number; y: number } => {
   const { cell, width } = data;
   const line = Math.trunc(cell / width);

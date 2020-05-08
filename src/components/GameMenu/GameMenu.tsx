@@ -5,8 +5,6 @@ import { SizeForm, PercentFilled, GameControl } from "./components";
 interface GameMenuProps {
   size: object;
 }
-/* const defaultProps: GameMenuProps = { */
-/* }; */
 
 const GameMenu: FunctionComponent<GameMenuProps> = (props) => {
   const { size, percent, controll } = props;
