@@ -17,13 +17,10 @@ import {
 interface EnterFormProps {
   onSubmit: (values?: { name: string }) => void;
 }
-const defaultProps: EnterFormProps = {
-  onSubmit: (): void => {
-    console.log("form submit");
-  },
-};
 
-const EnterForm: FunctionComponent<EnterFormProps> = (props = defaultProps) => {
+const EnterForm: FunctionComponent<EnterFormProps> = ({
+  onSubmit = (): void => console.log("submint"),
+}: EnterFormProps) => {
   const theme = useTheme();
   const [nameValue, setName] = useState<string>("");
   const changeName = (e: ChangeEvent<HTMLInputElement>): void => {
@@ -31,7 +28,7 @@ const EnterForm: FunctionComponent<EnterFormProps> = (props = defaultProps) => {
   };
   const onSubmitForm = (e: MouseEvent<HTMLFormElement>): void => {
     e.preventDefault();
-    props.onSubmit({ name: nameValue });
+    onSubmit({ name: nameValue });
   };
 
   return (
@@ -72,5 +69,4 @@ const EnterForm: FunctionComponent<EnterFormProps> = (props = defaultProps) => {
   );
 };
 
-EnterForm.defaultProps = defaultProps;
 export { EnterForm };
