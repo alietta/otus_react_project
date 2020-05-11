@@ -3,11 +3,12 @@ import { Field } from "./GameFieldItems";
 import { Cell } from "./components";
 
 interface GameFildProps {
-  field: string[][];
+  field: boolean[][];
+  setFiels: (field: Array) => void;
 }
 
 const GameField: FunctionComponent<GameFildProps> = (props) => {
-  const [field, setField] = useState<Array<boolean>>(props.field);
+  const { field, setField } = props;
   const onClick = (x: number, y: number, isFilled? = false): void => {
     const isXValid = x >= 0 && x < field[0].length;
     const isYValid = y >= 0 && y < field.length;

@@ -35,8 +35,8 @@ const SizeForm: FunctionComponent<SizeFormProps> = (props = defaultProps) => {
   }, [size]);
 
   return (
-    <Container css={{ background: theme.colors.background.default }}>
-      <form style={{ padding: theme.spaces.lg }}>
+    <Container css={{ background: theme.colors.background.layer, padding: 0 }}>
+      <form>
         <InputGroup
           label="Field width"
           css={{ flexDirection: "column", display: "flex" }}

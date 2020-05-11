@@ -15,7 +15,7 @@ const PercentFilled: FunctionComponent<EnterFormProps> = (
   props = defaultProps
 ) => {
   const theme = useTheme();
-  const [percent, setPercent] = useState<number | string>(0);
+  const [percent, setPercent] = useState<number | string>(props.startPercent);
 
   const changePercent = (e): void => {
     if (e.target.value !== "") {
@@ -28,7 +28,8 @@ const PercentFilled: FunctionComponent<EnterFormProps> = (
 
   const onSubmitForm = (e): void => {
     e.preventDefault();
-    props.onSubmit(percent);
+    const newPercent = percent === "" ? 0 : percent;
+    props.onSubmit(newPercent);
   };
 
   return (

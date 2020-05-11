@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Game renders Game 1`] = `
+<GameField
+  field={
+    Array [
+      Array [],
+    ]
+  }
+  setField={[Function]}
+/>
+<GameMenu
+  controll={
+    Object {
+      "setGameState": [Function],
+    }
+  }
+  percent={
+    Object {
+      "onSubmit": [Function],
+      "startPercent": 50,
+    }
+  }
+  size={
+    Object {
+      "maxHeight": 5,
+      "maxWidth": 5,
+      "minHeight": 2,
+      "minWidth": 2,
+      "passSize": [Function],
+    }
+  }
+/>
+`;
