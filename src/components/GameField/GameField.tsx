@@ -1,13 +1,13 @@
-import React, { FunctionComponent, useState } from "react";
+import React, { FunctionComponent } from "react";
 import { Field } from "./GameFieldItems";
 import { Cell } from "./components";
 
 interface GameFildProps {
   field: boolean[][];
-  setFiels: (field: Array) => void;
+  setField: (field: boolean[][]) => void;
 }
 
-const GameField: FunctionComponent<GameFildProps> = (props) => {
+const GameField: FunctionComponent<GameFildProps> = (props: GameFildProps) => {
   const { field, setField } = props;
   const onClick = (x: number, y: number, isFilled? = false): void => {
     const isXValid = x >= 0 && x < field[0].length;
