@@ -13,18 +13,17 @@ interface SizeFormProps {
   maxHeight: number;
   passSize: (values?: { width: number; height: number }) => void;
 }
-const defaultProps: SizeFormProps = {
-  minWidth: 3,
-  maxWidth: 10,
-  minHeight: 3,
-  maxHeight: 10,
-  passSize: (): void => {
+
+const SizeForm: FunctionComponent<SizeFormProps> = ({
+  minWidth = 3,
+  maxWidth = 10,
+  minHeight = 3,
+  maxHeight = 10,
+  passSize = (): void => {
     console.log("pass size");
   },
-};
-
-const SizeForm: FunctionComponent<SizeFormProps> = (props = defaultProps) => {
-  const { minWidth, maxWidth, minHeight, maxHeight, passSize } = props;
+}: SizeFormProps) => {
+  /* const { minWidth, maxWidth, minHeight, maxHeight, passSize } = props; */
   const theme = useTheme();
   const [size, setSize] = useState<{ width: number; height: number }>({
     width: minWidth,
@@ -74,5 +73,4 @@ const SizeForm: FunctionComponent<SizeFormProps> = (props = defaultProps) => {
   );
 };
 
-SizeForm.defaultProps = defaultProps;
 export { SizeForm };
