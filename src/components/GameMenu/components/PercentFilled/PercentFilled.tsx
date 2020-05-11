@@ -1,19 +1,13 @@
-import React, { FunctionComponent, useState } from "react";
-import { jsx, tsx } from "@emotion/core";
+import React, { FunctionComponent, MouseEvent, useState } from "react";
 import { useTheme, Layer, InputGroup, Input, Button } from "sancho";
 
 interface PercentFilled {
   onSubmit: (values?: { percent: number }) => void;
 }
-const defaultProps: EnterFormProps = {
-  onSubmit: (): void => {
-    console.log("form submit");
-  },
-};
 
-const PercentFilled: FunctionComponent<EnterFormProps> = (
-  props = defaultProps
-) => {
+const PercentFilled: FunctionComponent<PercentFilled> = ({
+  onSubmit = (): void => console.log("form submit"),
+}: PercentFilled) => {
   const theme = useTheme();
   const [percent, setPercent] = useState<number | string>(props.startPercent);
 
@@ -26,10 +20,10 @@ const PercentFilled: FunctionComponent<EnterFormProps> = (
     }
   };
 
-  const onSubmitForm = (e): void => {
+  const onSubmitForm = (e: MouseEvent<HTMLFormElement>): void => {
     e.preventDefault();
-    const newPercent = percent === "" ? 0 : percent;
-    props.onSubmit(newPercent);
+    const newPercent: number = percent === "" ? 0 : percent;
+    onSubmit(newPercent);
   };
 
   return (
@@ -63,5 +57,4 @@ const PercentFilled: FunctionComponent<EnterFormProps> = (
   );
 };
 
-PercentFilled.defaultProps = defaultProps;
 export { PercentFilled };
