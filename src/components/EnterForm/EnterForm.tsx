@@ -1,5 +1,4 @@
 import React, { FunctionComponent, useState } from "react";
-import { jsx, tsx } from "@emotion/core";
 import {
   useTheme,
   Layer,
