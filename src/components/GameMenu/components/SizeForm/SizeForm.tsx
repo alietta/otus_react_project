@@ -6,7 +6,7 @@ import React, {
 } from "react";
 import { useTheme, InputGroup, Container } from "sancho";
 
-interface SizeFormProps {
+export interface SizeFormProps {
   minWidth: number;
   maxWidth: number;
   minHeight: number;

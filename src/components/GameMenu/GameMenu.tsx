@@ -1,12 +1,21 @@
-import React, { FunctionComponent, useState, useEffect } from "react";
+import React, { FunctionComponent } from "react";
 import { useTheme, Layer } from "sancho";
-import { SizeForm, PercentFilled, GameControl } from "./components";
+import {
+  SizeForm,
+  SizeFormProps,
+  PercentFilled,
+  PercentFilledProps,
+  GameControl,
+  GameControlProps,
+} from "./components";
 
 interface GameMenuProps {
-  size: object;
+  size: SizeFormProps;
+  percent: PercentFilledProps;
+  controll: GameControlProps;
 }
 
-const GameMenu: FunctionComponent<GameMenuProps> = (props) => {
+const GameMenu: FunctionComponent<GameMenuProps> = (props: GameMenuProps) => {
   const { size, percent, controll } = props;
   const theme = useTheme();
 

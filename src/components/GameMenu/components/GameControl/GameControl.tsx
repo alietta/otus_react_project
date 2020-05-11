@@ -10,7 +10,7 @@ import {
   Button,
 } from "sancho";
 
-interface GameControlProps {
+export interface GameControlProps {
   setGameState: (values?: { speed: number; reset: boolean }) => void;
 }
 

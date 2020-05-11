@@ -6,15 +6,15 @@ import React, {
 } from "react";
 import { useTheme, Layer, InputGroup, Input, Button } from "sancho";
 
-interface PercentFilled {
+export interface PercentFilledProps {
   onSubmit: (values?: { percent: number }) => void;
   startPercent: number;
 }
 
-const PercentFilled: FunctionComponent<PercentFilled> = ({
+const PercentFilled: FunctionComponent<PercentFilledProps> = ({
   onSubmit = (): void => console.log("form submit"),
   startPercent = 50,
-}: PercentFilled) => {
+}: PercentFilledProps) => {
   const theme = useTheme();
   const [percent, setPercent] = useState<number | string>(startPercent);
 
