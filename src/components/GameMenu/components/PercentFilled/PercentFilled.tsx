@@ -1,23 +1,24 @@
-import React, { FunctionComponent, useState } from "react";
-import { jsx, tsx } from "@emotion/core";
+import React, {
+  FunctionComponent,
+  MouseEvent,
+  ChangeEvent,
+  useState,
+} from "react";
 import { useTheme, Layer, InputGroup, Input, Button } from "sancho";
 
-interface PercentFilled {
+export interface PercentFilledProps {
   onSubmit: (values?: { percent: number }) => void;
+  startPercent: number;
 }
-const defaultProps: EnterFormProps = {
-  onSubmit: (): void => {
-    console.log("form submit");
-  },
-};
 
-const PercentFilled: FunctionComponent<EnterFormProps> = (
-  props = defaultProps
-) => {
+const PercentFilled: FunctionComponent<PercentFilledProps> = ({
+  onSubmit = (): void => console.log("form submit"),
+  startPercent = 50,
+}: PercentFilledProps) => {
   const theme = useTheme();
-  const [percent, setPercent] = useState<number | string>(props.startPercent);
+  const [percent, setPercent] = useState<number | string>(startPercent);
 
-  const changePercent = (e): void => {
+  const changePercent = (e: ChangeEvent<HTMLInputElement>): void => {
     if (e.target.value !== "") {
       const percent = Math.abs(parseInt(e.target.value, 10));
       setPercent(percent <= 100 ? percent : 100);
@@ -26,10 +27,10 @@ const PercentFilled: FunctionComponent<EnterFormProps> = (
     }
   };
 
-  const onSubmitForm = (e): void => {
+  const onSubmitForm = (e: MouseEvent<HTMLFormElement>): void => {
     e.preventDefault();
-    const newPercent = percent === "" ? 0 : percent;
-    props.onSubmit(newPercent);
+    const newPercent: number = percent === "" ? 0 : percent;
+    onSubmit(newPercent);
   };
 
   return (
@@ -63,5 +64,4 @@ const PercentFilled: FunctionComponent<EnterFormProps> = (
   );
 };
 
-PercentFilled.defaultProps = defaultProps;
 export { PercentFilled };

@@ -1,21 +1,20 @@
-import React from "react";
-import { withKnobs, number, array, object } from "@storybook/addon-knobs";
+import React, { FC } from "react";
+import { withKnobs } from "@storybook/addon-knobs";
 import { PercentFilled } from "./PercentFilled";
 import { DarkMode, LightMode } from "sancho";
-import { jsx } from "@emotion/core";
 
 export default {
   title: "PercentFilled",
   decorators: [withKnobs],
 };
 
-export const percentFilledStory = () => (
+export const percentFilledStory: FC = () => (
   <div css={{ width: 400 }}>
     <DarkMode>
-      <PercentFilled />
+      <PercentFilled onSubmit={(): void => console.log("submint")} />
     </DarkMode>
     <LightMode>
-      <PercentFilled />
+      <PercentFilled onSubmit={(): void => console.log("submint")} />
     </LightMode>
   </div>
 );

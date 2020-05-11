@@ -571,6 +571,7 @@ exports[`GameMenu renders GameControl 1`] = `
           onTouchStart={[Function]}
           placeholder="0"
           type="number"
+          value={50}
         />
       </div>
       <button

@@ -1,32 +1,35 @@
-import React, { FunctionComponent, useState, useEffect } from "react";
-import { jsx, tsx } from "@emotion/core";
-import { useTheme, Text, InputGroup, Input, Layer, Container } from "sancho";
+import React, {
+  FunctionComponent,
+  ChangeEvent,
+  useState,
+  useEffect,
+} from "react";
+import { useTheme, InputGroup, Container } from "sancho";
 
-interface SizeFormProps {
+export interface SizeFormProps {
   minWidth: number;
   maxWidth: number;
   minHeight: number;
   maxHeight: number;
   passSize: (values?: { width: number; height: number }) => void;
 }
-const defaultProps: SizeFormProps = {
-  minWidth: 3,
-  maxWidth: 10,
-  minHeight: 3,
-  maxHeight: 10,
-  passSize: (): void => {
+
+const SizeForm: FunctionComponent<SizeFormProps> = ({
+  minWidth = 3,
+  maxWidth = 10,
+  minHeight = 3,
+  maxHeight = 10,
+  passSize = (): void => {
     console.log("pass size");
   },
-};
-
-const SizeForm: FunctionComponent<SizeFormProps> = (props = defaultProps) => {
-  const { minWidth, maxWidth, minHeight, maxHeight, passSize } = props;
+}: SizeFormProps) => {
+  /* const { minWidth, maxWidth, minHeight, maxHeight, passSize } = props; */
   const theme = useTheme();
-  const [size, setSize] = useState<object>({
+  const [size, setSize] = useState<{ width: number; height: number }>({
     width: minWidth,
     height: minHeight,
   });
-  const changeSize = (e): void => {
+  const changeSize = (e: ChangeEvent<HTMLInputElement>): void => {
     const newState = { ...size, [e.target.name]: parseInt(e.target.value, 10) };
     setSize(newState);
   };
@@ -70,5 +73,4 @@ const SizeForm: FunctionComponent<SizeFormProps> = (props = defaultProps) => {
   );
 };
 
-SizeForm.defaultProps = defaultProps;
 export { SizeForm };

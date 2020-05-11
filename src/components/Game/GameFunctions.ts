@@ -1,7 +1,7 @@
 export const preatyArray = (
   arr: Array<T>,
   length: number,
-  filler: any
+  filler: T
 ): Array<T> => {
   let copy = [...arr];
   if (copy.length > length) {
@@ -38,7 +38,7 @@ export const randomByPercent = (
   x: number,
   y: number,
   percent: number
-): array => {
+): boolean[][] => {
   const volume = x * y;
   const filled: Array<number> = [];
   const percentCount = Math.round((percent * volume) / 100);

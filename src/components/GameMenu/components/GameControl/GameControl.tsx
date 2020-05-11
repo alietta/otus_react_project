@@ -1,8 +1,6 @@
-import React, { FunctionComponent, useState, useEffect } from "react";
-import { jsx, tsx } from "@emotion/core";
+import React, { FunctionComponent } from "react";
 import { LayerStyle } from "./GameControlStyle";
 import {
-  useTheme,
   Layer,
   IconPause,
   IconFastForward,
@@ -12,32 +10,20 @@ import {
   Button,
 } from "sancho";
 
-interface GameControl {
+export interface GameControlProps {
   setGameState: (values?: { speed: number; reset: boolean }) => void;
 }
-const defaultProps: GameControlProps = {
-  setGameState: (): void => {
-    console.log("set game state");
-  },
-};
 
-const GameControl: FunctionComponent<GameControlProps> = (
-  props = defaultProps
-) => {
-  const { setGameState } = props;
-  const theme = useTheme();
-  const [speed, setSpeed] = useState<number>(0);
-
-  const resetGame = (e): void => {
-    console.log("here");
+const GameControl: FunctionComponent<GameControlProps> = ({
+  setGameState = (): void => console.log("set game state"),
+}: GameControlProps) => {
+  const resetGame = (): void => {
     setGameState({ speed: 0, reset: true });
-    setSpeed(0);
   };
 
-  const speedButtonClick = (newSpeed: number): void => {
+  const speedButtonClick = (newSpeed: number): (() => void) => {
     return (): void => {
       setGameState({ speed: newSpeed, reset: false });
-      setSpeed(newSpeed);
     };
   };
 
@@ -92,5 +78,4 @@ const GameControl: FunctionComponent<GameControlProps> = (
   );
 };
 
-GameControl.defaultProps = defaultProps;
 export { GameControl };

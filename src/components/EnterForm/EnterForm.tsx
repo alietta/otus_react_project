@@ -1,5 +1,9 @@
-import React, { FunctionComponent, useState } from "react";
-import { jsx, tsx } from "@emotion/core";
+import React, {
+  FunctionComponent,
+  ChangeEvent,
+  MouseEvent,
+  useState,
+} from "react";
 import {
   useTheme,
   Layer,
@@ -13,21 +17,18 @@ import {
 interface EnterFormProps {
   onSubmit: (values?: { name: string }) => void;
 }
-const defaultProps: EnterFormProps = {
-  onSubmit: (): void => {
-    console.log("form submit");
-  },
-};
 
-const EnterForm: FunctionComponent<EnterFormProps> = (props = defaultProps) => {
+const EnterForm: FunctionComponent<EnterFormProps> = ({
+  onSubmit = (): void => console.log("submint"),
+}: EnterFormProps) => {
   const theme = useTheme();
   const [nameValue, setName] = useState<string>("");
-  const changeName = (e): void => {
+  const changeName = (e: ChangeEvent<HTMLInputElement>): void => {
     setName(e.target.value);
   };
-  const onSubmitForm = (e): void => {
+  const onSubmitForm = (e: MouseEvent<HTMLFormElement>): void => {
     e.preventDefault();
-    props.onSubmit({ name: nameValue });
+    onSubmit({ name: nameValue });
   };
 
   return (
@@ -68,5 +69,4 @@ const EnterForm: FunctionComponent<EnterFormProps> = (props = defaultProps) => {
   );
 };
 
-EnterForm.defaultProps = defaultProps;
 export { EnterForm };

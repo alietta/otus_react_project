@@ -1,14 +1,14 @@
-import React from "react";
-import { withKnobs, number, array, object } from "@storybook/addon-knobs";
+import React, { FC } from "react";
+import { withKnobs } from "@storybook/addon-knobs";
 import { Game } from "./Game";
-import { DarkMode, LightMode } from "sancho";
+import { DarkMode } from "sancho";
 
 export default {
   title: "Game",
   decorators: [withKnobs],
 };
 
-export const gameStory = () => (
+export const gameStory: FC = () => (
   <div css={{ display: "flex" }}>
     <DarkMode>
       <Game />

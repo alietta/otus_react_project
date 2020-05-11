@@ -1,5 +1,5 @@
-import React from "react";
-import { withKnobs, number, array, object } from "@storybook/addon-knobs";
+import React, { FC } from "react";
+import { withKnobs } from "@storybook/addon-knobs";
 import { GameField } from "./GameField";
 
 export default {
@@ -7,7 +7,7 @@ export default {
   decorators: [withKnobs],
 };
 
-export const fieldWithCells = () => (
+export const fieldWithCells: FC = () => (
   <GameField
     field={object("field", [
       [false, true, false],

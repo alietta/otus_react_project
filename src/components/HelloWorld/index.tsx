@@ -1,10 +1,12 @@
 import React, { FunctionComponent } from "react";
 
-type Props = {
+interface HelloWorldProps {
   name?: string;
-};
+}
 
-const HelloWorld: FunctionComponent<Props> = (props) => {
+const HelloWorld: FunctionComponent<HelloWorldProps> = (
+  props: HelloWorldProps
+) => {
   return <div>Hello World{props.name && `, ${props.name}`}</div>;
 };
 

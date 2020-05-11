@@ -198,6 +198,7 @@ exports[`PercentFilled renders PercentFilled 1`] = `
         onTouchStart={[Function]}
         placeholder="0"
         type="number"
+        value={50}
       />
     </div>
     <button
