@@ -17,7 +17,7 @@ interface GameState {
   reset: boolean;
 }
 
-const Game: FunctionComponent<> = () => {
+const Game: FunctionComponent = () => {
   const theme = useTheme();
   const [fieldSize, setFieldSize] = useState<{ width: number; height: number }>(
     {
@@ -26,7 +26,6 @@ const Game: FunctionComponent<> = () => {
     }
   );
   const [field, setField] = useState<boolean[][]>([[]]);
-  const [percent, setPercent] = useState<number>(50);
   const [gameState, setGameState] = useState<GameState>({
     speed: 0,
     reset: false,
@@ -58,7 +57,6 @@ const Game: FunctionComponent<> = () => {
 
   const setFieldPercent = (perc: number): void => {
     const newField = randomByPercent(fieldSize.width, fieldSize.height, perc);
-    setPercent(perc);
     setField(newField);
   };
 
