@@ -1,4 +1,9 @@
-import React, { FunctionComponent, useState } from "react";
+import React, {
+  FunctionComponent,
+  ChangeEvent,
+  MouseEvent,
+  useState,
+} from "react";
 import {
   useTheme,
   Layer,
@@ -21,10 +26,10 @@ const defaultProps: EnterFormProps = {
 const EnterForm: FunctionComponent<EnterFormProps> = (props = defaultProps) => {
   const theme = useTheme();
   const [nameValue, setName] = useState<string>("");
-  const changeName = (e): void => {
+  const changeName = (e: ChangeEvent<HTMLInputElement>): void => {
     setName(e.target.value);
   };
-  const onSubmitForm = (e): void => {
+  const onSubmitForm = (e: MouseEvent<HTMLFormElement>): void => {
     e.preventDefault();
     props.onSubmit({ name: nameValue });
   };
