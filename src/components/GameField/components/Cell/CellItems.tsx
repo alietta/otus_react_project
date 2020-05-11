@@ -23,5 +23,5 @@ export const CellWrapper = styled.div`
   &:hover {
     border-width: 3px;
   }
-  ${({ isFilled }: Props) => (isFilled ? FilledCell : EmptyCell)};
+  ${({ isFilled }: Props): string => (isFilled ? FilledCell : EmptyCell)};
 `;

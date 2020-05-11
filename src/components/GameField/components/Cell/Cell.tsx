@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useState } from "react";
+import React, { FunctionComponent } from "react";
 import { CellWrapper } from "./CellItems";
 
 interface CellProps {
@@ -8,7 +8,7 @@ interface CellProps {
   onClick: (x: number, y: number, isFilled?: boolean) => void;
 }
 
-const Cell: FunctionComponent<CellProps> = (props) => {
+const Cell: FunctionComponent<CellProps> = (props: CellProps) => {
   const { isFilled, onClick, x, y } = props;
   const onCellClick = (): void => {
     onClick(x, y, !isFilled);

@@ -1,5 +1,5 @@
-import React from "react";
-import { withKnobs, number, array, boolean } from "@storybook/addon-knobs";
+import React, { FC } from "react";
+import { withKnobs, boolean } from "@storybook/addon-knobs";
 import { Cell } from "./Cell";
 
 export default {
@@ -7,7 +7,9 @@ export default {
   decorators: [withKnobs],
 };
 
-export const cellNotFilled = () => (
+export const cellNotFilled: FC = () => (
   <Cell isFilled={boolean("isFilled", false)} />
 );
-export const cellFilled = () => <Cell isFilled={boolean("isFilled", true)} />;
+export const cellFilled: FC = () => (
+  <Cell isFilled={boolean("isFilled", true)} />
+);
