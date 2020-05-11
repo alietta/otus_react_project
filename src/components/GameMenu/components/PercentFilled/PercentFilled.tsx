@@ -1,17 +1,24 @@
-import React, { FunctionComponent, MouseEvent, useState } from "react";
+import React, {
+  FunctionComponent,
+  MouseEvent,
+  ChangeEvent,
+  useState,
+} from "react";
 import { useTheme, Layer, InputGroup, Input, Button } from "sancho";
 
 interface PercentFilled {
   onSubmit: (values?: { percent: number }) => void;
+  startPercent: number;
 }
 
 const PercentFilled: FunctionComponent<PercentFilled> = ({
   onSubmit = (): void => console.log("form submit"),
+  startPercent = 50,
 }: PercentFilled) => {
   const theme = useTheme();
-  const [percent, setPercent] = useState<number | string>(props.startPercent);
+  const [percent, setPercent] = useState<number | string>(startPercent);
 
-  const changePercent = (e): void => {
+  const changePercent = (e: ChangeEvent<HTMLInputElement>): void => {
     if (e.target.value !== "") {
       const percent = Math.abs(parseInt(e.target.value, 10));
       setPercent(percent <= 100 ? percent : 100);
