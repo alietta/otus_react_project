@@ -7,9 +7,9 @@ import { preatyArray, randomByPercent } from "./gameFunctions";
 const startMock = {
   field: {
     minWidth: 2,
-    maxWidth: 5,
+    maxWidth: 20,
     minHeight: 2,
-    maxHeight: 5,
+    maxHeight: 10,
   },
 };
 interface GameState {

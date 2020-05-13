@@ -15,11 +15,11 @@ interface Props {
 
 export const CellWrapper = styled.div`
   display: inline-block;
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   border: 1px solid gray;
-  margin: 3px;
   box-sizing: border-box;
+  vertical-align: middle;
   &:hover {
     border-width: 3px;
   }

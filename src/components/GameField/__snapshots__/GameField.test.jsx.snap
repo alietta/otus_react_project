@@ -1,20 +1,30 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`GameField renders cells for passed empty GameField 1`] = `
-.emotion-8 {
+.emotion-10 {
   box-sizing: border-box;
   border: 3px solid gray;
   padding: 3px;
   display: inline-block;
+  border-color: hsla(210,10.8%,14.5%,0.12);
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .emotion-0 {
   display: inline-block;
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   border: 1px solid gray;
-  margin: 3px;
   box-sizing: border-box;
+  vertical-align: middle;
+  background: white;
+  border-color: hsla(210,10.8%,14.5%,0.12);
   background: white;
 }
 
@@ -23,9 +33,11 @@ exports[`GameField renders cells for passed empty GameField 1`] = `
 }
 
 <div
-  className="emotion-8 emotion-9"
+  className="emotion-10 emotion-11"
 >
-  <div>
+  <div
+    className="emotion-4"
+  >
     <div
       className="emotion-0 emotion-1"
       onClick={[Function]}
@@ -35,7 +47,9 @@ exports[`GameField renders cells for passed empty GameField 1`] = `
       onClick={[Function]}
     />
   </div>
-  <div>
+  <div
+    className="emotion-4"
+  >
     <div
       className="emotion-0 emotion-1"
       onClick={[Function]}
@@ -49,20 +63,30 @@ exports[`GameField renders cells for passed empty GameField 1`] = `
 `;
 
 exports[`GameField renders filled cells snapshot check 1`] = `
-.emotion-8 {
+.emotion-10 {
   box-sizing: border-box;
   border: 3px solid gray;
   padding: 3px;
   display: inline-block;
+  border-color: hsla(210,10.8%,14.5%,0.12);
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .emotion-2 {
   display: inline-block;
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   border: 1px solid gray;
-  margin: 3px;
   box-sizing: border-box;
+  vertical-align: middle;
+  background: white;
+  border-color: hsla(210,10.8%,14.5%,0.12);
   background: white;
 }
 
@@ -72,12 +96,14 @@ exports[`GameField renders filled cells snapshot check 1`] = `
 
 .emotion-0 {
   display: inline-block;
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   border: 1px solid gray;
-  margin: 3px;
   box-sizing: border-box;
-  background: lightgray;
+  vertical-align: middle;
+  background: white;
+  border-color: hsla(210,10.8%,14.5%,0.12);
+  background: #212529;
 }
 
 .emotion-0:hover {
@@ -85,9 +111,11 @@ exports[`GameField renders filled cells snapshot check 1`] = `
 }
 
 <div
-  className="emotion-8 emotion-9"
+  className="emotion-10 emotion-11"
 >
-  <div>
+  <div
+    className="emotion-4"
+  >
     <div
       className="emotion-0 emotion-1"
       onClick={[Function]}
@@ -97,7 +125,9 @@ exports[`GameField renders filled cells snapshot check 1`] = `
       onClick={[Function]}
     />
   </div>
-  <div>
+  <div
+    className="emotion-4"
+  >
     <div
       className="emotion-2 emotion-1"
       onClick={[Function]}

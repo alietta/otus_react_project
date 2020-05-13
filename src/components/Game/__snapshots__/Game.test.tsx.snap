@@ -23,8 +23,8 @@ exports[`Game renders Game 1`] = `
   }
   size={
     Object {
-      "maxHeight": 5,
-      "maxWidth": 5,
+      "maxHeight": 10,
+      "maxWidth": 20,
       "minHeight": 2,
       "minWidth": 2,
       "passSize": [Function],
