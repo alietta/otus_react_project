@@ -10,7 +10,6 @@ interface GameFildProps {
 
 const GameField: FunctionComponent<GameFildProps> = (props: GameFildProps) => {
   const theme = useTheme();
-  console.warn("theme", theme);
   const { field, setField } = props;
   const onClick = (x: number, y: number, isFilled? = false): void => {
     const isXValid = x >= 0 && x < field[0].length;
