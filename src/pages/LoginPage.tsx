@@ -1,23 +1,18 @@
-import React, {
-  FC,
-} from "react";
-import {
-  useTheme,
-  Container,
-} from "sancho";
+import React, { FC } from "react";
+import { useTheme, Container } from "sancho";
 import { EnterForm } from "components/EnterForm";
 import { login } from "@/api/auth";
+import { pageWithoutNavigation } from '@/utils/HOC/pageWithoutNavigation'
 
-const LoginPage: FC = () => {
-  const theme = useTheme();
+const Page: FC = () => {
   const onSubmit = (): void => {
     login();
-  }
+  };
   return (
-    <Container>
-      <EnterForm onSubmit={onSubmit}/>
-    </Container>
+    <div css={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%'}}>
+      <EnterForm onSubmit={onSubmit} />
+    </div>
   );
 };
 
-export { LoginPage };
+export const LoginPage = pageWithoutNavigation(Page);
