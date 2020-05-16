@@ -1,4 +1,5 @@
 import React, { FunctionComponent } from "react";
+import { useTheme } from "sancho";
 import { Field } from "./GameFieldItems";
 import { Cell } from "./components";
 
@@ -8,6 +9,7 @@ interface GameFildProps {
 }
 
 const GameField: FunctionComponent<GameFildProps> = (props: GameFildProps) => {
+  const theme = useTheme();
   const { field, setField } = props;
   const onClick = (x: number, y: number, isFilled? = false): void => {
     const isXValid = x >= 0 && x < field[0].length;
@@ -23,10 +25,14 @@ const GameField: FunctionComponent<GameFildProps> = (props: GameFildProps) => {
   };
 
   return (
-    <Field>
+    <Field
+      css={{
+        borderColor: theme.colors.border.default,
+      }}
+    >
       {field.map((arr, index) => {
         return (
-          <div key={`row-${index}`}>
+          <div key={`row-${index}`} css={{ display: "flex" }}>
             {arr.map((isFilled, ind) => {
               return (
                 <Cell

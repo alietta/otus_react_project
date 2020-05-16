@@ -2,14 +2,15 @@ import React, { FunctionComponent, useState, useEffect } from "react";
 import { useTheme, Layer } from "sancho";
 import { GameMenu } from "../GameMenu";
 import { GameField } from "../GameField";
-import { preatyArray, randomByPercent } from "./gameFunctions";
+/* import { preatyArray, randomByPercent } from "./gameFunctions"; */
+import { preatyArray, randomByPercent } from "components/Game/gameFunctions";
 
 const startMock = {
   field: {
     minWidth: 2,
-    maxWidth: 5,
+    maxWidth: 20,
     minHeight: 2,
-    maxHeight: 5,
+    maxHeight: 10,
   },
 };
 interface GameState {

@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { withKnobs } from "@storybook/addon-knobs";
+import { withKnobs, object } from "@storybook/addon-knobs";
 import { GameField } from "./GameField";
 
 export default {

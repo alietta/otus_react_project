@@ -15,11 +15,13 @@ describe("Cell", () => {
       .toMatchInlineSnapshot(`
       .emotion-0 {
         display: inline-block;
-        width: 30px;
-        height: 30px;
+        width: 20px;
+        height: 20px;
         border: 1px solid gray;
-        margin: 3px;
         box-sizing: border-box;
+        vertical-align: middle;
+        background: white;
+        border-color: hsla(210,10.8%,14.5%,0.12);
         background: white;
       }
 
