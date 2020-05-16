@@ -7,8 +7,14 @@ export const pageWithoutNavigation = <Props extends object>(
 ) => (props: Props) => {
   const theme = useTheme();
   return (
-    <div css={{ width: "100vw", height: "100vh", background: theme.colors.background.default}}>
-      <Container css={{ maxWidth: 1024, height: '100%' }}>
+    <div
+      css={{
+        width: "100vw",
+        height: "100vh",
+        background: theme.colors.background.default,
+      }}
+    >
+      <Container css={{ maxWidth: 1024, height: "100%" }}>
         <Component {...props} />
       </Container>
     </div>
