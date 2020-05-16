@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { render } from "react-dom";
+import { App } from "@/App";
 
-ReactDOM.render(<div>Test React</div>, document.getElementById("app"));
-module.hot.accept();
+render(<App />, document.getElementById("app"));
