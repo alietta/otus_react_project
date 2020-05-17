@@ -9,7 +9,9 @@
     "prettier/prettier": "error",
     "no-nested-ternary": "error",
     "react/jsx-uses-react": "error",
-    "react/jsx-uses-vars": "error"
+    "react/jsx-uses-vars": "error",
+    "react/prop-types": 0,
+    "@typescript-eslint/explicit-function-return-type": 0
   },
   "parserOptions": {
     "sourceType": "module",

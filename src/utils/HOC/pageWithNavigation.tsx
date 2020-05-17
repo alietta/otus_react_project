@@ -1,7 +1,5 @@
 import React from "react";
-import { Redirect } from "react-router-dom";
-import { DarkMode, Container, useTheme } from "sancho";
-import { pageStyle } from "./pageStyle";
+import { Container, useTheme } from "sancho";
 import { Headbar } from "components/Headbar";
 import { logout } from "@/api/auth";
 

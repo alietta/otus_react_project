@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { useTheme, Container, Text, Button, IconLogOut } from "sancho";
+import { useTheme, Container, Text, IconLogOut } from "sancho";
 
 interface HeadbarProps {
   name: string;

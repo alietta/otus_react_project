@@ -23,7 +23,7 @@ describe("Router test", () => {
     expect(wrapper.find(LoginPage)).toHaveLength(1);
   });
   it("route with authorization", () => {
-    localStorage.setItem("login", "Anny")
+    localStorage.setItem("login", "Anny");
     const wrapper = mount(
       <MemoryRouter initialEntries={["/"]}>
         <App />
@@ -32,7 +32,7 @@ describe("Router test", () => {
     expect(wrapper.find(GamePage)).toHaveLength(1);
   });
   it("route with authorization redirect from login", () => {
-    localStorage.setItem("login", "Anny")
+    localStorage.setItem("login", "Anny");
     const wrapper = mount(
       <MemoryRouter initialEntries={["/login"]}>
         <App />

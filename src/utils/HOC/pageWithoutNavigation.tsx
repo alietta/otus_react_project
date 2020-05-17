@@ -1,6 +1,5 @@
 import React from "react";
-import { DarkMode, Container, useTheme } from "sancho";
-import { pageStyle } from "./pageStyle";
+import { Container, useTheme } from "sancho";
 
 export const pageWithoutNavigation = <Props extends object>(
   Component: React.ComponentType<Props>
