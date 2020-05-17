@@ -8,8 +8,16 @@ export const App: React.FC<{}> = () => {
   return (
     <div>
       <DarkMode>
-        {/* <LoginPage /> */}
-        <GamePage/>
+        <Router>
+          <Switch>
+            <Route path="/login">
+              <LoginPage />
+            </Route>
+            <Route path="/">
+              <GamePage />
+            </Route>
+          </Switch>
+        </Router>
       </DarkMode>
     </div>
   );

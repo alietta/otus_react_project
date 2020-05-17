@@ -1,7 +1,7 @@
 import React from "react";
 import { DarkMode, Container, useTheme } from "sancho";
 import { pageStyle } from "./pageStyle";
-import { Headbar } from 'components/Headbar';
+import { Headbar } from "components/Headbar";
 
 export const pageWithNavigation = <Props extends object>(
   Component: React.ComponentType<Props>
