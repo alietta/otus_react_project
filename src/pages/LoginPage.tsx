@@ -6,7 +6,6 @@ import { pageWithoutNavigation } from "@/utils/HOC/pageWithoutNavigation";
 
 const Page: FC = (props) => {
   const onSubmit = async (data: { name: string }) => {
-    debugger;
     await login(data.name);
     props.setStore({ name: data.name, isAuth: true });
   };

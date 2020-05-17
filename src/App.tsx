@@ -9,15 +9,14 @@ import { LoginPage } from "@/pages/LoginPage";
 import { GamePage } from "@/pages/GamePage";
 import { DarkMode } from "sancho";
 import { isLoggedIn } from "@/api/auth";
+import {getUserName } from "@/api/user";
 
 export const App: React.FC<{}> = () => {
-  const [store, setStore] = useState({ name: "", isAuth: true });
+  const [store, setStore] = useState({ name: "", isAuth: false });
   useEffect(() => {
-    (async () => {
-      const isAuth = await isLoggedIn();
-      debugger;
-      setStore({ ...store, isAuth });
-    })();
+    const isAuth = isLoggedIn();
+    const name = getUserName();
+    setStore({ name, isAuth });
   }, []);
   return (
     <div>
@@ -26,7 +25,7 @@ export const App: React.FC<{}> = () => {
           {store.isAuth ? (
             <Switch>
               <Route path="/" exact>
-                <GamePage store={store} />
+                <GamePage store={store} setStore={setStore} />
               </Route>
               <Route path="*">
                 <Redirect to={{ pathname: "/" }} />
@@ -34,7 +33,7 @@ export const App: React.FC<{}> = () => {
             </Switch>
           ) : (
             <Switch>
-              <Route path="/login">
+              <Route path="/login" exact>
                 <LoginPage setStore={setStore} />
               </Route>
               <Route path="*">

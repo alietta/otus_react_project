@@ -1,3 +1,3 @@
-export const getUserName = (): void => {
-  localStorage.getItem("login");
+export const getUserName = (): string => {
+  return localStorage.getItem("login");
 };

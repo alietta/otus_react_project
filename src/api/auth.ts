@@ -12,8 +12,7 @@ export const logout = async (): void => {
   await localStorage.removeItem("login");
 };
 
-export const isLoggedIn = async (): boolean => {
-  await delay(2000);
-  const login = await localStorage.getItem("login");
+export const isLoggedIn = (): boolean => {
+  const login = localStorage.getItem("login");
   return Boolean(login);
 };
