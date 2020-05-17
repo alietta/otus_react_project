@@ -4,9 +4,11 @@ import { EnterForm } from "components/EnterForm";
 import { login } from "@/api/auth";
 import { pageWithoutNavigation } from "@/utils/HOC/pageWithoutNavigation";
 
-const Page: FC = () => {
-  const onSubmit = (data: { name: string }): void => {
-    login(data.name);
+const Page: FC = (props) => {
+  const onSubmit = async (data: { name: string }) => {
+    debugger;
+    await login(data.name);
+    props.setStore({ name: data.name, isAuth: true });
   };
   return (
     <div
