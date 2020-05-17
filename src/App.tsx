@@ -9,7 +9,7 @@ import { LoginPage } from "@/pages/LoginPage";
 import { GamePage } from "@/pages/GamePage";
 import { DarkMode } from "sancho";
 import { isLoggedIn } from "@/api/auth";
-import {getUserName } from "@/api/user";
+import { getUserName } from "@/api/user";
 
 export const App: React.FC<{}> = () => {
   const [store, setStore] = useState({ name: "", isAuth: false });

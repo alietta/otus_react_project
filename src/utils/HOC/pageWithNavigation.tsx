@@ -9,12 +9,12 @@ export const pageWithNavigation = <Props extends object>(
   Component: React.ComponentType<Props>
 ) => (props: Props) => {
   const theme = useTheme();
-  console.warn(props)
+  console.warn(props);
   const onLogout = () => {
     (async () => {
       await logout();
-      debugger
-      props.setStore({name: '', isAuth: false})
+      debugger;
+      props.setStore({ name: "", isAuth: false });
     })();
   };
   return (

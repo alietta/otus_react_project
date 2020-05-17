@@ -28,7 +28,11 @@ const Headbar: FC<HeadbarProps> = (props: HeadbarProps) => {
         }}
       >
         <Text css={{ marginRight: 10 }}>{name}</Text>
-        <div onClick={onLogout}>
+        <div
+          onClick={onLogout}
+          css={{ "&:hover": { cursor: "pointer" } }}
+          className="logout-icon"
+        >
           <IconLogOut />
         </div>
       </Container>
