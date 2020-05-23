@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -8,25 +8,32 @@ import {
 import { LoginPage } from "@/pages/LoginPage";
 import { GamePage } from "@/pages/GamePage";
 import { DarkMode } from "sancho";
-import { isLoggedIn } from "@/api/auth";
-import { getUserName } from "@/api/user";
-import {AppContextProvider} from './AppContext';
+import { isLoggedIn, getUserName } from "@/api/auth";
+import { AppContext } from "./AppContext";
 
 export const App: React.FC<{}> = () => {
-  const [store, setStore] = useState({ name: "", isAuth: false });
+  const [{ isAuth }, dispatch] = useContext(AppContext);
   useEffect(() => {
-    const isAuth = isLoggedIn();
-    const name = getUserName();
-    setStore({ name, isAuth });
+    (async () => {
+      dispatch({ type: "LOADER_SHOW" });
+      const isLogged = await isLoggedIn();
+      const name = getUserName();
+      if (isLogged) {
+        dispatch({ type: "LOGIN", payload: name });
+      } else {
+        dispatch({ type: "LOGOUT" });
+      }
+      dispatch({ type: "LOADER_HIDE" });
+    })();
   }, []);
   return (
-    <AppContextProvider>
+    <div>
       <DarkMode>
         <Router>
-          {store.isAuth ? (
+          {isAuth ? (
             <Switch>
               <Route path="/" exact>
-                <GamePage store={store} setStore={setStore} />
+                <GamePage />
               </Route>
               <Route path="*">
                 <Redirect to={{ pathname: "/" }} />
@@ -35,7 +42,7 @@ export const App: React.FC<{}> = () => {
           ) : (
             <Switch>
               <Route path="/login" exact>
-                <LoginPage setStore={setStore} />
+                <LoginPage />
               </Route>
               <Route path="*">
                 <Redirect to={{ pathname: "/login" }} />
@@ -44,6 +51,6 @@ export const App: React.FC<{}> = () => {
           )}
         </Router>
       </DarkMode>
-    </AppContextProvider>
+    </div>
   );
 };

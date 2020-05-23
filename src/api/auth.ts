@@ -12,7 +12,11 @@ export const logout = async (): void => {
   await localStorage.removeItem("login");
 };
 
-export const isLoggedIn = (): boolean => {
+export const getUserName = (): string => {
+  return localStorage.getItem("login");
+};
+export const isLoggedIn = async (): boolean => {
+  await delay(1000);
   const login = localStorage.getItem("login");
   return Boolean(login);
 };

@@ -1,12 +1,14 @@
-import React, { FC, useCallback } from "react";
+import React, { FC, useCallback, useContext } from "react";
 import { EnterForm } from "components/EnterForm";
 import { login } from "@/api/auth";
-import { WithoutNavigationLayout } from '@/layouts/WithoutNavigationLayout'
+import { WithoutNavigationLayout } from "@/layouts/WithoutNavigationLayout";
+import { AppContext } from "@/AppContext";
 
 export const LoginPage: FC = (props) => {
+  const [, dispatch] = useContext(AppContext);
   const onSubmit = useCallback(async (data: { name: string }) => {
     await login(data.name);
-    props.setStore({ name: data.name, isAuth: true });
+    dispatch({ type: "LOGIN", payload: data.name });
   }, []);
   return (
     <WithoutNavigationLayout>
@@ -23,4 +25,3 @@ export const LoginPage: FC = (props) => {
     </WithoutNavigationLayout>
   );
 };
-

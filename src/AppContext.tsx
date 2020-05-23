@@ -17,7 +17,7 @@ const reducer = (state, action) => {
     case "LOGOUT":
       return {
         ...state,
-        isAuth: true,
+        isAuth: false,
         name: '',
       }
     case "LOADER_SHOW":
