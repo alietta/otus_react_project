@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import { LoginPage } from "@/pages/LoginPage";
 import { GamePage } from "@/pages/GamePage";
+import { Loader } from 'components/Loader';
 import { DarkMode } from "sancho";
 import { isLoggedIn, getUserName } from "@/api/auth";
 import { BaseRoutes } from "@/routes/BaseRoutes";
@@ -33,7 +34,7 @@ export const App: React.FC<{}> = () => {
     <div>
       <DarkMode>
         {loader ? (
-          <div>loading</div>
+          <Loader/>
         ) : (
           <BrowserRouter>
             <BaseRoutes />
