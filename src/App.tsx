@@ -1,14 +1,6 @@
 import React, { useEffect, useContext } from "react";
 import { BrowserRouter } from "react-router-dom";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Redirect,
-} from "react-router-dom";
-import { LoginPage } from "@/pages/LoginPage";
-import { GamePage } from "@/pages/GamePage";
-import { Loader } from 'components/Loader';
+import { Loader } from "components/Loader";
 import { DarkMode } from "sancho";
 import { isLoggedIn, getUserName } from "@/api/auth";
 import { BaseRoutes } from "@/routes/BaseRoutes";
@@ -17,7 +9,6 @@ import { AppContext } from "./AppContext";
 export const App: React.FC<{}> = () => {
   const [{ loader }, dispatch] = useContext(AppContext);
   useEffect(() => {
-    console.warn('RENDER');
     (async () => {
       dispatch({ type: "LOADER_SHOW" });
       const isLogged = await isLoggedIn();
@@ -34,11 +25,11 @@ export const App: React.FC<{}> = () => {
     <div>
       <DarkMode>
         {loader ? (
-          <Loader/>
+          <Loader />
         ) : (
           <BrowserRouter>
             <BaseRoutes />
-           </BrowserRouter>
+          </BrowserRouter>
         )}
       </DarkMode>
     </div>

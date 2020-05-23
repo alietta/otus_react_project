@@ -1,10 +1,10 @@
-import React, { createContext, useReducer } from 'react';
+import React, { createContext, useReducer } from "react";
 
 const initialState = {
-  name: '',
+  name: "",
   isAuth: true,
   loader: true,
-}
+};
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -12,37 +12,32 @@ const reducer = (state, action) => {
       return {
         ...state,
         isAuth: true,
-        name: action.payload
-      }
+        name: action.payload,
+      };
     case "LOGOUT":
       return {
         ...state,
         isAuth: false,
-        name: '',
-      }
+        name: "",
+      };
     case "LOADER_SHOW":
       return {
         ...state,
         loader: true,
-      }
+      };
     case "LOADER_HIDE":
       return {
         ...state,
         loader: false,
-      }
+      };
     default:
-      return state
+      return state;
   }
-}
+};
 
-export const AppContext = createContext()
+export const AppContext = createContext();
 
-export const AppContextProvider = ({children}) => {
+export const AppContextProvider = ({ children }) => {
   const value = useReducer(reducer, initialState);
-  return (
-    <AppContext.Provider value={value}>
-      {children}
-    </AppContext.Provider>
-  )
-}
-
+  return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
+};

@@ -84,7 +84,6 @@ exports[`Headbar renders Headbar 1`] = `
 }
 
 <Headbar
-  name="Name"
   onLogout={[MockFunction]}
 >
   <div
@@ -102,7 +101,7 @@ exports[`Headbar renders Headbar 1`] = `
           <span
             className="emotion-0"
           >
-            Name
+            NNN
           </span>
         </Component>
         <div

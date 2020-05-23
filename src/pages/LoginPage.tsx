@@ -5,17 +5,19 @@ import { WithoutNavigationLayout } from "@/layouts/WithoutNavigationLayout";
 import { AppContext } from "@/AppContext";
 import { useHistory } from "react-router-dom";
 
-export const LoginPage: FC = (props) => {
+export const LoginPage: FC = () => {
   const [{ isAuth }, dispatch] = useContext(AppContext);
   const history = useHistory();
 
   useEffect(() => {
     if (isAuth) {
-      const lastRoute = history.location.state ? history.location.state.from : null;
+      const lastRoute = history.location.state
+        ? history.location.state.from
+        : null;
       const path = lastRoute ? lastRoute.pathname : "/";
       history.push(path);
     }
-  }, [isAuth])
+  }, [isAuth]);
 
   const onSubmit = useCallback(async (data: { name: string }) => {
     await login(data.name);

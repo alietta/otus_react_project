@@ -1,20 +1,15 @@
-import React, { useEffect, useContext } from "react";
-import {
-  Switch,
-  Route,
-  Redirect,
-  withRouter,
-} from "react-router-dom";
+import React, { useContext } from "react";
+import { Switch, Route, Redirect, withRouter } from "react-router-dom";
 import { LoginPage } from "@/pages/LoginPage";
 import { GamePage } from "@/pages/GamePage";
 import { PrivateRoute } from "./PrivateRoute";
 import { AppContext } from "@/AppContext";
 
 const Routes: React.FC<{}> = () => {
-  const [{ isAuth }, ] = useContext(AppContext);
+  const [{ isAuth }] = useContext(AppContext);
   return (
     <Switch>
-      <PrivateRoute isAuth={isAuth} path='/' exact >
+      <PrivateRoute isAuth={isAuth} path="/" exact>
         <GamePage />
       </PrivateRoute>
       <Route path="/login" exact>
@@ -26,4 +21,4 @@ const Routes: React.FC<{}> = () => {
     </Switch>
   );
 };
-export const BaseRoutes = withRouter(Routes)
+export const BaseRoutes = withRouter(Routes);

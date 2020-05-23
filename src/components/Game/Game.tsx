@@ -52,7 +52,6 @@ const Game: FunctionComponent = () => {
       startMock.field.minHeight,
       50
     );
-    console.log(newField);
     setField(newField);
   }, []);
 
