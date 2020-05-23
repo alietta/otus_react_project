@@ -1,17 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Container, useTheme } from "sancho";
 import { Headbar } from "components/Headbar";
 import { logout } from "@/api/auth";
+import { AppContext } from "@/AppContext";
 
-export const pageWithNavigation = <Props extends object>(
-  Component: React.ComponentType<Props>
-) => (props: Props) => {
+export const WithNavigationLayout: React.FC = (props) => {
   const theme = useTheme();
-  const onLogout = () => {
-    (async () => {
-      await logout();
-      props.setStore({ name: "", isAuth: false });
-    })();
+  const [, dispatch] = useContext(AppContext);
+  const onLogout = async () => {
+    await logout();
+    dispatch({ type: "LOGOUT" });
   };
   return (
     <div
@@ -21,9 +19,9 @@ export const pageWithNavigation = <Props extends object>(
         background: theme.colors.background.default,
       }}
     >
-      <Headbar name={props.store.name} onLogout={onLogout} />
+      <Headbar onLogout={onLogout} />
       <Container css={{ maxWidth: 1024, paddingTop: 50 }}>
-        <Component {...props} />
+        {props.children}
       </Container>
     </div>
   );

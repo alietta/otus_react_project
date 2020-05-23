@@ -1,3 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`HOC pageWithNavigation render 1`] = `"<div class=\\"css-1xfup8k\\"><div class=\\"css-94ghjt-Headbar\\"><div class=\\"css-hkw5ma-Headbar\\"><span class=\\"css-69rko3-Headbar\\">Anny</span><div class=\\"logout-icon css-1vhmik5-Headbar\\"><svg viewBox=\\"0 0 24 24\\" fill=\\"none\\" stroke=\\"#212529\\" stroke-width=\\"2\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\" height=\\"20px\\" width=\\"20px\\"><path d=\\"M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4\\"></path><polyline points=\\"16 17 21 12 16 7\\"></polyline><line x1=\\"21\\" y1=\\"12\\" x2=\\"9\\" y2=\\"12\\"></line></svg></div></div></div><div class=\\"css-hr2t1h\\"><h1>Anny</h1></div></div>"`;

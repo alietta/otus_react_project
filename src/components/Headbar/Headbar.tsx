@@ -1,14 +1,16 @@
-import React, { FC } from "react";
+import React, { FC, useContext } from "react";
 import { useTheme, Container, Text, IconLogOut } from "sancho";
+import { AppContext } from '@/AppContext';
 
 interface HeadbarProps {
-  name: string;
   onLogout: () => void;
 }
 
 const Headbar: FC<HeadbarProps> = (props: HeadbarProps) => {
-  const { name, onLogout } = props;
+  const { onLogout } = props;
   const theme = useTheme();
+  const [{ name }, ] = useContext(AppContext)
+
   return (
     <div
       css={{

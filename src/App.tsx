@@ -10,6 +10,7 @@ import { GamePage } from "@/pages/GamePage";
 import { DarkMode } from "sancho";
 import { isLoggedIn } from "@/api/auth";
 import { getUserName } from "@/api/user";
+import {AppContextProvider} from './AppContext';
 
 export const App: React.FC<{}> = () => {
   const [store, setStore] = useState({ name: "", isAuth: false });
@@ -19,7 +20,7 @@ export const App: React.FC<{}> = () => {
     setStore({ name, isAuth });
   }, []);
   return (
-    <div>
+    <AppContextProvider>
       <DarkMode>
         <Router>
           {store.isAuth ? (
@@ -43,6 +44,6 @@ export const App: React.FC<{}> = () => {
           )}
         </Router>
       </DarkMode>
-    </div>
+    </AppContextProvider>
   );
 };

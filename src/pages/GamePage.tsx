@@ -1,20 +1,20 @@
 import React, { FC } from "react";
+import { WithNavigationLayout } from "@/layouts/WithNavigationLayout";
 import { Game } from "components/Game";
-import { pageWithNavigation } from "@/utils/HOC/pageWithNavigation";
 
-const Page: FC = () => {
+export const GamePage: FC = () => {
   return (
-    <div
-      css={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        height: "100%",
-      }}
-    >
-      <Game />
-    </div>
+    <WithNavigationLayout>
+      <div
+        css={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          height: "100%",
+        }}
+      >
+        <Game />
+      </div>
+    </WithNavigationLayout>
   );
 };
-
-export const GamePage = pageWithNavigation(Page);

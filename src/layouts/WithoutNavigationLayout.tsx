@@ -1,9 +1,7 @@
 import React from "react";
 import { Container, useTheme } from "sancho";
 
-export const pageWithoutNavigation = <Props extends object>(
-  Component: React.ComponentType<Props>
-) => (props: Props) => {
+export const WithoutNavigationLayout: React.FC = (props) => {
   const theme = useTheme();
   return (
     <div
@@ -14,7 +12,7 @@ export const pageWithoutNavigation = <Props extends object>(
       }}
     >
       <Container css={{ maxWidth: 1024, height: "100%" }}>
-        <Component {...props} />
+        {props.children}
       </Container>
     </div>
   );
