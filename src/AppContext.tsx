@@ -3,7 +3,7 @@ import React, { createContext, useReducer } from 'react';
 const initialState = {
   name: '',
   isAuth: true,
-  loader: false
+  loader: true,
 }
 
 const reducer = (state, action) => {

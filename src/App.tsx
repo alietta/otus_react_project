@@ -1,4 +1,5 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useEffect, useContext } from "react";
+import { BrowserRouter } from "react-router-dom";
 import {
   BrowserRouter as Router,
   Switch,
@@ -9,11 +10,13 @@ import { LoginPage } from "@/pages/LoginPage";
 import { GamePage } from "@/pages/GamePage";
 import { DarkMode } from "sancho";
 import { isLoggedIn, getUserName } from "@/api/auth";
+import { BaseRoutes } from "@/routes/BaseRoutes";
 import { AppContext } from "./AppContext";
 
 export const App: React.FC<{}> = () => {
-  const [{ isAuth }, dispatch] = useContext(AppContext);
+  const [{ loader }, dispatch] = useContext(AppContext);
   useEffect(() => {
+    console.warn('RENDER');
     (async () => {
       dispatch({ type: "LOADER_SHOW" });
       const isLogged = await isLoggedIn();
@@ -29,27 +32,13 @@ export const App: React.FC<{}> = () => {
   return (
     <div>
       <DarkMode>
-        <Router>
-          {isAuth ? (
-            <Switch>
-              <Route path="/" exact>
-                <GamePage />
-              </Route>
-              <Route path="*">
-                <Redirect to={{ pathname: "/" }} />
-              </Route>
-            </Switch>
-          ) : (
-            <Switch>
-              <Route path="/login" exact>
-                <LoginPage />
-              </Route>
-              <Route path="*">
-                <Redirect to={{ pathname: "/login" }} />
-              </Route>
-            </Switch>
-          )}
-        </Router>
+        {loader ? (
+          <div>loading</div>
+        ) : (
+          <BrowserRouter>
+            <BaseRoutes />
+           </BrowserRouter>
+        )}
       </DarkMode>
     </div>
   );
