@@ -15,7 +15,7 @@ export const originalTeamToExpectedTeam = (
   originalTeam: OriginalTeam
 ): ExpectedTeam => {
   const changes = { name: "New York Badgers", roster: 25 };
-  const result = { ...originalTeam, ...changes }
+  const result = { ...originalTeam, ...changes };
   delete result.size;
   return result;
 };
