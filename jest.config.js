@@ -13,4 +13,5 @@ module.exports = {
     "^components(.*)$": "<rootDir>/src/components$1",
     "^@/(.*)$": "<rootDir>/src/$1",
   },
+  setupFiles: ["jest-localstorage-mock"],
 };

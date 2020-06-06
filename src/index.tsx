@@ -1,5 +1,12 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { render } from "react-dom";
+import { App } from "@/App";
+import "./index.css";
+import { AppContextProvider } from "./AppContext";
 
-ReactDOM.render(<div>Test React</div>, document.getElementById("app"));
-module.hot.accept();
+render(
+  <AppContextProvider>
+    <App />
+  </AppContextProvider>,
+  document.getElementById("app")
+);

@@ -1,0 +1,141 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Headbar renders Headbar 1`] = `
+.emotion-7 {
+  height: 50px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: #f1f3f5;
+}
+
+.emotion-5 {
+  min-width: 1024px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-4 {
+  width: 100%;
+  max-width: 1200px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0 1rem;
+  min-width: 1024px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media (min-width:992px) {
+  .emotion-4 {
+    padding: 0 1.5rem;
+  }
+}
+
+.emotion-1 {
+  margin-right: 10px;
+}
+
+.emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: 400;
+  line-height: 1.5;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 1rem;
+  color: #212529;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+  font-size: 1rem;
+  margin-right: 10px;
+}
+
+.emotion-3:hover {
+  cursor: pointer;
+}
+
+<Headbar
+  onLogout={[MockFunction]}
+>
+  <div
+    className="emotion-7"
+  >
+    <Component
+      className="emotion-5"
+    >
+      <div
+        className="emotion-4"
+      >
+        <Component
+          className="emotion-1"
+        >
+          <span
+            className="emotion-0"
+          >
+            NNN
+          </span>
+        </Component>
+        <div
+          className="logout-icon emotion-3"
+          onClick={[MockFunction]}
+        >
+          <Component>
+            <svg
+              fill="none"
+              height="20px"
+              stroke="#212529"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width="20px"
+            >
+              <path
+                d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"
+              />
+              <polyline
+                points="16 17 21 12 16 7"
+              />
+              <line
+                x1="21"
+                x2="9"
+                y1="12"
+                y2="12"
+              />
+            </svg>
+          </Component>
+        </div>
+      </div>
+    </Component>
+  </div>
+</Headbar>
+`;
