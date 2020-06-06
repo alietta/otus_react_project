@@ -9,8 +9,15 @@ export const userSlice = createSlice({
   name: "users",
   initialState: userInitialState,
   reducers: {
-    getUsers: (state, { payload }: PayloadAction<Array<User>>) => {
+    getUsersLoading: (state) => {
+      state.status = "loading";
+    },
+    getUsersSuccess: (state, { payload }: PayloadAction<Array<User>>) => {
       state.users = payload;
+      state.status = "success";
+    },
+    getUsersError: (state) => {
+      state.status = "error";
     },
   },
 });
