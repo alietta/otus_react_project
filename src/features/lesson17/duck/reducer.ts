@@ -21,3 +21,19 @@ export const userSlice = createSlice({
     },
   },
 });
+
+export const counterSlice = createSlice({
+  name: "conter",
+  initialState: 0,
+  reducers: {
+    increment: {
+      reducer: (state) => {
+        return state + 1;
+      },
+      prepare: (probability: number) => ({
+        payload: {},
+        meta: { probability },
+      }),
+    },
+  },
+});

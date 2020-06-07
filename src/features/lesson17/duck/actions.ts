@@ -1,4 +1,4 @@
-import { userSlice } from "./reducer";
+import { userSlice, counterSlice } from "./reducer";
 import axios from "axios";
 
 export const getUsers = () => {
@@ -14,3 +14,5 @@ export const getUsers = () => {
       });
   };
 };
+
+export const incrementCounter = counterSlice.actions.increment;
