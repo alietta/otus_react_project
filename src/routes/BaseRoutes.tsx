@@ -4,10 +4,9 @@ import { LoginPage } from "@/pages/LoginPage";
 import { GamePage } from "@/pages/GamePage";
 import { Lesson17Page } from "@/pages/Lesson17Page";
 import { PrivateRoute } from "./PrivateRoute";
-import { AppContext } from "@/AppContext";
 
 const Routes: React.FC<{}> = () => {
-  const [{ isAuth }] = useContext(AppContext);
+  const isAuth = true;
   return (
     <Switch>
       <PrivateRoute isAuth={isAuth} path="/" exact>
