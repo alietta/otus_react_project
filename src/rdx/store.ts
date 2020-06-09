@@ -1,12 +1,20 @@
 import { configureStore, getDefaultMiddleware } from "@reduxjs/toolkit";
 import { reducer } from "./reducder";
-import { thunkMiddleware } from "./thunkMiddleware";
-import { probabilityMiddleware } from "./probabilityMiddleware";
+import createSagaMiddleware from "redux-saga";
+import { fork } from "redux-saga/effects";
+import { loginSaga } from "@/features/login/duck/saga";
 
-const middleware = [...getDefaultMiddleware(), probabilityMiddleware];
-// const middleware = [...getDefaultMiddleware()];
+const sagaMiddleware = createSagaMiddleware();
+
+function* rootSaga() {
+  yield fork(loginSaga);
+}
+const middleware = [...getDefaultMiddleware(), sagaMiddleware];
 
 export const store = configureStore({
   reducer,
   middleware,
 });
+
+
+sagaMiddleware.run(rootSaga);

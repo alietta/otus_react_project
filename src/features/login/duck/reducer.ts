@@ -1,7 +1,7 @@
 import { User } from "./types";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-const userInitialState: Users = {
+const userInitialState: User = {
   status: "success",
   isAuth: false,
   name: "",
@@ -13,8 +13,8 @@ export const userSlice = createSlice({
     loginLoading: (state) => {
       state.status = "loading";
     },
-    loginSuccess: (state, { payload }: PayloadAction<Array<User>>) => {
-      state.user = payload;
+    loginSuccess: (state, { payload }: PayloadAction<string>) => {
+      state.name = payload;
       state.isAuth = true;
       state.status = "success";
     },
@@ -26,7 +26,7 @@ export const userSlice = createSlice({
       state.status = "loading";
     },
     logoutSuccess: (state) => {
-      state.user = "";
+      state.name = "";
       state.isAuth = false;
       state.status = "success";
     },
@@ -37,3 +37,4 @@ export const userSlice = createSlice({
   },
 });
 
+export const { reducer, actions } = userSlice;
