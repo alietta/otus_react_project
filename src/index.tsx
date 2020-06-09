@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "react-dom";
-import { App } from "@/App";
+import { App } from "@/features/App";
 import "./index.css";
 import { AppContextProvider } from "./AppContext";
 import { Provider } from "react-redux";
