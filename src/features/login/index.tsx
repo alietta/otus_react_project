@@ -2,7 +2,7 @@ import React, { FC, useEffect, useCallback, useContext } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { EnterForm } from "./components/EnterForm";
 import { useHistory } from "react-router-dom";
-import { userSlice } from "./duck/reducer";
+import { actions } from "./duck/reducer";
 
 export const Login: FC = () => {
   const dispatch = useDispatch();
@@ -20,7 +20,7 @@ export const Login: FC = () => {
   }, [isAuth]);
 
   const onSubmit = useCallback((data: { name: string }) => {
-    dispatch(userSlice.actions.loginSuccess(data.name));
+    dispatch(actions.login(data.name));
   }, []);
 
   return (

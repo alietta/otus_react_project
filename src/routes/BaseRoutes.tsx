@@ -5,8 +5,7 @@ import { GamePage } from "@/pages/GamePage";
 import { Lesson17Page } from "@/pages/Lesson17Page";
 import { PrivateRoute } from "./PrivateRoute";
 
-const Routes: React.FC<{}> = () => {
-  const isAuth = true;
+const Routes: React.FC<{isAuth: boolean}> = ({ isAuth }: {isAuth: boolean}) => {
   return (
     <Switch>
       <PrivateRoute isAuth={isAuth} path="/" exact>

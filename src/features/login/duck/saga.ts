@@ -29,7 +29,7 @@ export function* logoutWorker() {
 
 export function* loginWorker({
   payload,
-}: ReturnType<typeof actions.loginLoading>) {
+}: ReturnType<typeof actions.login>) {
   yield put(actions.loginLoading());
   const username = String(payload);
   try {
@@ -44,6 +44,6 @@ export function* loginWorker({
 
 export function* loginSaga() {
   yield fork(checkUserWorker);
-  yield takeEvery(actions.loginLoading.type, loginWorker);
-  yield takeEvery(actions.logoutLoading.type, logoutWorker);
+  yield takeEvery(actions.login.type, loginWorker);
+  yield takeEvery(actions.logout.type, logoutWorker);
 }
