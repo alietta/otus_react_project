@@ -9,7 +9,6 @@ const Headbar: FC = () => {
   const dispatch = useDispatch();
   const name = useSelector((state: any) => state.user.name)
   const onLogout = () => {
-    console.log(actions);
     dispatch(actions.logout())
   }
 

@@ -1,22 +1,52 @@
 import React from "react";
 import { mount } from "enzyme";
+import {Provider} from 'react-redux';
 import { Headbar } from "./Headbar";
-import { AppContext } from "@/AppContext";
+import configureMockStore from 'redux-mock-store';
+import thunk from 'redux-thunk';
+import { stub } from 'sinon';
 
-const onLogout = jest.fn();
-const element = mount(<Headbar onLogout={onLogout} />, {
-  wrappingComponent: AppContext.Provider,
-  wrappingComponentProps: {
-    value: [{ isAuth: true, loader: false, name: "NNN" }],
-  },
-});
+const mockStore = configureMockStore([thunk]);
+
+
+const logout = () => ({ type: 'user/logout' })
 
 describe("Headbar", () => {
+  let store;
+  beforeEach(() => {
+    store = mockStore({
+      user: {
+        name: 'Helen',
+      },
+    });
+  });
   it("renders Headbar", () => {
+    const element = mount(<Headbar  />, {
+      wrappingComponent: Provider,
+      wrappingComponentProps: {
+        store,
+      },
+    });
     expect(element).toMatchSnapshot();
   });
-  it("should call logout from props", () => {
+  it("should render with name from store", () => {
+    const element = mount(<Headbar  />, {
+      wrappingComponent: Provider,
+      wrappingComponentProps: {
+        store,
+      },
+    });
+    expect(element.text().includes('Helen')).toBe(true);
+  });
+  it("should call logout action on click", () => {
+    const element = mount(<Headbar  />, {
+      wrappingComponent: Provider,
+      wrappingComponentProps: {
+        store,
+      },
+    });
     element.find(".logout-icon").first().simulate("click");
-    expect(onLogout).toHaveBeenCalled();
+    const actions = store.getActions()
+    expect(actions[0]).toEqual({type: 'user/logout', payload: undefined})
   });
 });

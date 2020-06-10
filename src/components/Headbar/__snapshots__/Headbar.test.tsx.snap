@@ -83,9 +83,7 @@ exports[`Headbar renders Headbar 1`] = `
   cursor: pointer;
 }
 
-<Headbar
-  onLogout={[MockFunction]}
->
+<Headbar>
   <div
     className="emotion-7"
   >
@@ -101,12 +99,12 @@ exports[`Headbar renders Headbar 1`] = `
           <span
             className="emotion-0"
           >
-            NNN
+            Helen
           </span>
         </Component>
         <div
           className="logout-icon emotion-3"
-          onClick={[MockFunction]}
+          onClick={[Function]}
         >
           <Component>
             <svg
