@@ -4,7 +4,6 @@ import {Provider} from 'react-redux';
 import { Headbar } from "./Headbar";
 import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
-import { stub } from 'sinon';
 
 const mockStore = configureMockStore([thunk]);
 
