@@ -25,7 +25,7 @@ export const userSlice = createSlice({
       state.isAuth = false;
       state.status = "error";
     },
-    logout: state => state,
+    logout: (state) => state,
     logoutLoading: (state) => {
       state.status = "loading";
     },

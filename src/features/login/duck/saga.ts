@@ -8,13 +8,13 @@ import { appSlice } from "@/features/App/duck/reducer";
 export function* checkUserWorker() {
   yield put(appSlice.actions.loading());
   const isAuth: boolean = yield call(isLoggedIn);
+  const name: string = yield call(getUserName);
   if (isAuth) {
-    yield put(actions.loginSuccess(getUserName()));
-    yield put(appSlice.actions.success());
+    yield put(actions.loginSuccess(name));
   } else {
     yield put(actions.logoutSuccess());
-    yield put(appSlice.actions.error());
   }
+  yield put(appSlice.actions.success());
 }
 
 export function* logoutWorker() {
@@ -27,9 +27,7 @@ export function* logoutWorker() {
   }
 }
 
-export function* loginWorker({
-  payload,
-}: ReturnType<typeof actions.login>) {
+export function* loginWorker({ payload }: ReturnType<typeof actions.login>) {
   yield put(actions.loginLoading());
   const username = String(payload);
   try {
