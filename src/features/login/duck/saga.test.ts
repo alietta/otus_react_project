@@ -1,4 +1,3 @@
-import { call, put } from "redux-saga/effects";
 import { expectSaga } from "redux-saga-test-plan";
 import * as matchers from "redux-saga-test-plan/matchers";
 import { throwError } from "redux-saga-test-plan/providers";
@@ -6,15 +5,6 @@ import { checkUserWorker, logoutWorker, loginWorker } from "./saga";
 import { actions, reducer } from "./reducer";
 import { isLoggedIn, getUserName, login, logout } from "./api";
 import { appSlice } from "@/features/App/duck/reducer";
-
-const storeState = {
-  app: { status: "success" },
-  user: {
-    status: "success",
-    isAuth: false,
-    name: "",
-  },
-};
 
 describe("Login saga", () => {
   it("checkUser login", () => {
@@ -78,7 +68,7 @@ describe("Login saga", () => {
       .run();
   });
   it("loginWorker success", () => {
-    return expectSaga(loginWorker, {payload: "Helen"})
+    return expectSaga(loginWorker, { payload: "Helen" })
       .withReducer(reducer)
       .put(actions.loginLoading())
       .provide([[matchers.call.fn(login), "Helen"]])
@@ -91,7 +81,7 @@ describe("Login saga", () => {
       .run();
   });
   it("loginWorker failed", () => {
-    return expectSaga(loginWorker, {payload: "Helen"})
+    return expectSaga(loginWorker, { payload: "Helen" })
       .withReducer(reducer)
       .put(actions.loginLoading())
       .provide([[matchers.call.fn(login), throwError(new Error("error"))]])

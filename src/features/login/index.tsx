@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useCallback, useContext } from "react";
+import React, { FC, useEffect, useCallback } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { EnterForm } from "./components/EnterForm";
 import { useHistory } from "react-router-dom";
@@ -23,8 +23,5 @@ export const Login: FC = () => {
     dispatch(actions.login(data.name));
   }, []);
 
-  return (
-    <EnterForm onSubmit={onSubmit} />
-  );
+  return <EnterForm onSubmit={onSubmit} />;
 };
-

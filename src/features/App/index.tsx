@@ -1,6 +1,6 @@
-import React, { useEffect, useContext } from "react";
+import React from "react";
 import { BrowserRouter } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import { Loader } from "components/Loader";
 import { DarkMode } from "sancho";
 import { BaseRoutes } from "@/routes/BaseRoutes";

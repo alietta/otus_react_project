@@ -1,16 +1,15 @@
 import React, { FC } from "react";
 import { useTheme, Container, Text, IconLogOut } from "sancho";
 import { useSelector, useDispatch } from "react-redux";
-import { actions } from "@/features/login/duck/reducer"
-
+import { actions } from "@/features/login/duck/reducer";
 
 const Headbar: FC = () => {
   const theme = useTheme();
   const dispatch = useDispatch();
-  const name = useSelector((state: any) => state.user.name)
+  const name = useSelector((state: any) => state.user.name);
   const onLogout = () => {
-    dispatch(actions.logout())
-  }
+    dispatch(actions.logout());
+  };
 
   return (
     <div

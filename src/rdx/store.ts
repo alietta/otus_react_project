@@ -16,5 +16,4 @@ export const store = configureStore({
   middleware,
 });
 
-
 sagaMiddleware.run(rootSaga);

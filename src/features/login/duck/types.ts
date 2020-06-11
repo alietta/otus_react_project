@@ -3,4 +3,3 @@ export interface User {
   isAuth: boolean;
   name: string;
 }
-

@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useCallback, useContext } from "react";
+import React, { FC, useEffect, useCallback } from "react";
 import { WithoutNavigationLayout } from "@/layouts/WithoutNavigationLayout";
 import { UsersList } from "@/features/lesson17";
 

@@ -1,9 +1,9 @@
 import React from "react";
 import { mount } from "enzyme";
 import { App } from "@/features/App";
-import {Provider} from 'react-redux';
-import configureMockStore from 'redux-mock-store';
-import thunk from 'redux-thunk';
+import { Provider } from "react-redux";
+import configureMockStore from "redux-mock-store";
+import thunk from "redux-thunk";
 import { MemoryRouter } from "react-router";
 import { LoginPage } from "@/pages/LoginPage";
 import { GamePage } from "@/pages/GamePage";
@@ -11,21 +11,21 @@ import { GamePage } from "@/pages/GamePage";
 const mockStore = configureMockStore([thunk]);
 const storeWithAuth = mockStore({
   app: {
-    status: 'success',
+    status: "success",
   },
   user: {
     isAuth: true,
-    name: 'Helen',
+    name: "Helen",
   },
 });
 
 const storeWithoutAuth = mockStore({
   app: {
-    status: 'success',
+    status: "success",
   },
   user: {
     isAuth: false,
-    name: '',
+    name: "",
   },
 });
 
