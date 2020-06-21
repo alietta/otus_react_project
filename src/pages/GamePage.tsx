@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import { WithNavigationLayout } from "@/layouts/WithNavigationLayout";
-import { Game } from "components/Game";
+import { Game } from "@/modules/Game";
 
 export const GamePage: FC = () => {
   return (
