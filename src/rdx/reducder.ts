@@ -5,8 +5,10 @@ import {
 } from "@/features/lesson17/duck/reducer";
 import { userSlice } from "@/features/login/duck/reducer";
 import { appSlice } from "@/features/App/duck/reducer";
+import { settingsSlice } from "@/modules/GameSettings/duck/reducer";
 
 export const reducer = combineReducers({
+  settings: settingsSlice.reducer,
   users: lessonSlice.reducer,
   counter: counterSlice.reducer,
   app: appSlice.reducer,

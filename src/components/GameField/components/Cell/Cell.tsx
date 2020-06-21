@@ -7,11 +7,12 @@ interface CellProps {
   y: number;
   isFilled: boolean;
   onClick: (x: number, y: number, isFilled?: boolean) => void;
+  size: number;
 }
 
 const Cell: FunctionComponent<CellProps> = (props: CellProps) => {
   const theme = useTheme();
-  const { isFilled, onClick, x, y } = props;
+  const { isFilled, onClick, x, y, size = 5 } = props;
   const fillColor = useMemo(() => {
     const {
       colors: { background, text },
@@ -26,6 +27,8 @@ const Cell: FunctionComponent<CellProps> = (props: CellProps) => {
     <CellWrapper
       css={{ borderColor: theme.colors.border.default, background: fillColor }}
       onClick={onCellClick}
+      width={size}
+      height={size}
     ></CellWrapper>
   );
 };

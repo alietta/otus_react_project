@@ -15,8 +15,6 @@ interface Props {
 
 export const CellWrapper = styled.div`
   display: inline-block;
-  width: 20px;
-  height: 20px;
   border: 1px solid gray;
   box-sizing: border-box;
   vertical-align: middle;
@@ -24,4 +22,6 @@ export const CellWrapper = styled.div`
     border-width: 3px;
   }
   ${({ isFilled }: Props): string => (isFilled ? FilledCell : EmptyCell)};
+  ${({ width }: Props): number => `width: ${width}px`};
+  ${({ height }: Props): number => `height: ${height}px`};
 `;

@@ -1,14 +1,15 @@
 import React, { FunctionComponent, useState, useEffect } from "react";
+import { useSelector } from "react-redux";
 import { useTheme, Layer } from "sancho";
-import { GameMenu } from "components/GameMenu";
+import { GameSettings } from "@/modules/GameSettings";
 import { GameField } from "components/GameField";
 import { preatyArray, randomByPercent } from "./gameFunctions";
 
 const startMock = {
   field: {
-    minWidth: 2,
+    minWidth: 5,
     maxWidth: 20,
-    minHeight: 2,
+    minHeight: 5,
     maxHeight: 10,
   },
 };
@@ -19,12 +20,14 @@ interface GameState {
 
 const Game: FunctionComponent = () => {
   const theme = useTheme();
-  const [fieldSize, setFieldSize] = useState<{ width: number; height: number }>(
-    {
-      width: startMock.minWidth,
-      height: startMock.minHeight,
-    }
-  );
+  const fieldSize = useSelector((state: any) => state.settings.fieldSize)
+  const cellSize = useSelector((state: any) => state.settings.cellSize)
+  /* const [fieldSize, setFieldSize] = useState<{ width: number; height: number }>( */
+  /*   { */
+  /*     width: startMock.minWidth, */
+  /*     height: startMock.minHeight, */
+  /*   } */
+  /* ); */
   const [field, setField] = useState<boolean[][]>([[]]);
   const [gameState, setGameState] = useState<GameState>({
     speed: 0,
@@ -68,17 +71,14 @@ const Game: FunctionComponent = () => {
         alignItems: "center",
         justifyContent: "center",
         width: "100%",
+        flexDirection: "column",
       }}
     >
-      <div css={{ width: "100%", textAlign: "center" }}>
-        <GameField field={field} setField={setField} />
-      </div>
       <div css={{ minWidth: 422 }}>
-        <GameMenu
-          size={{ ...startMock.field, passSize: setFieldSize }}
-          percent={{ onSubmit: setFieldPercent, startPercent: 50 }}
-          controll={{ setGameState: setGameState }}
-        />
+        <GameSettings />
+      </div>
+      <div css={{ width: "100%", textAlign: "center" }}>
+        <GameField field={field} setField={setField} cellSize={cellSize.width}/>
       </div>
     </Layer>
   );

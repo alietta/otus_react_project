@@ -6,11 +6,12 @@ import { Cell } from "./components";
 interface GameFildProps {
   field: boolean[][];
   setField: (field: boolean[][]) => void;
+  cellSize: number;
 }
 
 const GameField: FunctionComponent<GameFildProps> = (props: GameFildProps) => {
   const theme = useTheme();
-  const { field, setField } = props;
+  const { field, setField, cellSize } = props;
   const onClick = (x: number, y: number, isFilled? = false): void => {
     const isXValid = x >= 0 && x < field[0].length;
     const isYValid = y >= 0 && y < field.length;
@@ -41,6 +42,7 @@ const GameField: FunctionComponent<GameFildProps> = (props: GameFildProps) => {
                   x={ind}
                   y={index}
                   onClick={onClick}
+                  size={cellSize}
                 />
               );
             })}
