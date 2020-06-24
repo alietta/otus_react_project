@@ -15,12 +15,12 @@ describe("Cell", () => {
       .toMatchInlineSnapshot(`
       .emotion-0 {
         display: inline-block;
-        width: 20px;
-        height: 20px;
         border: 1px solid gray;
         box-sizing: border-box;
         vertical-align: middle;
         background: white;
+        width: 5px;
+        height: 5px;
         border-color: hsla(210,10.8%,14.5%,0.12);
         background: white;
       }
@@ -31,7 +31,9 @@ describe("Cell", () => {
 
       <div
         className="emotion-0 emotion-1"
+        height={5}
         onClick={[Function]}
+        width={5}
       />
     `);
   });

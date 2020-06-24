@@ -9,6 +9,7 @@ exports[`SizeForm renders SizeForm 1`] = `
   padding: 0 1rem;
   background: white;
   padding: 0;
+  margin: 0;
 }
 
 @media (min-width:992px) {
@@ -67,7 +68,7 @@ exports[`SizeForm renders SizeForm 1`] = `
         <div
           className="Label__text emotion-0"
         >
-          Field width
+           width
         </div>
       </label>
       <input
@@ -77,7 +78,7 @@ exports[`SizeForm renders SizeForm 1`] = `
         onChange={[Function]}
         step="1"
         type="range"
-        value={3}
+        value={6}
       />
     </div>
     <div
@@ -90,7 +91,7 @@ exports[`SizeForm renders SizeForm 1`] = `
         <div
           className="Label__text emotion-0"
         >
-          Field height
+           height
         </div>
       </label>
       <input
@@ -100,7 +101,7 @@ exports[`SizeForm renders SizeForm 1`] = `
         onChange={[Function]}
         step="1"
         type="range"
-        value={3}
+        value={6}
       />
     </div>
   </form>

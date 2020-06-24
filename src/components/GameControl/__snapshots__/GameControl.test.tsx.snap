@@ -86,7 +86,6 @@ exports[`GameControl renders GameControl 1`] = `
   <div
     className="Button Touchable emotion-0"
     name="reset"
-    onClick={[Function]}
     onKeyDown={[Function]}
     onKeyUp={[Function]}
     onMouseDown={[Function]}
