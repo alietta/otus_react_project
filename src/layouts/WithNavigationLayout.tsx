@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, useTheme } from "sancho";
-import { Headbar } from "components/Headbar";
+import { Headbar } from "@/modules/Headbar";
 
 export const WithNavigationLayout: React.FC = (props) => {
   const theme = useTheme();
