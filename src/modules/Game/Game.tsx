@@ -49,12 +49,12 @@ const Game: FunctionComponent = () => {
   }, [gameState]);
 
   useEffect(() => {
-    const newField = randomByPercent(
-      startMock.field.minWidth,
-      startMock.field.minHeight,
-      50
-    );
-    setField(newField);
+    /* const newField = randomByPercent( */
+    /*   startMock.field.minWidth, */
+    /*   startMock.field.minHeight, */
+    /*   50 */
+    /* ); */
+    /* setField(newField); */
   }, []);
 
   const setFieldPercent = (perc: number): void => {

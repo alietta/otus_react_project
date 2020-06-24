@@ -38,7 +38,7 @@ export const randomByPercent = (
   x: number,
   y: number,
   percent: number
-): boolean[][] => {
+): number[] => {
   const volume = x * y;
   const filled: Array<number> = [];
   const percentCount = Math.round((percent * volume) / 100);
@@ -46,6 +46,10 @@ export const randomByPercent = (
     const cell = randomIntWithoutRepeat(volume, filled);
     filled.push(cell);
   }
+  return filled;
+};
+
+export const makeField = (x: number, y: number, filled: number[]): boolean[][] => {
   const filledArray = Array(y)
     .fill(false)
     .map(() => Array(x).fill(false));
@@ -54,4 +58,4 @@ export const randomByPercent = (
     filledArray[pos.y][pos.x] = true;
   });
   return filledArray;
-};
+}

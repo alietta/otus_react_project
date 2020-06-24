@@ -19,10 +19,10 @@ const settingsInitialState: ISettingState = {
       width: 10,
       height: 10,
     },
-  }
+  },
 };
 export const settingsSlice = createSlice({
-  name: "app",
+  name: "settings",
   initialState: settingsInitialState,
   reducers: {
     field: (state, { payload }: PayloadAction<ISize>) => {
@@ -34,7 +34,7 @@ export const settingsSlice = createSlice({
     returnDefault: (state) => {
       state.fieldSize = state.default.fieldSize;
       state.cellSize = state.default.cellSize;
-    }
+    },
   },
 });
 

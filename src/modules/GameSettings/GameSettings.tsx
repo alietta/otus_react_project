@@ -4,6 +4,8 @@ import { useTheme, Layer, Text } from "sancho";
 import { SizeForm } from "@/components/SizeForm";
 import { PercentFilled } from "@/components/PercentFilled";
 import { actions } from "./duck/reducer";
+import { actions as gameActions } from "../Game/duck/reducer";
+import { randomByPercent } from "../Game/gameFunctions";
 
 /* interface GameSettingsProps { */
 /* } */
@@ -26,6 +28,11 @@ const GameSettings: FC<> = () => {
     const result = Math.max(width, height);
     dispatch(actions.cell({ width: result, height: result }));
   };
+
+  const changePercent = (percent: number): void => {
+    const filledCells = randomByPercent(3, 3, percent)
+    dispatch(gameActions.fillCells(filledCells))
+  }
 
   useEffect(() => {
     console.log(cellSize.width);
@@ -62,7 +69,7 @@ const GameSettings: FC<> = () => {
           passSize={passCellSize}
         />
       </div>
-      {/* <PercentFilled {...percent} /> */}
+      <PercentFilled onSubmit={changePercent}/>
     </Layer>
   );
 };
