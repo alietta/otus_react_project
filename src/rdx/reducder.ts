@@ -7,10 +7,12 @@ import { userSlice } from "@/features/login/duck/reducer";
 import { appSlice } from "@/features/App/duck/reducer";
 import { settingsSlice } from "@/modules/GameSettings/duck/reducer";
 import { gameSlice } from "@/modules/Game/duck/reducer";
+import { fieldSlice } from "@/modules/GameField/duck/reducer";
 
 export const reducer = combineReducers({
   settings: settingsSlice.reducer,
   game: gameSlice.reducer,
+  field: fieldSlice.reducer,
   users: lessonSlice.reducer,
   counter: counterSlice.reducer,
   app: appSlice.reducer,

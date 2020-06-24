@@ -15,6 +15,7 @@ const GameSettings: FC<> = () => {
   const dispatch = useDispatch();
   const [size, setSize] = useState({ min: 3, max: 10 });
   const cellSize = useSelector((state: any) => state.settings.cellSize);
+  const fieldSize = useSelector((state: any) => state.settings.fieldSize);
   const passSize = (values: { width: number; height: number }) => {
     dispatch(actions.field(values));
   };
@@ -30,7 +31,7 @@ const GameSettings: FC<> = () => {
   };
 
   const changePercent = (percent: number): void => {
-    const filledCells = randomByPercent(3, 3, percent)
+    const filledCells = randomByPercent(fieldSize.width, fieldSize.height, percent)
     dispatch(gameActions.fillCells(filledCells))
   }
 
@@ -38,6 +39,10 @@ const GameSettings: FC<> = () => {
     console.log(cellSize.width);
     setSize({ min: 3, max: Math.floor(900 / cellSize.width) });
   }, [cellSize.width]);
+
+  useEffect(() => {
+    dispatch(gameActions.fillCells([]))
+  }, [fieldSize])
 
   return (
     <Layer
