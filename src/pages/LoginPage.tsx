@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { Login } from "@/features/login";
+import { Login } from "@/modules/login";
 import { WithoutNavigationLayout } from "@/layouts/WithoutNavigationLayout";
 
 export const LoginPage: FC = () => {

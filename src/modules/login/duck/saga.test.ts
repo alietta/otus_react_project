@@ -4,7 +4,7 @@ import { throwError } from "redux-saga-test-plan/providers";
 import { checkUserWorker, logoutWorker, loginWorker } from "./saga";
 import { actions, reducer } from "./reducer";
 import { isLoggedIn, getUserName, login, logout } from "./api";
-import { appSlice } from "@/features/App/duck/reducer";
+import { appSlice } from "@/modules/App/duck/reducer";
 
 describe("Login saga", () => {
   it("checkUser login", () => {

@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import { useTheme, Container, Text, IconLogOut } from "sancho";
 import { useSelector, useDispatch } from "react-redux";
-import { actions } from "@/features/login/duck/reducer";
+import { actions } from "@/modules/login/duck/reducer";
 
 const Headbar: FC = () => {
   const theme = useTheme();

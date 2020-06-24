@@ -2,7 +2,7 @@ import { configureStore, getDefaultMiddleware } from "@reduxjs/toolkit";
 import { reducer } from "./reducder";
 import createSagaMiddleware from "redux-saga";
 import { fork } from "redux-saga/effects";
-import { loginSaga } from "@/features/login/duck/saga";
+import { loginSaga } from "@/modules/login/duck/saga";
 
 const sagaMiddleware = createSagaMiddleware();
 

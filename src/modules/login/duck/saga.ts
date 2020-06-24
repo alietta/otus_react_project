@@ -3,7 +3,7 @@ import { takeEvery, call, put, fork } from "redux-saga/effects";
 
 import { actions } from "./reducer";
 import { isLoggedIn, getUserName, login, logout } from "./api";
-import { appSlice } from "@/features/App/duck/reducer";
+import { appSlice } from "@/modules/App/duck/reducer";
 
 export function* checkUserWorker() {
   yield put(appSlice.actions.loading());
