@@ -2,6 +2,7 @@ import React, { FC, useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useTheme, Layer, Text, Button } from "sancho";
 import { GameSettings } from "@/components/GameSettings";
+import { GameControl } from "@/components/GameControl";
 import { actions } from "./duck/reducer";
 import { actions as gameActions } from "../Game/duck/reducer";
 import { randomByPercent } from "../Game/gameFunctions";
@@ -40,6 +41,14 @@ const GameMenu: FC<> = () => {
     dispatch(gameActions.changeStatus('game'))
   }
 
+  const resetGame = (): void => {
+    dispatch(gameActions.changeStatus('settings'))
+  }
+
+  const changeSpeed = (speed: number): void => {
+    dispatch(gameActions.changeSpeed(speed))
+  }
+
   useEffect(() => {
     setSize({ min: 3, max: Math.floor(900 / cellSize.width) });
   }, [cellSize.width]);
@@ -49,14 +58,21 @@ const GameMenu: FC<> = () => {
   }, [fieldSize])
 
   return (
-    <div>
-      <GameSettings 
-        size={size}
-        passSize={passSize}
-        passCellSize={passCellSize}
-        changePercent={changePercent}
-        startGame={startGame}
-      />
+    <div css={{marginBottom: 30}}>
+      {gameStatus === 'settings' ? (
+        <GameSettings 
+          size={size}
+          passSize={passSize}
+          passCellSize={passCellSize}
+          changePercent={changePercent}
+          startGame={startGame}
+        />
+      ) : (
+        <GameControl
+          resetGame={resetGame}
+          changeSpeed={changeSpeed}
+        />
+      )}
     </div>
   );
 };

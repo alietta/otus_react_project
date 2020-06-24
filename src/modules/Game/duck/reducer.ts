@@ -16,6 +16,9 @@ export const gameSlice = createSlice({
     changeStatus: (state, { payload }: PayloadAction<TGameStatus>) => {
       state.status = payload;
     },
+    changeSpeed: (state, { payload }: PayloadAction<number>) => {
+      state.speed = payload;
+    },
   },
 });
 

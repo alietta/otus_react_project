@@ -11,19 +11,18 @@ import {
 } from "sancho";
 
 export interface GameControlProps {
-  setGameState: (values?: { speed: number; reset: boolean }) => void;
+  resetGame: () => void;
+  changeSpeed: (speed: number) => void;
 }
 
 const GameControl: FunctionComponent<GameControlProps> = ({
-  setGameState = (): void => console.log("set game state"),
+  resetGame,
+  changeSpeed,
 }: GameControlProps) => {
-  const resetGame = (): void => {
-    setGameState({ speed: 0, reset: true });
-  };
 
   const speedButtonClick = (newSpeed: number): (() => void) => {
     return (): void => {
-      setGameState({ speed: newSpeed, reset: false });
+      changeSpeed(newSpeed);
     };
   };
 
