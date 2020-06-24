@@ -20,8 +20,8 @@ interface GameState {
 
 const Game: FunctionComponent = () => {
   const theme = useTheme();
-  const fieldSize = useSelector((state: any) => state.settings.fieldSize)
-  const cellSize = useSelector((state: any) => state.settings.cellSize)
+  const fieldSize = useSelector((state: any) => state.settings.fieldSize);
+  const cellSize = useSelector((state: any) => state.settings.cellSize);
   /* const [fieldSize, setFieldSize] = useState<{ width: number; height: number }>( */
   /*   { */
   /*     width: startMock.minWidth, */
@@ -78,7 +78,11 @@ const Game: FunctionComponent = () => {
         <GameMenu />
       </div>
       <div css={{ width: "100%", textAlign: "center" }}>
-        <GameField field={field} setField={setField} cellSize={cellSize.width}/>
+        <GameField
+          field={field}
+          setField={setField}
+          cellSize={cellSize.width}
+        />
       </div>
     </Layer>
   );

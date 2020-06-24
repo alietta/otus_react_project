@@ -1,6 +1,6 @@
-export type TGameStatus = 'settings' | 'game' | 'stop';
-export interface IGameState {
-  status: TGameStatus;
+export type GameStatus = "settings" | "game" | "stop";
+export interface GameState {
+  status: GameStatus;
   speed: number;
   filledCells: Array<number>;
 }

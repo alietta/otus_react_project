@@ -1,13 +1,13 @@
-export interface ISize {
+export interface Size {
   width: number;
   height: number;
 }
 
-export interface ISettingState {
-  fieldSize: ISize;
-  cellSize: ISize;
+export interface SettingState {
+  fieldSize: Size;
+  cellSize: Size;
   default: {
-    fieldSize: ISize;
-    cellSize: ISize;
-  }
+    fieldSize: Size;
+    cellSize: Size;
+  };
 }

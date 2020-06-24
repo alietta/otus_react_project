@@ -29,7 +29,7 @@ describe("GameField", () => {
         [false, false, false, false],
         [false, false, false, false],
         [false, false, false, false],
-        [false, false, false, false]
+        [false, false, false, false],
       ],
     });
   });
@@ -55,7 +55,7 @@ describe("GameField", () => {
         [false, true, true, false],
         [true, false, false, false],
         [false, false, false, false],
-        [false, false, false, false]
+        [false, false, false, false],
       ],
     });
     const element = mount(<GameField />, {

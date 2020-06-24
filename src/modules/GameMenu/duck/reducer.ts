@@ -1,7 +1,7 @@
 import { ISettingState, ISize } from "./types";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-const settingsInitialState: ISettingState = {
+const settingsInitialState: SettingState = {
   fieldSize: {
     width: 0,
     height: 0,

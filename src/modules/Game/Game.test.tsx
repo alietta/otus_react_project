@@ -33,7 +33,7 @@ describe("Game", () => {
     });
   });
   it("renders Game", () => {
-    const elem = mount(<Game/>, {
+    const elem = mount(<Game />, {
       wrappingComponent: Provider,
       wrappingComponentProps: {
         store,

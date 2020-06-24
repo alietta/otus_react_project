@@ -7,7 +7,7 @@ import {
   preatyArray,
   randomIntWithoutRepeat,
 } from "./gameFunctions";
-import { uniq } from 'ramda';
+import { uniq } from "ramda";
 
 describe("Game functions", () => {
   describe("preatyArray", () => {
@@ -51,13 +51,13 @@ describe("Game functions", () => {
   describe("randomByPercent", () => {
     it("test randomByPercent 50", () => {
       const randArray = randomByPercent(4, 4, 50);
-      expect(randArray.length).toEqual(8)
-      expect(uniq(randArray)).toEqual(randArray)
+      expect(randArray.length).toEqual(8);
+      expect(uniq(randArray)).toEqual(randArray);
     });
     it("test randomByPercent 25", () => {
       const randArray = randomByPercent(4, 4, 25);
-      expect(randArray.length).toEqual(4)
-      expect(uniq(randArray)).toEqual(randArray)
+      expect(randArray.length).toEqual(4);
+      expect(uniq(randArray)).toEqual(randArray);
     });
   });
 });

@@ -19,7 +19,6 @@ const GameControl: FunctionComponent<GameControlProps> = ({
   resetGame,
   changeSpeed,
 }: GameControlProps) => {
-
   const speedButtonClick = (newSpeed: number): (() => void) => {
     return (): void => {
       changeSpeed(newSpeed);

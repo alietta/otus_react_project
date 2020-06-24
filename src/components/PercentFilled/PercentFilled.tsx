@@ -30,7 +30,7 @@ const PercentFilled: FunctionComponent<PercentFilledProps> = ({
   const onSubmitForm = (e: MouseEvent<HTMLFormElement>): void => {
     e.preventDefault();
     const newPercent: number = percent === "" ? 0 : percent;
-    console.log('here')
+    console.log("here");
     onSubmit(newPercent);
   };
 

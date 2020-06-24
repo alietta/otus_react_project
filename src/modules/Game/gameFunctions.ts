@@ -49,7 +49,11 @@ export const randomByPercent = (
   return filled;
 };
 
-export const makeField = (x: number, y: number, filled: number[]): boolean[][] => {
+export const makeField = (
+  x: number,
+  y: number,
+  filled: number[]
+): boolean[][] => {
   const filledArray = Array(y)
     .fill(false)
     .map(() => Array(x).fill(false));
@@ -58,4 +62,4 @@ export const makeField = (x: number, y: number, filled: number[]): boolean[][] =
     filledArray[pos.y][pos.x] = true;
   });
   return filledArray;
-}
+};

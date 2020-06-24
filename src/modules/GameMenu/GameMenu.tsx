@@ -7,7 +7,6 @@ import { actions } from "./duck/reducer";
 import { actions as gameActions } from "../Game/duck/reducer";
 import { randomByPercent } from "../Game/gameFunctions";
 
-
 const GameMenu: FC<> = () => {
   const theme = useTheme();
   const dispatch = useDispatch();
@@ -33,34 +32,38 @@ const GameMenu: FC<> = () => {
   };
 
   const changePercent = (percent: number): void => {
-    const filledCells = randomByPercent(fieldSize.width, fieldSize.height, percent)
-    dispatch(gameActions.fillCells(filledCells))
-  }
+    const filledCells = randomByPercent(
+      fieldSize.width,
+      fieldSize.height,
+      percent
+    );
+    dispatch(gameActions.fillCells(filledCells));
+  };
 
   const startGame = (): void => {
-    dispatch(gameActions.changeStatus('game'))
-  }
+    dispatch(gameActions.changeStatus("game"));
+  };
 
   const resetGame = (): void => {
-    dispatch(gameActions.changeStatus('settings'))
-  }
+    dispatch(gameActions.changeStatus("settings"));
+  };
 
   const changeSpeed = (speed: number): void => {
-    dispatch(gameActions.changeSpeed(speed))
-  }
+    dispatch(gameActions.changeSpeed(speed));
+  };
 
   useEffect(() => {
     setSize({ min: 3, max: Math.floor(900 / cellSize.width) });
   }, [cellSize.width]);
 
   useEffect(() => {
-    dispatch(gameActions.fillCells([]))
-  }, [fieldSize])
+    dispatch(gameActions.fillCells([]));
+  }, [fieldSize]);
 
   return (
-    <div css={{marginBottom: 30}}>
-      {gameStatus === 'settings' ? (
-        <GameSettings 
+    <div css={{ marginBottom: 30 }}>
+      {gameStatus === "settings" ? (
+        <GameSettings
           size={size}
           passSize={passSize}
           passCellSize={passCellSize}
@@ -68,10 +71,7 @@ const GameMenu: FC<> = () => {
           startGame={startGame}
         />
       ) : (
-        <GameControl
-          resetGame={resetGame}
-          changeSpeed={changeSpeed}
-        />
+        <GameControl resetGame={resetGame} changeSpeed={changeSpeed} />
       )}
     </div>
   );

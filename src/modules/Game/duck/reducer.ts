@@ -1,7 +1,7 @@
-import { IGameState, TGameStatus } from "./types";
+import { GameState, GameStatus } from "./types";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-const gameInitialState: IGameState = {
+const gameInitialState: GameState = {
   status: "settings",
   speed: 0,
   filledCells: [],

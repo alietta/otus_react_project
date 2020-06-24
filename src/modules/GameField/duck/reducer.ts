@@ -6,9 +6,9 @@ export const fieldSlice = createSlice({
   initialState: fieldInitialState,
   reducers: {
     setField: (state, { payload }: PayloadAction<boolean[][]>) => {
-      return state = payload;
+      return (state = payload);
     },
-    clearField: (state) => state = [[]],
+    clearField: (state) => (state = [[]]),
   },
 });
 
