@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from "react";
 import { useTheme } from "sancho";
 import { Field } from "./GameFieldItems";
-import { Cell } from "./components";
+import { Cell } from "components/Cell";
 
 interface GameFildProps {
   field: boolean[][];

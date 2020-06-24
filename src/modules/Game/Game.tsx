@@ -2,7 +2,7 @@ import React, { FunctionComponent, useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import { useTheme, Layer } from "sancho";
 import { GameSettings } from "@/modules/GameSettings";
-import { GameField } from "components/GameField";
+import { GameField } from "../GameField";
 import { preatyArray, randomByPercent } from "./gameFunctions";
 
 const startMock = {
