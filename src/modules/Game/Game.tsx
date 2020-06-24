@@ -1,7 +1,7 @@
 import React, { FunctionComponent, useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import { useTheme, Layer } from "sancho";
-import { GameSettings } from "@/modules/GameSettings";
+import { GameMenu } from "@/modules/GameMenu";
 import { GameField } from "../GameField";
 import { preatyArray, randomByPercent } from "./gameFunctions";
 
@@ -75,7 +75,7 @@ const Game: FunctionComponent = () => {
       }}
     >
       <div css={{ minWidth: 422 }}>
-        <GameSettings />
+        <GameMenu />
       </div>
       <div css={{ width: "100%", textAlign: "center" }}>
         <GameField field={field} setField={setField} cellSize={cellSize.width}/>
