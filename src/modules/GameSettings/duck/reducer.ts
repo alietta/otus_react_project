@@ -3,8 +3,8 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 const settingsInitialState: ISettingState = {
   fieldSize: {
-    width: 100,
-    height: 100,
+    width: 0,
+    height: 0,
   },
   cellSize: {
     width: 10,
@@ -12,8 +12,8 @@ const settingsInitialState: ISettingState = {
   },
   default: {
     fieldSize: {
-      width: 100,
-      height: 100,
+      width: 0,
+      height: 0,
     },
     cellSize: {
       width: 10,

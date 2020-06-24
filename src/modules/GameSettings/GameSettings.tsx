@@ -36,7 +36,6 @@ const GameSettings: FC<> = () => {
   }
 
   useEffect(() => {
-    console.log(cellSize.width);
     setSize({ min: 3, max: Math.floor(900 / cellSize.width) });
   }, [cellSize.width]);
 
