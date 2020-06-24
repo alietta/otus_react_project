@@ -3,26 +3,42 @@
  */
 import React from "react";
 import { shallow, mount } from "enzyme";
+import { Provider } from "react-redux";
+import configureMockStore from "redux-mock-store";
+import thunk from "redux-thunk";
 
 import { Game } from "./Game";
 
+const mockStore = configureMockStore([thunk]);
+
 describe("Game", () => {
-  it("renders Game", () => {
-    const elem = shallow(<Game />);
-    expect(elem).toMatchSnapshot();
+  let store;
+  beforeEach(() => {
+    store = mockStore({
+      settings: {
+        fieldSize: { width: 4, height: 4 },
+        cellSize: { width: 10, height: 10 },
+      },
+      game: {
+        status: "settings",
+        speed: 0,
+        filledCells: [],
+      },
+      field: [
+        [false, false, false, false],
+        [false, false, false, false],
+        [false, false, false, false],
+        [false, false, false, false],
+      ],
+    });
   });
-  it("test Game field prop", () => {
-    const elem = mount(<Game />);
-    const fieldComponent = elem.find("GameField");
-    const field = fieldComponent.props().field;
-    const filledCells = field.reduce((acc, row) => {
-      const fillInRow = row.filter((elem) => elem).length;
-      return acc + fillInRow;
-    }, 0);
-    const percentCount = Math.round((50 * 4) / 100);
-    expect(field instanceof Array).toBeTruthy();
-    expect(field.length).toBe(2);
-    expect(field[0].length).toBe(2);
-    expect(filledCells).toEqual(percentCount);
+  it("renders Game", () => {
+    const elem = mount(<Game/>, {
+      wrappingComponent: Provider,
+      wrappingComponentProps: {
+        store,
+      },
+    });
+    expect(elem).toMatchSnapshot();
   });
 });

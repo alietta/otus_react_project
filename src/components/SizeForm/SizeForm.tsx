@@ -30,8 +30,8 @@ const SizeForm: FunctionComponent<SizeFormProps> = ({
   const theme = useTheme();
   console.log((maxWidth - minWidth) / 2 + minWidth, maxWidth);
   const [size, setSize] = useState<{ width: number; height: number }>({
-    width: Math.floor((maxWidth - minWidth) / 2 + minWidth),
-    height: Math.floor((maxHeight - minHeight) / 2 + minHeight),
+    width: minWidth,
+    height: minHeight,
   });
   const changeSize = (e: ChangeEvent<HTMLInputElement>): void => {
     const newState = { ...size, [e.target.name]: parseInt(e.target.value, 10) };

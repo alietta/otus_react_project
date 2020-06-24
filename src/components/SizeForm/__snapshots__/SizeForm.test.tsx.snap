@@ -78,7 +78,7 @@ exports[`SizeForm renders SizeForm 1`] = `
         onChange={[Function]}
         step="1"
         type="range"
-        value={6}
+        value={3}
       />
     </div>
     <div
@@ -101,7 +101,7 @@ exports[`SizeForm renders SizeForm 1`] = `
         onChange={[Function]}
         step="1"
         type="range"
-        value={6}
+        value={3}
       />
     </div>
   </form>

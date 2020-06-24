@@ -1,0 +1,457 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GameSettings renders GameSettings 1`] = `
+.emotion-26 {
+  position: relative;
+  background: white;
+  box-shadow: 0 1px 10px 0 hsla(210,10.3%,22.7%,0.15), 0 6px 12px 0 hsla(210,10.3%,22.7%,0.1), 0 6px 15px -2px hsla(210,10.3%,22.7%,0.12);
+  border-radius: 1rem;
+  overflow: hidden;
+  padding: 1rem;
+  max-width: 422px;
+}
+
+.emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: 400;
+  line-height: 1.5;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 1rem;
+  color: #212529;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+  color: #212529;
+  font-weight: 500;
+  font-size: 1.75rem;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+.emotion-15 {
+  margin: 15px 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.emotion-15 > div {
+  width: 47%;
+}
+
+.emotion-7 {
+  width: 100%;
+  max-width: 1200px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0 1rem;
+  background: white;
+  padding: 0;
+  margin: 0;
+}
+
+@media (min-width:992px) {
+  .emotion-7 {
+    padding: 0 1.5rem;
+  }
+}
+
+.emotion-3 {
+  margin-top: 1rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-3:first-child {
+  margin-top: 0;
+}
+
+.emotion-2 {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: 400;
+  line-height: 1.5;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 1rem;
+  color: #212529;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #5F6871;
+  line-height: 1.5;
+}
+
+.emotion-23 {
+  position: relative;
+  background: white;
+  box-shadow: 0 0 1px hsla(210,10.3%,22.7%,0.1), 0 0 1px 1px hsla(210,10.3%,22.7%,0.12);
+  border-radius: 1rem;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.emotion-22 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+}
+
+.emotion-19 {
+  margin-top: 1rem;
+}
+
+.emotion-19:first-child {
+  margin-top: 0;
+}
+
+.emotion-18 {
+  display: block;
+  width: 100%;
+  line-height: 1.5;
+  color: #212529;
+  background-color: transparent;
+  background-image: none;
+  background-clip: padding-box;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: none;
+  box-sizing: border-box;
+  touch-action: manipulation;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  border: none;
+  box-shadow: 0 0 0 2px transparent inset,0 0 0 1px hsla(210,10.8%,14.5%,0.2) inset;
+  border-radius: 0.25rem;
+  -webkit-transition: background 0.25s cubic-bezier(0.35,0,0.25,1),border-color 0.15s cubic-bezier(0.35,0,0.25,1),box-shadow 0.15s cubic-bezier(0.35,0,0.25,1);
+  transition: background 0.25s cubic-bezier(0.35,0,0.25,1),border-color 0.15s cubic-bezier(0.35,0,0.25,1),box-shadow 0.15s cubic-bezier(0.35,0,0.25,1);
+  font-size: 1.25rem;
+  padding: 0.65rem 1rem;
+  height: 48px;
+}
+
+.emotion-18::-webkit-input-placeholder {
+  color: hsla(210,10.8%,14.5%,0.45);
+}
+
+.emotion-18::-moz-placeholder {
+  color: hsla(210,10.8%,14.5%,0.45);
+}
+
+.emotion-18:-ms-input-placeholder {
+  color: hsla(210,10.8%,14.5%,0.45);
+}
+
+.emotion-18::placeholder {
+  color: hsla(210,10.8%,14.5%,0.45);
+}
+
+.emotion-18:focus {
+  box-shadow: 0 0 0 3px hsla(209,75.4%,38.2%,0.1),inset 0 0 0 1px hsla(210,10.8%,14.5%,0.2),inset 0 -1px 1px 0 hsla(210,10.8%,14.5%,0.05);
+  outline: none;
+}
+
+.emotion-18:disabled {
+  opacity: 0.8;
+  background: #f1f3f5;
+  cursor: not-allowed;
+  box-shadow: 0 0 0 2px transparent inset,0 0 0 1px hsla(210,10.8%,14.5%,0.12) inset;
+}
+
+.emotion-18:active {
+  background: #f1f3f5;
+}
+
+.emotion-21 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  white-space: nowrap;
+  -webkit-appearance: none;
+  box-sizing: border-box;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  border: none;
+  text-rendering: optimizeLegibility;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+  box-shadow: none;
+  font-weight: 500;
+  position: relative;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  border-radius: 0.25rem;
+  font-size: 1.25rem;
+  padding: 0 1.5rem;
+  height: 48px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: #1971c2;
+  color: white;
+  background-image: linear-gradient(to top,#1971c2,hsl(208.79999999999995,77.2%,60.1%));
+  box-shadow: inset 0 0 0 1px hsla(210,10.8%,14.5%,0.2),inset 0 -1px 1px 0 hsla(210,10.8%,14.5%,0.2);
+}
+
+.emotion-21:focus {
+  outline: 3px auto hsla(208.79999999999995,77.2%,42.9%,0.8);
+}
+
+.emotion-21:focus:not([data-focus-visible-added]) {
+  outline: none;
+}
+
+.emotion-21[aria-expanded="true"] {
+  box-shadow: inset 0 0 0 1px hsla(210,10.8%,14.5%,0.5),inset 0 -1px 1px 0 hsla(210,10.8%,14.5%,0.5);
+  background-image: linear-gradient(to top,#1864ab,#1971c2);
+}
+
+.emotion-20 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+<div
+  className="emotion-26"
+>
+  <h3
+    className="emotion-0"
+  >
+    Game settings
+  </h3>
+  <div
+    className="emotion-15"
+  >
+    <div
+      className="emotion-7"
+    >
+      <form>
+        <div
+          className="emotion-3"
+        >
+          <label
+            className="Label emotion-2"
+            htmlFor=""
+          >
+            <div
+              className="Label__text emotion-1"
+            >
+              Field width
+            </div>
+          </label>
+          <input
+            max={10}
+            min={3}
+            name="width"
+            onChange={[Function]}
+            step="1"
+            type="range"
+            value={3}
+          />
+        </div>
+        <div
+          className="emotion-3"
+        >
+          <label
+            className="Label emotion-2"
+            htmlFor=""
+          >
+            <div
+              className="Label__text emotion-1"
+            >
+              Field height
+            </div>
+          </label>
+          <input
+            max={10}
+            min={3}
+            name="height"
+            onChange={[Function]}
+            step="1"
+            type="range"
+            value={3}
+          />
+        </div>
+      </form>
+    </div>
+    <div
+      className="emotion-7"
+    >
+      <form>
+        <div
+          className="emotion-3"
+        >
+          <label
+            className="Label emotion-2"
+            htmlFor=""
+          >
+            <div
+              className="Label__text emotion-1"
+            >
+              Cell width
+            </div>
+          </label>
+          <input
+            max={25}
+            min={5}
+            name="width"
+            onChange={[Function]}
+            step="1"
+            type="range"
+            value={5}
+          />
+        </div>
+        <div
+          className="emotion-3"
+        >
+          <label
+            className="Label emotion-2"
+            htmlFor=""
+          >
+            <div
+              className="Label__text emotion-1"
+            >
+              Cell height
+            </div>
+          </label>
+          <input
+            max={25}
+            min={5}
+            name="height"
+            onChange={[Function]}
+            step="1"
+            type="range"
+            value={5}
+          />
+        </div>
+      </form>
+    </div>
+  </div>
+  <div
+    className="emotion-23"
+  >
+    <form
+      className="emotion-22"
+      onSubmit={[Function]}
+    >
+      <div
+        className="InputGroup emotion-19"
+      >
+        <label
+          className="Label emotion-2"
+          htmlFor=""
+        >
+          <div
+            className="Label__text emotion-1"
+          >
+            Filled percent
+          </div>
+        </label>
+        <input
+          className="Input emotion-18"
+          id=""
+          onChange={[Function]}
+          onTouchEnd={[Function]}
+          onTouchStart={[Function]}
+          placeholder="0"
+          type="number"
+          value={50}
+        />
+      </div>
+      <button
+        className="Button Touchable emotion-21"
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseDownCapture={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchMoveCapture={[Function]}
+        onTouchStart={[Function]}
+        onTouchStartCapture={[Function]}
+        role="button"
+        style={
+          Object {
+            "marginLeft": 10,
+            "marginTop": "1.5rem",
+          }
+        }
+        tabIndex={0}
+        type="submit"
+      >
+        <span
+          aria-hidden={false}
+          className="emotion-20"
+        >
+          Set
+        </span>
+      </button>
+    </form>
+  </div>
+  <div
+    className="Button Touchable emotion-21"
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseDownCapture={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchMoveCapture={[Function]}
+    onTouchStart={[Function]}
+    onTouchStartCapture={[Function]}
+    role="button"
+    style={
+      Object {
+        "marginTop": "1.5rem",
+      }
+    }
+    tabIndex={0}
+    type="button"
+  >
+    <span
+      aria-hidden={false}
+      className="emotion-20"
+    >
+      Start Game
+    </span>
+  </div>
+</div>
+`;

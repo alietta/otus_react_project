@@ -4,7 +4,7 @@ import { SizeForm } from "@/components/SizeForm";
 import { PercentFilled } from "@/components/PercentFilled";
 
 interface GameSettingsProps {
-  size: { min: number, max: number };
+  size: { min: number; max: number };
   passSize: () => void;
   passCellSize: () => void;
   changePercent: () => void;
@@ -12,7 +12,7 @@ interface GameSettingsProps {
 }
 
 const GameSettings: FC<GameSettingsProps> = ({
-  size,
+  size = { min: 3, max: 10 },
   passSize,
   passCellSize,
   changePercent,
@@ -50,7 +50,7 @@ const GameSettings: FC<GameSettingsProps> = ({
           passSize={passCellSize}
         />
       </div>
-      <PercentFilled onSubmit={changePercent}/>
+      <PercentFilled onSubmit={changePercent} />
       <Button
         style={{
           marginTop: theme.spaces.lg,

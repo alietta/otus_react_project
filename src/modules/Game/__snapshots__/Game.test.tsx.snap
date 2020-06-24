@@ -1,34 +1,1174 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Game renders Game 1`] = `
-<GameField
-  field={
-    Array [
-      Array [],
-    ]
+.emotion-102 {
+  overflow: hidden;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-101 {
+  position: relative;
+  background: white;
+  box-shadow: 0 1px 10px 0 hsla(210,10.3%,22.7%,0.15), 0 6px 12px 0 hsla(210,10.3%,22.7%,0.1), 0 6px 15px -2px hsla(210,10.3%,22.7%,0.12);
+  border-radius: 1rem;
+  overflow: hidden;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-44 {
+  min-width: 422px;
+}
+
+.emotion-43 {
+  margin-bottom: 30px;
+}
+
+.emotion-41 {
+  overflow: hidden;
+  padding: 1rem;
+  max-width: 422px;
+}
+
+.emotion-40 {
+  position: relative;
+  background: white;
+  box-shadow: 0 1px 10px 0 hsla(210,10.3%,22.7%,0.15), 0 6px 12px 0 hsla(210,10.3%,22.7%,0.1), 0 6px 15px -2px hsla(210,10.3%,22.7%,0.12);
+  border-radius: 1rem;
+  overflow: hidden;
+  padding: 1rem;
+  max-width: 422px;
+}
+
+.emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: 400;
+  line-height: 1.5;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 1rem;
+  color: #212529;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+  color: #212529;
+  font-weight: 500;
+  font-size: 1.75rem;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+.emotion-27 {
+  margin: 15px 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.emotion-27 > div {
+  width: 47%;
+}
+
+.emotion-12 {
+  background: white;
+  padding: 0;
+  margin: 0;
+}
+
+.emotion-11 {
+  width: 100%;
+  max-width: 1200px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0 1rem;
+  background: white;
+  padding: 0;
+  margin: 0;
+}
+
+@media (min-width:992px) {
+  .emotion-11 {
+    padding: 0 1.5rem;
   }
-  setField={[Function]}
-/>
-<GameMenu
-  controll={
-    Object {
-      "setGameState": [Function],
-    }
-  }
-  percent={
-    Object {
-      "onSubmit": [Function],
-      "startPercent": 50,
-    }
-  }
-  size={
-    Object {
-      "maxHeight": 10,
-      "maxWidth": 20,
-      "minHeight": 2,
-      "minWidth": 2,
-      "passSize": [Function],
-    }
-  }
-/>
+}
+
+.emotion-4 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-3 {
+  margin-top: 1rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-3:first-child {
+  margin-top: 0;
+}
+
+.emotion-2 {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: 400;
+  line-height: 1.5;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 1rem;
+  color: #212529;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #5F6871;
+  line-height: 1.5;
+}
+
+.emotion-36 {
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.emotion-35 {
+  position: relative;
+  background: white;
+  box-shadow: 0 0 1px hsla(210,10.3%,22.7%,0.1), 0 0 1px 1px hsla(210,10.3%,22.7%,0.12);
+  border-radius: 1rem;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.emotion-34 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+}
+
+.emotion-31 {
+  margin-top: 1rem;
+}
+
+.emotion-31:first-child {
+  margin-top: 0;
+}
+
+.emotion-30 {
+  display: block;
+  width: 100%;
+  line-height: 1.5;
+  color: #212529;
+  background-color: transparent;
+  background-image: none;
+  background-clip: padding-box;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: none;
+  box-sizing: border-box;
+  touch-action: manipulation;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  border: none;
+  box-shadow: 0 0 0 2px transparent inset,0 0 0 1px hsla(210,10.8%,14.5%,0.2) inset;
+  border-radius: 0.25rem;
+  -webkit-transition: background 0.25s cubic-bezier(0.35,0,0.25,1),border-color 0.15s cubic-bezier(0.35,0,0.25,1),box-shadow 0.15s cubic-bezier(0.35,0,0.25,1);
+  transition: background 0.25s cubic-bezier(0.35,0,0.25,1),border-color 0.15s cubic-bezier(0.35,0,0.25,1),box-shadow 0.15s cubic-bezier(0.35,0,0.25,1);
+  font-size: 1.25rem;
+  padding: 0.65rem 1rem;
+  height: 48px;
+}
+
+.emotion-30::-webkit-input-placeholder {
+  color: hsla(210,10.8%,14.5%,0.45);
+}
+
+.emotion-30::-moz-placeholder {
+  color: hsla(210,10.8%,14.5%,0.45);
+}
+
+.emotion-30:-ms-input-placeholder {
+  color: hsla(210,10.8%,14.5%,0.45);
+}
+
+.emotion-30::placeholder {
+  color: hsla(210,10.8%,14.5%,0.45);
+}
+
+.emotion-30:focus {
+  box-shadow: 0 0 0 3px hsla(209,75.4%,38.2%,0.1),inset 0 0 0 1px hsla(210,10.8%,14.5%,0.2),inset 0 -1px 1px 0 hsla(210,10.8%,14.5%,0.05);
+  outline: none;
+}
+
+.emotion-30:disabled {
+  opacity: 0.8;
+  background: #f1f3f5;
+  cursor: not-allowed;
+  box-shadow: 0 0 0 2px transparent inset,0 0 0 1px hsla(210,10.8%,14.5%,0.12) inset;
+}
+
+.emotion-30:active {
+  background: #f1f3f5;
+}
+
+.emotion-33 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  white-space: nowrap;
+  -webkit-appearance: none;
+  box-sizing: border-box;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  border: none;
+  text-rendering: optimizeLegibility;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+  box-shadow: none;
+  font-weight: 500;
+  position: relative;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  border-radius: 0.25rem;
+  font-size: 1.25rem;
+  padding: 0 1.5rem;
+  height: 48px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: #1971c2;
+  color: white;
+  background-image: linear-gradient(to top,#1971c2,hsl(208.79999999999995,77.2%,60.1%));
+  box-shadow: inset 0 0 0 1px hsla(210,10.8%,14.5%,0.2),inset 0 -1px 1px 0 hsla(210,10.8%,14.5%,0.2);
+}
+
+.emotion-33:focus {
+  outline: 3px auto hsla(208.79999999999995,77.2%,42.9%,0.8);
+}
+
+.emotion-33:focus:not([data-focus-visible-added]) {
+  outline: none;
+}
+
+.emotion-33[aria-expanded="true"] {
+  box-shadow: inset 0 0 0 1px hsla(210,10.8%,14.5%,0.5),inset 0 -1px 1px 0 hsla(210,10.8%,14.5%,0.5);
+  background-image: linear-gradient(to top,#1864ab,#1971c2);
+}
+
+.emotion-32 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.emotion-100 {
+  width: 100%;
+  text-align: center;
+}
+
+.emotion-99 {
+  border-color: hsla(210,10.8%,14.5%,0.12);
+}
+
+.emotion-97 {
+  box-sizing: border-box;
+  border: 3px solid gray;
+  padding: 3px;
+  display: inline-block;
+  border-color: hsla(210,10.8%,14.5%,0.12);
+}
+
+.emotion-57 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-47 {
+  border-color: hsla(210,10.8%,14.5%,0.12);
+  background: white;
+}
+
+.emotion-45 {
+  display: inline-block;
+  border: 1px solid gray;
+  box-sizing: border-box;
+  vertical-align: middle;
+  background: white;
+  width: 10px;
+  height: 10px;
+  border-color: hsla(210,10.8%,14.5%,0.12);
+  background: white;
+}
+
+.emotion-45:hover {
+  border-width: 3px;
+}
+
+<Game>
+  <Layer
+    className="emotion-102"
+  >
+    <div
+      className="emotion-101"
+    >
+      <div
+        className="emotion-44"
+      >
+        <GameMenu>
+          <div
+            className="emotion-43"
+          >
+            <GameSettings
+              changePercent={[Function]}
+              passCellSize={[Function]}
+              passSize={[Function]}
+              size={
+                Object {
+                  "max": 90,
+                  "min": 3,
+                }
+              }
+              startGame={[Function]}
+            >
+              <Layer
+                className="emotion-41"
+              >
+                <div
+                  className="emotion-40"
+                >
+                  <Component
+                    variant="h3"
+                  >
+                    <h3
+                      className="emotion-0"
+                    >
+                      Game settings
+                    </h3>
+                  </Component>
+                  <div
+                    className="emotion-27"
+                  >
+                    <SizeForm
+                      label="Field"
+                      maxHeight={90}
+                      maxWidth={90}
+                      minHeight={3}
+                      minWidth={3}
+                      passSize={[Function]}
+                    >
+                      <Component
+                        className="emotion-12"
+                      >
+                        <div
+                          className="emotion-11"
+                        >
+                          <form>
+                            <Component
+                              className="emotion-4"
+                              label="Field width"
+                            >
+                              <div
+                                className="emotion-3"
+                              >
+                                <Component
+                                  htmlFor="1"
+                                >
+                                  <label
+                                    className="Label emotion-2"
+                                    htmlFor="1"
+                                  >
+                                    <Component
+                                      className="Label__text"
+                                      variant="subtitle"
+                                    >
+                                      <div
+                                        className="Label__text emotion-1"
+                                      >
+                                        Field width
+                                      </div>
+                                    </Component>
+                                  </label>
+                                </Component>
+                                <input
+                                  max={90}
+                                  min={3}
+                                  name="width"
+                                  onChange={[Function]}
+                                  step="1"
+                                  type="range"
+                                  value={3}
+                                />
+                              </div>
+                            </Component>
+                            <Component
+                              className="emotion-4"
+                              label="Field height"
+                            >
+                              <div
+                                className="emotion-3"
+                              >
+                                <Component
+                                  htmlFor="2"
+                                >
+                                  <label
+                                    className="Label emotion-2"
+                                    htmlFor="2"
+                                  >
+                                    <Component
+                                      className="Label__text"
+                                      variant="subtitle"
+                                    >
+                                      <div
+                                        className="Label__text emotion-1"
+                                      >
+                                        Field height
+                                      </div>
+                                    </Component>
+                                  </label>
+                                </Component>
+                                <input
+                                  max={90}
+                                  min={3}
+                                  name="height"
+                                  onChange={[Function]}
+                                  step="1"
+                                  type="range"
+                                  value={3}
+                                />
+                              </div>
+                            </Component>
+                          </form>
+                        </div>
+                      </Component>
+                    </SizeForm>
+                    <SizeForm
+                      label="Cell"
+                      maxHeight={25}
+                      maxWidth={25}
+                      minHeight={5}
+                      minWidth={5}
+                      passSize={[Function]}
+                    >
+                      <Component
+                        className="emotion-12"
+                      >
+                        <div
+                          className="emotion-11"
+                        >
+                          <form>
+                            <Component
+                              className="emotion-4"
+                              label="Cell width"
+                            >
+                              <div
+                                className="emotion-3"
+                              >
+                                <Component
+                                  htmlFor="3"
+                                >
+                                  <label
+                                    className="Label emotion-2"
+                                    htmlFor="3"
+                                  >
+                                    <Component
+                                      className="Label__text"
+                                      variant="subtitle"
+                                    >
+                                      <div
+                                        className="Label__text emotion-1"
+                                      >
+                                        Cell width
+                                      </div>
+                                    </Component>
+                                  </label>
+                                </Component>
+                                <input
+                                  max={25}
+                                  min={5}
+                                  name="width"
+                                  onChange={[Function]}
+                                  step="1"
+                                  type="range"
+                                  value={5}
+                                />
+                              </div>
+                            </Component>
+                            <Component
+                              className="emotion-4"
+                              label="Cell height"
+                            >
+                              <div
+                                className="emotion-3"
+                              >
+                                <Component
+                                  htmlFor="4"
+                                >
+                                  <label
+                                    className="Label emotion-2"
+                                    htmlFor="4"
+                                  >
+                                    <Component
+                                      className="Label__text"
+                                      variant="subtitle"
+                                    >
+                                      <div
+                                        className="Label__text emotion-1"
+                                      >
+                                        Cell height
+                                      </div>
+                                    </Component>
+                                  </label>
+                                </Component>
+                                <input
+                                  max={25}
+                                  min={5}
+                                  name="height"
+                                  onChange={[Function]}
+                                  step="1"
+                                  type="range"
+                                  value={5}
+                                />
+                              </div>
+                            </Component>
+                          </form>
+                        </div>
+                      </Component>
+                    </SizeForm>
+                  </div>
+                  <PercentFilled
+                    onSubmit={[Function]}
+                  >
+                    <Layer
+                      className="emotion-36"
+                      elevation="xs"
+                    >
+                      <div
+                        className="emotion-35"
+                      >
+                        <form
+                          className="emotion-34"
+                          onSubmit={[Function]}
+                        >
+                          <Component
+                            label="Filled percent"
+                          >
+                            <div
+                              className="InputGroup emotion-31"
+                            >
+                              <Component
+                                htmlFor="5"
+                              >
+                                <label
+                                  className="Label emotion-2"
+                                  htmlFor="5"
+                                >
+                                  <Component
+                                    className="Label__text"
+                                    variant="subtitle"
+                                  >
+                                    <div
+                                      className="Label__text emotion-1"
+                                    >
+                                      Filled percent
+                                    </div>
+                                  </Component>
+                                </label>
+                              </Component>
+                              <ForwardRef
+                                inputSize="lg"
+                                onChange={[Function]}
+                                placeholder="0"
+                                type="number"
+                                value={50}
+                              >
+                                <input
+                                  className="Input emotion-30"
+                                  id="5"
+                                  onChange={[Function]}
+                                  onTouchEnd={[Function]}
+                                  onTouchStart={[Function]}
+                                  placeholder="0"
+                                  type="number"
+                                  value={50}
+                                />
+                              </ForwardRef>
+                            </div>
+                          </Component>
+                          <Button
+                            intent="primary"
+                            size="lg"
+                            style={
+                              Object {
+                                "marginLeft": 10,
+                                "marginTop": "1.5rem",
+                              }
+                            }
+                            type="submit"
+                          >
+                            <button
+                              className="Button Touchable emotion-33"
+                              onKeyDown={[Function]}
+                              onKeyUp={[Function]}
+                              onMouseDown={[Function]}
+                              onMouseDownCapture={[Function]}
+                              onMouseEnter={[Function]}
+                              onMouseLeave={[Function]}
+                              onTouchEnd={[Function]}
+                              onTouchMove={[Function]}
+                              onTouchMoveCapture={[Function]}
+                              onTouchStart={[Function]}
+                              onTouchStartCapture={[Function]}
+                              role="button"
+                              style={
+                                Object {
+                                  "marginLeft": 10,
+                                  "marginTop": "1.5rem",
+                                }
+                              }
+                              tabIndex={0}
+                              type="submit"
+                            >
+                              <span
+                                aria-hidden={false}
+                                className="emotion-32"
+                              >
+                                Set
+                              </span>
+                            </button>
+                          </Button>
+                        </form>
+                      </div>
+                    </Layer>
+                  </PercentFilled>
+                  <Button
+                    intent="primary"
+                    onClick={[Function]}
+                    size="lg"
+                    style={
+                      Object {
+                        "marginTop": "1.5rem",
+                      }
+                    }
+                    type="button"
+                  >
+                    <div
+                      className="Button Touchable emotion-33"
+                      onClick={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyUp={[Function]}
+                      onMouseDown={[Function]}
+                      onMouseDownCapture={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      onTouchEnd={[Function]}
+                      onTouchMove={[Function]}
+                      onTouchMoveCapture={[Function]}
+                      onTouchStart={[Function]}
+                      onTouchStartCapture={[Function]}
+                      role="button"
+                      style={
+                        Object {
+                          "marginTop": "1.5rem",
+                        }
+                      }
+                      tabIndex={0}
+                      type="button"
+                    >
+                      <span
+                        aria-hidden={false}
+                        className="emotion-32"
+                      >
+                        Start Game
+                      </span>
+                    </div>
+                  </Button>
+                </div>
+              </Layer>
+            </GameSettings>
+          </div>
+        </GameMenu>
+      </div>
+      <div
+        className="emotion-100"
+      >
+        <GameField
+          cellSize={10}
+          field={
+            Array [
+              Array [
+                false,
+                false,
+                false,
+                false,
+              ],
+              Array [
+                false,
+                false,
+                false,
+                false,
+              ],
+              Array [
+                false,
+                false,
+                false,
+                false,
+              ],
+              Array [
+                false,
+                false,
+                false,
+                false,
+              ],
+            ]
+          }
+          setField={[Function]}
+        >
+          <Field
+            className="emotion-99"
+          >
+            <div
+              className="emotion-97 emotion-98"
+            >
+              <div
+                className="emotion-57"
+              >
+                <Cell
+                  isFilled={false}
+                  key="y-0_x-0"
+                  onClick={[Function]}
+                  size={10}
+                  x={0}
+                  y={0}
+                >
+                  <CellWrapper
+                    className="emotion-47"
+                    height={10}
+                    onClick={[Function]}
+                    width={10}
+                  >
+                    <div
+                      className="emotion-45 emotion-46"
+                      height={10}
+                      onClick={[Function]}
+                      width={10}
+                    />
+                  </CellWrapper>
+                </Cell>
+                <Cell
+                  isFilled={false}
+                  key="y-0_x-1"
+                  onClick={[Function]}
+                  size={10}
+                  x={1}
+                  y={0}
+                >
+                  <CellWrapper
+                    className="emotion-47"
+                    height={10}
+                    onClick={[Function]}
+                    width={10}
+                  >
+                    <div
+                      className="emotion-45 emotion-46"
+                      height={10}
+                      onClick={[Function]}
+                      width={10}
+                    />
+                  </CellWrapper>
+                </Cell>
+                <Cell
+                  isFilled={false}
+                  key="y-0_x-2"
+                  onClick={[Function]}
+                  size={10}
+                  x={2}
+                  y={0}
+                >
+                  <CellWrapper
+                    className="emotion-47"
+                    height={10}
+                    onClick={[Function]}
+                    width={10}
+                  >
+                    <div
+                      className="emotion-45 emotion-46"
+                      height={10}
+                      onClick={[Function]}
+                      width={10}
+                    />
+                  </CellWrapper>
+                </Cell>
+                <Cell
+                  isFilled={false}
+                  key="y-0_x-3"
+                  onClick={[Function]}
+                  size={10}
+                  x={3}
+                  y={0}
+                >
+                  <CellWrapper
+                    className="emotion-47"
+                    height={10}
+                    onClick={[Function]}
+                    width={10}
+                  >
+                    <div
+                      className="emotion-45 emotion-46"
+                      height={10}
+                      onClick={[Function]}
+                      width={10}
+                    />
+                  </CellWrapper>
+                </Cell>
+              </div>
+              <div
+                className="emotion-57"
+              >
+                <Cell
+                  isFilled={false}
+                  key="y-1_x-0"
+                  onClick={[Function]}
+                  size={10}
+                  x={0}
+                  y={1}
+                >
+                  <CellWrapper
+                    className="emotion-47"
+                    height={10}
+                    onClick={[Function]}
+                    width={10}
+                  >
+                    <div
+                      className="emotion-45 emotion-46"
+                      height={10}
+                      onClick={[Function]}
+                      width={10}
+                    />
+                  </CellWrapper>
+                </Cell>
+                <Cell
+                  isFilled={false}
+                  key="y-1_x-1"
+                  onClick={[Function]}
+                  size={10}
+                  x={1}
+                  y={1}
+                >
+                  <CellWrapper
+                    className="emotion-47"
+                    height={10}
+                    onClick={[Function]}
+                    width={10}
+                  >
+                    <div
+                      className="emotion-45 emotion-46"
+                      height={10}
+                      onClick={[Function]}
+                      width={10}
+                    />
+                  </CellWrapper>
+                </Cell>
+                <Cell
+                  isFilled={false}
+                  key="y-1_x-2"
+                  onClick={[Function]}
+                  size={10}
+                  x={2}
+                  y={1}
+                >
+                  <CellWrapper
+                    className="emotion-47"
+                    height={10}
+                    onClick={[Function]}
+                    width={10}
+                  >
+                    <div
+                      className="emotion-45 emotion-46"
+                      height={10}
+                      onClick={[Function]}
+                      width={10}
+                    />
+                  </CellWrapper>
+                </Cell>
+                <Cell
+                  isFilled={false}
+                  key="y-1_x-3"
+                  onClick={[Function]}
+                  size={10}
+                  x={3}
+                  y={1}
+                >
+                  <CellWrapper
+                    className="emotion-47"
+                    height={10}
+                    onClick={[Function]}
+                    width={10}
+                  >
+                    <div
+                      className="emotion-45 emotion-46"
+                      height={10}
+                      onClick={[Function]}
+                      width={10}
+                    />
+                  </CellWrapper>
+                </Cell>
+              </div>
+              <div
+                className="emotion-57"
+              >
+                <Cell
+                  isFilled={false}
+                  key="y-2_x-0"
+                  onClick={[Function]}
+                  size={10}
+                  x={0}
+                  y={2}
+                >
+                  <CellWrapper
+                    className="emotion-47"
+                    height={10}
+                    onClick={[Function]}
+                    width={10}
+                  >
+                    <div
+                      className="emotion-45 emotion-46"
+                      height={10}
+                      onClick={[Function]}
+                      width={10}
+                    />
+                  </CellWrapper>
+                </Cell>
+                <Cell
+                  isFilled={false}
+                  key="y-2_x-1"
+                  onClick={[Function]}
+                  size={10}
+                  x={1}
+                  y={2}
+                >
+                  <CellWrapper
+                    className="emotion-47"
+                    height={10}
+                    onClick={[Function]}
+                    width={10}
+                  >
+                    <div
+                      className="emotion-45 emotion-46"
+                      height={10}
+                      onClick={[Function]}
+                      width={10}
+                    />
+                  </CellWrapper>
+                </Cell>
+                <Cell
+                  isFilled={false}
+                  key="y-2_x-2"
+                  onClick={[Function]}
+                  size={10}
+                  x={2}
+                  y={2}
+                >
+                  <CellWrapper
+                    className="emotion-47"
+                    height={10}
+                    onClick={[Function]}
+                    width={10}
+                  >
+                    <div
+                      className="emotion-45 emotion-46"
+                      height={10}
+                      onClick={[Function]}
+                      width={10}
+                    />
+                  </CellWrapper>
+                </Cell>
+                <Cell
+                  isFilled={false}
+                  key="y-2_x-3"
+                  onClick={[Function]}
+                  size={10}
+                  x={3}
+                  y={2}
+                >
+                  <CellWrapper
+                    className="emotion-47"
+                    height={10}
+                    onClick={[Function]}
+                    width={10}
+                  >
+                    <div
+                      className="emotion-45 emotion-46"
+                      height={10}
+                      onClick={[Function]}
+                      width={10}
+                    />
+                  </CellWrapper>
+                </Cell>
+              </div>
+              <div
+                className="emotion-57"
+              >
+                <Cell
+                  isFilled={false}
+                  key="y-3_x-0"
+                  onClick={[Function]}
+                  size={10}
+                  x={0}
+                  y={3}
+                >
+                  <CellWrapper
+                    className="emotion-47"
+                    height={10}
+                    onClick={[Function]}
+                    width={10}
+                  >
+                    <div
+                      className="emotion-45 emotion-46"
+                      height={10}
+                      onClick={[Function]}
+                      width={10}
+                    />
+                  </CellWrapper>
+                </Cell>
+                <Cell
+                  isFilled={false}
+                  key="y-3_x-1"
+                  onClick={[Function]}
+                  size={10}
+                  x={1}
+                  y={3}
+                >
+                  <CellWrapper
+                    className="emotion-47"
+                    height={10}
+                    onClick={[Function]}
+                    width={10}
+                  >
+                    <div
+                      className="emotion-45 emotion-46"
+                      height={10}
+                      onClick={[Function]}
+                      width={10}
+                    />
+                  </CellWrapper>
+                </Cell>
+                <Cell
+                  isFilled={false}
+                  key="y-3_x-2"
+                  onClick={[Function]}
+                  size={10}
+                  x={2}
+                  y={3}
+                >
+                  <CellWrapper
+                    className="emotion-47"
+                    height={10}
+                    onClick={[Function]}
+                    width={10}
+                  >
+                    <div
+                      className="emotion-45 emotion-46"
+                      height={10}
+                      onClick={[Function]}
+                      width={10}
+                    />
+                  </CellWrapper>
+                </Cell>
+                <Cell
+                  isFilled={false}
+                  key="y-3_x-3"
+                  onClick={[Function]}
+                  size={10}
+                  x={3}
+                  y={3}
+                >
+                  <CellWrapper
+                    className="emotion-47"
+                    height={10}
+                    onClick={[Function]}
+                    width={10}
+                  >
+                    <div
+                      className="emotion-45 emotion-46"
+                      height={10}
+                      onClick={[Function]}
+                      width={10}
+                    />
+                  </CellWrapper>
+                </Cell>
+              </div>
+            </div>
+          </Field>
+        </GameField>
+      </div>
+    </div>
+  </Layer>
+</Game>
 `;

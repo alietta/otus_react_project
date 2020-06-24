@@ -7,8 +7,6 @@ import { actions } from "./duck/reducer";
 import { makeField } from "../Game/gameFunctions";
 
 interface GameFildProps {
-  field: boolean[][];
-  setField: (field: boolean[][]) => void;
   cellSize: number;
 }
 

@@ -7,6 +7,7 @@ import {
   preatyArray,
   randomIntWithoutRepeat,
 } from "./gameFunctions";
+import { uniq } from 'ramda';
 
 describe("Game functions", () => {
   describe("preatyArray", () => {
@@ -50,30 +51,13 @@ describe("Game functions", () => {
   describe("randomByPercent", () => {
     it("test randomByPercent 50", () => {
       const randArray = randomByPercent(4, 4, 50);
-      const filledCells = randArray.reduce((acc, row) => {
-        const fillInRow = row.filter(Boolean).length;
-        return acc + fillInRow;
-      }, 0);
-      const arrayPercent = (filledCells / 16) * 100;
-      expect(arrayPercent).toEqual(50);
+      expect(randArray.length).toEqual(8)
+      expect(uniq(randArray)).toEqual(randArray)
     });
     it("test randomByPercent 25", () => {
       const randArray = randomByPercent(4, 4, 25);
-      const filledCells = randArray.reduce((acc, row) => {
-        const fillInRow = row.filter(Boolean).length;
-        return acc + fillInRow;
-      }, 0);
-      const arrayPercent = (filledCells / 16) * 100;
-      expect(arrayPercent).toEqual(25);
-    });
-    it("test round randomByPercent 20", () => {
-      const randArray = randomByPercent(3, 3, 20);
-      const filledCells = randArray.reduce((acc, row) => {
-        const fillInRow = row.filter(Boolean).length;
-        return acc + fillInRow;
-      }, 0);
-      const percentCount = Math.round((20 * 9) / 100);
-      expect(filledCells).toEqual(percentCount);
+      expect(randArray.length).toEqual(4)
+      expect(uniq(randArray)).toEqual(randArray)
     });
   });
 });

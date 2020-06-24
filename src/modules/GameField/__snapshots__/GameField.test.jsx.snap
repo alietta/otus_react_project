@@ -1,7 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`GameField renders cells for passed empty GameField 1`] = `
-.emotion-10 {
+.emotion-54 {
+  border-color: hsla(210,10.8%,14.5%,0.12);
+}
+
+.emotion-52 {
   box-sizing: border-box;
   border: 3px solid gray;
   padding: 3px;
@@ -9,69 +13,7 @@ exports[`GameField renders cells for passed empty GameField 1`] = `
   border-color: hsla(210,10.8%,14.5%,0.12);
 }
 
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-0 {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  border: 1px solid gray;
-  box-sizing: border-box;
-  vertical-align: middle;
-  background: white;
-  border-color: hsla(210,10.8%,14.5%,0.12);
-  background: white;
-}
-
-.emotion-0:hover {
-  border-width: 3px;
-}
-
-<div
-  className="emotion-10 emotion-11"
->
-  <div
-    className="emotion-4"
-  >
-    <div
-      className="emotion-0 emotion-1"
-      onClick={[Function]}
-    />
-    <div
-      className="emotion-0 emotion-1"
-      onClick={[Function]}
-    />
-  </div>
-  <div
-    className="emotion-4"
-  >
-    <div
-      className="emotion-0 emotion-1"
-      onClick={[Function]}
-    />
-    <div
-      className="emotion-0 emotion-1"
-      onClick={[Function]}
-    />
-  </div>
-</div>
-`;
-
-exports[`GameField renders filled cells snapshot check 1`] = `
-.emotion-10 {
-  box-sizing: border-box;
-  border: 3px solid gray;
-  padding: 3px;
-  display: inline-block;
-  border-color: hsla(210,10.8%,14.5%,0.12);
-}
-
-.emotion-4 {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -79,63 +21,812 @@ exports[`GameField renders filled cells snapshot check 1`] = `
 }
 
 .emotion-2 {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  border: 1px solid gray;
-  box-sizing: border-box;
-  vertical-align: middle;
-  background: white;
   border-color: hsla(210,10.8%,14.5%,0.12);
   background: white;
-}
-
-.emotion-2:hover {
-  border-width: 3px;
 }
 
 .emotion-0 {
   display: inline-block;
-  width: 20px;
-  height: 20px;
   border: 1px solid gray;
   box-sizing: border-box;
   vertical-align: middle;
   background: white;
+  width: 5px;
+  height: 5px;
   border-color: hsla(210,10.8%,14.5%,0.12);
-  background: #212529;
+  background: white;
 }
 
 .emotion-0:hover {
   border-width: 3px;
 }
 
-<div
-  className="emotion-10 emotion-11"
->
-  <div
-    className="emotion-4"
+<GameField>
+  <Field
+    className="emotion-54"
   >
     <div
-      className="emotion-0 emotion-1"
-      onClick={[Function]}
-    />
-    <div
-      className="emotion-2 emotion-1"
-      onClick={[Function]}
-    />
-  </div>
-  <div
-    className="emotion-4"
+      className="emotion-52 emotion-53"
+    >
+      <div
+        className="emotion-12"
+      >
+        <Cell
+          isFilled={false}
+          key="y-0_x-0"
+          onClick={[Function]}
+          x={0}
+          y={0}
+        >
+          <CellWrapper
+            className="emotion-2"
+            height={5}
+            onClick={[Function]}
+            width={5}
+          >
+            <div
+              className="emotion-0 emotion-1"
+              height={5}
+              onClick={[Function]}
+              width={5}
+            />
+          </CellWrapper>
+        </Cell>
+        <Cell
+          isFilled={false}
+          key="y-0_x-1"
+          onClick={[Function]}
+          x={1}
+          y={0}
+        >
+          <CellWrapper
+            className="emotion-2"
+            height={5}
+            onClick={[Function]}
+            width={5}
+          >
+            <div
+              className="emotion-0 emotion-1"
+              height={5}
+              onClick={[Function]}
+              width={5}
+            />
+          </CellWrapper>
+        </Cell>
+        <Cell
+          isFilled={false}
+          key="y-0_x-2"
+          onClick={[Function]}
+          x={2}
+          y={0}
+        >
+          <CellWrapper
+            className="emotion-2"
+            height={5}
+            onClick={[Function]}
+            width={5}
+          >
+            <div
+              className="emotion-0 emotion-1"
+              height={5}
+              onClick={[Function]}
+              width={5}
+            />
+          </CellWrapper>
+        </Cell>
+        <Cell
+          isFilled={false}
+          key="y-0_x-3"
+          onClick={[Function]}
+          x={3}
+          y={0}
+        >
+          <CellWrapper
+            className="emotion-2"
+            height={5}
+            onClick={[Function]}
+            width={5}
+          >
+            <div
+              className="emotion-0 emotion-1"
+              height={5}
+              onClick={[Function]}
+              width={5}
+            />
+          </CellWrapper>
+        </Cell>
+      </div>
+      <div
+        className="emotion-12"
+      >
+        <Cell
+          isFilled={false}
+          key="y-1_x-0"
+          onClick={[Function]}
+          x={0}
+          y={1}
+        >
+          <CellWrapper
+            className="emotion-2"
+            height={5}
+            onClick={[Function]}
+            width={5}
+          >
+            <div
+              className="emotion-0 emotion-1"
+              height={5}
+              onClick={[Function]}
+              width={5}
+            />
+          </CellWrapper>
+        </Cell>
+        <Cell
+          isFilled={false}
+          key="y-1_x-1"
+          onClick={[Function]}
+          x={1}
+          y={1}
+        >
+          <CellWrapper
+            className="emotion-2"
+            height={5}
+            onClick={[Function]}
+            width={5}
+          >
+            <div
+              className="emotion-0 emotion-1"
+              height={5}
+              onClick={[Function]}
+              width={5}
+            />
+          </CellWrapper>
+        </Cell>
+        <Cell
+          isFilled={false}
+          key="y-1_x-2"
+          onClick={[Function]}
+          x={2}
+          y={1}
+        >
+          <CellWrapper
+            className="emotion-2"
+            height={5}
+            onClick={[Function]}
+            width={5}
+          >
+            <div
+              className="emotion-0 emotion-1"
+              height={5}
+              onClick={[Function]}
+              width={5}
+            />
+          </CellWrapper>
+        </Cell>
+        <Cell
+          isFilled={false}
+          key="y-1_x-3"
+          onClick={[Function]}
+          x={3}
+          y={1}
+        >
+          <CellWrapper
+            className="emotion-2"
+            height={5}
+            onClick={[Function]}
+            width={5}
+          >
+            <div
+              className="emotion-0 emotion-1"
+              height={5}
+              onClick={[Function]}
+              width={5}
+            />
+          </CellWrapper>
+        </Cell>
+      </div>
+      <div
+        className="emotion-12"
+      >
+        <Cell
+          isFilled={false}
+          key="y-2_x-0"
+          onClick={[Function]}
+          x={0}
+          y={2}
+        >
+          <CellWrapper
+            className="emotion-2"
+            height={5}
+            onClick={[Function]}
+            width={5}
+          >
+            <div
+              className="emotion-0 emotion-1"
+              height={5}
+              onClick={[Function]}
+              width={5}
+            />
+          </CellWrapper>
+        </Cell>
+        <Cell
+          isFilled={false}
+          key="y-2_x-1"
+          onClick={[Function]}
+          x={1}
+          y={2}
+        >
+          <CellWrapper
+            className="emotion-2"
+            height={5}
+            onClick={[Function]}
+            width={5}
+          >
+            <div
+              className="emotion-0 emotion-1"
+              height={5}
+              onClick={[Function]}
+              width={5}
+            />
+          </CellWrapper>
+        </Cell>
+        <Cell
+          isFilled={false}
+          key="y-2_x-2"
+          onClick={[Function]}
+          x={2}
+          y={2}
+        >
+          <CellWrapper
+            className="emotion-2"
+            height={5}
+            onClick={[Function]}
+            width={5}
+          >
+            <div
+              className="emotion-0 emotion-1"
+              height={5}
+              onClick={[Function]}
+              width={5}
+            />
+          </CellWrapper>
+        </Cell>
+        <Cell
+          isFilled={false}
+          key="y-2_x-3"
+          onClick={[Function]}
+          x={3}
+          y={2}
+        >
+          <CellWrapper
+            className="emotion-2"
+            height={5}
+            onClick={[Function]}
+            width={5}
+          >
+            <div
+              className="emotion-0 emotion-1"
+              height={5}
+              onClick={[Function]}
+              width={5}
+            />
+          </CellWrapper>
+        </Cell>
+      </div>
+      <div
+        className="emotion-12"
+      >
+        <Cell
+          isFilled={false}
+          key="y-3_x-0"
+          onClick={[Function]}
+          x={0}
+          y={3}
+        >
+          <CellWrapper
+            className="emotion-2"
+            height={5}
+            onClick={[Function]}
+            width={5}
+          >
+            <div
+              className="emotion-0 emotion-1"
+              height={5}
+              onClick={[Function]}
+              width={5}
+            />
+          </CellWrapper>
+        </Cell>
+        <Cell
+          isFilled={false}
+          key="y-3_x-1"
+          onClick={[Function]}
+          x={1}
+          y={3}
+        >
+          <CellWrapper
+            className="emotion-2"
+            height={5}
+            onClick={[Function]}
+            width={5}
+          >
+            <div
+              className="emotion-0 emotion-1"
+              height={5}
+              onClick={[Function]}
+              width={5}
+            />
+          </CellWrapper>
+        </Cell>
+        <Cell
+          isFilled={false}
+          key="y-3_x-2"
+          onClick={[Function]}
+          x={2}
+          y={3}
+        >
+          <CellWrapper
+            className="emotion-2"
+            height={5}
+            onClick={[Function]}
+            width={5}
+          >
+            <div
+              className="emotion-0 emotion-1"
+              height={5}
+              onClick={[Function]}
+              width={5}
+            />
+          </CellWrapper>
+        </Cell>
+        <Cell
+          isFilled={false}
+          key="y-3_x-3"
+          onClick={[Function]}
+          x={3}
+          y={3}
+        >
+          <CellWrapper
+            className="emotion-2"
+            height={5}
+            onClick={[Function]}
+            width={5}
+          >
+            <div
+              className="emotion-0 emotion-1"
+              height={5}
+              onClick={[Function]}
+              width={5}
+            />
+          </CellWrapper>
+        </Cell>
+      </div>
+    </div>
+  </Field>
+</GameField>
+`;
+
+exports[`GameField renders filled cells snapshot check 1`] = `
+.emotion-54 {
+  border-color: hsla(210,10.8%,14.5%,0.12);
+}
+
+.emotion-52 {
+  box-sizing: border-box;
+  border: 3px solid gray;
+  padding: 3px;
+  display: inline-block;
+  border-color: hsla(210,10.8%,14.5%,0.12);
+}
+
+.emotion-12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-2 {
+  border-color: hsla(210,10.8%,14.5%,0.12);
+  background: white;
+}
+
+.emotion-0 {
+  display: inline-block;
+  border: 1px solid gray;
+  box-sizing: border-box;
+  vertical-align: middle;
+  background: white;
+  width: 5px;
+  height: 5px;
+  border-color: hsla(210,10.8%,14.5%,0.12);
+  background: white;
+}
+
+.emotion-0:hover {
+  border-width: 3px;
+}
+
+.emotion-5 {
+  border-color: hsla(210,10.8%,14.5%,0.12);
+  background: #212529;
+}
+
+.emotion-3 {
+  display: inline-block;
+  border: 1px solid gray;
+  box-sizing: border-box;
+  vertical-align: middle;
+  background: white;
+  width: 5px;
+  height: 5px;
+  border-color: hsla(210,10.8%,14.5%,0.12);
+  background: #212529;
+}
+
+.emotion-3:hover {
+  border-width: 3px;
+}
+
+<GameField>
+  <Field
+    className="emotion-54"
   >
     <div
-      className="emotion-2 emotion-1"
-      onClick={[Function]}
-    />
-    <div
-      className="emotion-2 emotion-1"
-      onClick={[Function]}
-    />
-  </div>
-</div>
+      className="emotion-52 emotion-53"
+    >
+      <div
+        className="emotion-12"
+      >
+        <Cell
+          isFilled={false}
+          key="y-0_x-0"
+          onClick={[Function]}
+          x={0}
+          y={0}
+        >
+          <CellWrapper
+            className="emotion-2"
+            height={5}
+            onClick={[Function]}
+            width={5}
+          >
+            <div
+              className="emotion-0 emotion-1"
+              height={5}
+              onClick={[Function]}
+              width={5}
+            />
+          </CellWrapper>
+        </Cell>
+        <Cell
+          isFilled={true}
+          key="y-0_x-1"
+          onClick={[Function]}
+          x={1}
+          y={0}
+        >
+          <CellWrapper
+            className="emotion-5"
+            height={5}
+            onClick={[Function]}
+            width={5}
+          >
+            <div
+              className="emotion-3 emotion-1"
+              height={5}
+              onClick={[Function]}
+              width={5}
+            />
+          </CellWrapper>
+        </Cell>
+        <Cell
+          isFilled={true}
+          key="y-0_x-2"
+          onClick={[Function]}
+          x={2}
+          y={0}
+        >
+          <CellWrapper
+            className="emotion-5"
+            height={5}
+            onClick={[Function]}
+            width={5}
+          >
+            <div
+              className="emotion-3 emotion-1"
+              height={5}
+              onClick={[Function]}
+              width={5}
+            />
+          </CellWrapper>
+        </Cell>
+        <Cell
+          isFilled={false}
+          key="y-0_x-3"
+          onClick={[Function]}
+          x={3}
+          y={0}
+        >
+          <CellWrapper
+            className="emotion-2"
+            height={5}
+            onClick={[Function]}
+            width={5}
+          >
+            <div
+              className="emotion-0 emotion-1"
+              height={5}
+              onClick={[Function]}
+              width={5}
+            />
+          </CellWrapper>
+        </Cell>
+      </div>
+      <div
+        className="emotion-12"
+      >
+        <Cell
+          isFilled={true}
+          key="y-1_x-0"
+          onClick={[Function]}
+          x={0}
+          y={1}
+        >
+          <CellWrapper
+            className="emotion-5"
+            height={5}
+            onClick={[Function]}
+            width={5}
+          >
+            <div
+              className="emotion-3 emotion-1"
+              height={5}
+              onClick={[Function]}
+              width={5}
+            />
+          </CellWrapper>
+        </Cell>
+        <Cell
+          isFilled={false}
+          key="y-1_x-1"
+          onClick={[Function]}
+          x={1}
+          y={1}
+        >
+          <CellWrapper
+            className="emotion-2"
+            height={5}
+            onClick={[Function]}
+            width={5}
+          >
+            <div
+              className="emotion-0 emotion-1"
+              height={5}
+              onClick={[Function]}
+              width={5}
+            />
+          </CellWrapper>
+        </Cell>
+        <Cell
+          isFilled={false}
+          key="y-1_x-2"
+          onClick={[Function]}
+          x={2}
+          y={1}
+        >
+          <CellWrapper
+            className="emotion-2"
+            height={5}
+            onClick={[Function]}
+            width={5}
+          >
+            <div
+              className="emotion-0 emotion-1"
+              height={5}
+              onClick={[Function]}
+              width={5}
+            />
+          </CellWrapper>
+        </Cell>
+        <Cell
+          isFilled={false}
+          key="y-1_x-3"
+          onClick={[Function]}
+          x={3}
+          y={1}
+        >
+          <CellWrapper
+            className="emotion-2"
+            height={5}
+            onClick={[Function]}
+            width={5}
+          >
+            <div
+              className="emotion-0 emotion-1"
+              height={5}
+              onClick={[Function]}
+              width={5}
+            />
+          </CellWrapper>
+        </Cell>
+      </div>
+      <div
+        className="emotion-12"
+      >
+        <Cell
+          isFilled={false}
+          key="y-2_x-0"
+          onClick={[Function]}
+          x={0}
+          y={2}
+        >
+          <CellWrapper
+            className="emotion-2"
+            height={5}
+            onClick={[Function]}
+            width={5}
+          >
+            <div
+              className="emotion-0 emotion-1"
+              height={5}
+              onClick={[Function]}
+              width={5}
+            />
+          </CellWrapper>
+        </Cell>
+        <Cell
+          isFilled={false}
+          key="y-2_x-1"
+          onClick={[Function]}
+          x={1}
+          y={2}
+        >
+          <CellWrapper
+            className="emotion-2"
+            height={5}
+            onClick={[Function]}
+            width={5}
+          >
+            <div
+              className="emotion-0 emotion-1"
+              height={5}
+              onClick={[Function]}
+              width={5}
+            />
+          </CellWrapper>
+        </Cell>
+        <Cell
+          isFilled={false}
+          key="y-2_x-2"
+          onClick={[Function]}
+          x={2}
+          y={2}
+        >
+          <CellWrapper
+            className="emotion-2"
+            height={5}
+            onClick={[Function]}
+            width={5}
+          >
+            <div
+              className="emotion-0 emotion-1"
+              height={5}
+              onClick={[Function]}
+              width={5}
+            />
+          </CellWrapper>
+        </Cell>
+        <Cell
+          isFilled={false}
+          key="y-2_x-3"
+          onClick={[Function]}
+          x={3}
+          y={2}
+        >
+          <CellWrapper
+            className="emotion-2"
+            height={5}
+            onClick={[Function]}
+            width={5}
+          >
+            <div
+              className="emotion-0 emotion-1"
+              height={5}
+              onClick={[Function]}
+              width={5}
+            />
+          </CellWrapper>
+        </Cell>
+      </div>
+      <div
+        className="emotion-12"
+      >
+        <Cell
+          isFilled={false}
+          key="y-3_x-0"
+          onClick={[Function]}
+          x={0}
+          y={3}
+        >
+          <CellWrapper
+            className="emotion-2"
+            height={5}
+            onClick={[Function]}
+            width={5}
+          >
+            <div
+              className="emotion-0 emotion-1"
+              height={5}
+              onClick={[Function]}
+              width={5}
+            />
+          </CellWrapper>
+        </Cell>
+        <Cell
+          isFilled={false}
+          key="y-3_x-1"
+          onClick={[Function]}
+          x={1}
+          y={3}
+        >
+          <CellWrapper
+            className="emotion-2"
+            height={5}
+            onClick={[Function]}
+            width={5}
+          >
+            <div
+              className="emotion-0 emotion-1"
+              height={5}
+              onClick={[Function]}
+              width={5}
+            />
+          </CellWrapper>
+        </Cell>
+        <Cell
+          isFilled={false}
+          key="y-3_x-2"
+          onClick={[Function]}
+          x={2}
+          y={3}
+        >
+          <CellWrapper
+            className="emotion-2"
+            height={5}
+            onClick={[Function]}
+            width={5}
+          >
+            <div
+              className="emotion-0 emotion-1"
+              height={5}
+              onClick={[Function]}
+              width={5}
+            />
+          </CellWrapper>
+        </Cell>
+        <Cell
+          isFilled={false}
+          key="y-3_x-3"
+          onClick={[Function]}
+          x={3}
+          y={3}
+        >
+          <CellWrapper
+            className="emotion-2"
+            height={5}
+            onClick={[Function]}
+            width={5}
+          >
+            <div
+              className="emotion-0 emotion-1"
+              height={5}
+              onClick={[Function]}
+              width={5}
+            />
+          </CellWrapper>
+        </Cell>
+      </div>
+    </div>
+  </Field>
+</GameField>
 `;
