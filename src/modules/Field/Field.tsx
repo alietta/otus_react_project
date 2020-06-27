@@ -4,7 +4,7 @@ import { useTheme } from "sancho";
 import { FieldWrapper } from "./FieldItems";
 import { actions } from "./duck/reducer";
 import { makeField } from "../Game/gameFunctions";
-import { drawGrid } from "./canvasHelper";
+import { drawGrid, contextSettings } from "./canvasHelper";
 
 interface GameFildProps {
   cellSize: number;
@@ -14,7 +14,7 @@ const Field: FunctionComponent<GameFildProps> = (props: GameFildProps) => {
   const theme = useTheme();
   const dispatch = useDispatch();
   const canvasRef = useRef(null)
-  const contextRef = useRef(null)
+  const ctxRef = useRef(null)
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -25,8 +25,17 @@ const Field: FunctionComponent<GameFildProps> = (props: GameFildProps) => {
       canvas.style.height = 100;
       const context = canvas.getContext("2d");
       context.scale(2, 2)
-      contextRef.current = context;
-      drawGrid(context, 100, 100, 10)
+      ctxRef.current = context;
+      const color = theme.colors.border.default;
+      drawGrid({
+        ctx: context,
+        width: 100,
+        height: 100,
+        step: 10,
+        settings: {
+          strokeStyle: color
+        }
+      })
     }
   }, []);
 

@@ -3,30 +3,44 @@ export interface Point {
   y: number;
 }
 
-export const drawGrid = (
-  ctx: CanvasRenderingContext2D,
-  width: number,
-  height: number,
-  step: number
-) => {
+interface Settings {
+  strokeStyle?: string;
+  lineWidth?: number;
+}
+
+export const contextSettings = (ctx: CanvasRenderingContext2D, { strokeStyle = 'black', lineWidth = 1 }: Settings) => {
+  ctx.strokeStyle = strokeStyle;
+  ctx.lineWidth = lineWidth;
+}
+
+interface Grid {
+  ctx: CanvasRenderingContext2D;
+  width: number;
+  height: number;
+  step: number;
+  settings: Settings;
+}
+
+export const drawGrid = ({
+  ctx,
+  width,
+  height,
+  step,
+  settings,
+}: Grid) => {
   ctx.beginPath();
   let xPos = 0;
   while (xPos <= width) {
     drawLine(ctx, { x: xPos, y: 0 }, { x: xPos, y: height });
     xPos += step;
   }
-  ctx.strokeStyle = "black";
-  ctx.lineWidth = 1;
-  ctx.stroke();
 
-  ctx.beginPath();
   let yPos = 0;
   while (yPos <= height) {
     drawLine(ctx, { x: 0, y: yPos }, { x: width, y: yPos });
     yPos += step;
   }
-  ctx.strokeStyle = "black";
-  ctx.lineWidth = 1;
+  contextSettings(ctx, settings)
   ctx.stroke();
 };
 
