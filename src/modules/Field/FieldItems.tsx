@@ -5,4 +5,7 @@ export const FieldWrapper = styled.div`
   border: 3px solid gray;
   padding: 3px;
   display: inline-block;
+  canvas {
+    display: block;
+  }
 `;

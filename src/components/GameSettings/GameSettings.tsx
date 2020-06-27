@@ -44,9 +44,9 @@ const GameSettings: FC<GameSettingsProps> = ({
         <SizeForm
           label="Cell"
           minWidth={5}
-          maxWidth={25}
+          maxWidth={20}
           minHeight={5}
-          maxHeight={25}
+          maxHeight={20}
           passSize={passCellSize}
         />
       </div>

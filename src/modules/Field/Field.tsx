@@ -13,37 +13,47 @@ interface GameFildProps {
 const Field: FunctionComponent<GameFildProps> = (props: GameFildProps) => {
   const theme = useTheme();
   const dispatch = useDispatch();
-  const canvasRef = useRef(null)
-  const ctxRef = useRef(null)
+  const canvasRef = useRef(null);
+  const ctxRef = useRef(null);
+  const fieldSize = useSelector((state: any) => state.settings.fieldSize);
+  const cellSize = useSelector((state: any) => state.settings.cellSize);
 
   useEffect(() => {
     const canvas = canvasRef.current;
     if (canvas) {
-      canvas.width = 200;
-      canvas.height = 200;
-      canvas.style.width = 100;
-      canvas.style.height = 100;
+      canvas.width = fieldSize.width;
+      canvas.height = fieldSize.height;
+      canvas.style.width = "${fieldSize.width / 2}px";
+      canvas.style.height = "${fieldSize.height / 2}px";
+      const color = theme.colors.border.default;
+      console.log('ref', ctxRef.current);
+      if (ctxRef.current) {
+        ctxRef.current.scale(2, 2);
+        drawGrid({
+          ctx: ctxRef.current,
+          width: fieldSize.width / 2,
+          height: fieldSize.height / 2,
+          step: cellSize.width,
+          settings: {
+            strokeStyle: color,
+          },
+        });
+      }
+    }
+  }, [fieldSize, cellSize]);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (canvas) {
       const context = canvas.getContext("2d");
-      context.scale(2, 2)
       ctxRef.current = context;
       const color = theme.colors.border.default;
-      drawGrid({
-        ctx: context,
-        width: 100,
-        height: 100,
-        step: 10,
-        settings: {
-          strokeStyle: color
-        }
-      })
     }
   }, []);
 
   return (
     <FieldWrapper>
-      <canvas
-        ref={canvasRef}
-      />
+      <canvas ref={canvasRef} />
     </FieldWrapper>
   );
 };

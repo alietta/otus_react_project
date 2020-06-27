@@ -80,11 +80,6 @@ const Game: FunctionComponent = () => {
       </div>
       <div css={{ width: "100%", textAlign: "center" }}>
         <Field />
-        <GameField
-          field={field}
-          setField={setField}
-          cellSize={cellSize.width}
-        />
       </div>
     </Layer>
   );
