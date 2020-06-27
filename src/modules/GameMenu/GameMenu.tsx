@@ -10,7 +10,7 @@ import { randomByPercent } from "../Game/gameFunctions";
 const GameMenu: FC<> = () => {
   const theme = useTheme();
   const dispatch = useDispatch();
-  const size = { min: 100, max: 900 };
+  const [size, setSize] = useState({ min: 3, max: 10 });
 
   const cellSize = useSelector((state: any) => state.settings.cellSize);
   const fieldSize = useSelector((state: any) => state.settings.fieldSize);
@@ -52,9 +52,9 @@ const GameMenu: FC<> = () => {
     dispatch(gameActions.changeSpeed(speed));
   };
 
-  /* useEffect(() => { */
-  /*   setSize({ min: 3, max: Math.floor(900 / cellSize.width) }); */
-  /* }, [cellSize.width]); */
+  useEffect(() => {
+    setSize({ min: 3, max: Math.floor(900 / cellSize.width) });
+  }, [cellSize.width]);
 
   useEffect(() => {
     dispatch(gameActions.fillCells([]));
