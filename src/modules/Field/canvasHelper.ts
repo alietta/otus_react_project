@@ -6,11 +6,19 @@ export interface Point {
 interface Settings {
   strokeStyle?: string;
   lineWidth?: number;
+  fillStyle?: string;
 }
 
-export const contextSettings = (ctx: CanvasRenderingContext2D, { strokeStyle = 'black', lineWidth = 1 }: Settings) => {
+export const contextSettings = (ctx: CanvasRenderingContext2D, settings: Settings) => {
+  const def = {
+    strokeStyle:'black',
+    lineWidth: 1,
+    fillStyle: 'white',
+  }
+  const { strokeStyle, lineWidth, fillStyle } = { ...def, ...settings }
   ctx.strokeStyle = strokeStyle;
   ctx.lineWidth = lineWidth;
+  ctx.fillStyle = fillStyle;
 }
 
 interface Grid {
@@ -52,3 +60,26 @@ export const drawLine = (
   ctx.moveTo(from.x, from.y);
   ctx.lineTo(to.x, to.y);
 };
+
+interface Rect {
+  ctx: CanvasRenderingContext2D;
+  x: number;
+  y: number;
+  width: number;
+  height: number;
+  settings: Settings;
+}
+
+export const drawCell = ({
+  ctx,
+  x,
+  y,
+  width,
+  height,
+  settings = {},
+}: Rect) => {
+  contextSettings(settings)
+  const xPos = x * width + 1;
+  const yPos = y * height + 1;
+  ctx.fillRect(xPos, yPos, width - 2, height - 2);
+}

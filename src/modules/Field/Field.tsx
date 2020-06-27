@@ -3,8 +3,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { useTheme } from "sancho";
 import { FieldWrapper } from "./FieldItems";
 import { actions } from "./duck/reducer";
-import { makeField } from "../Game/gameFunctions";
-import { drawGrid, contextSettings } from "./canvasHelper";
+import { makeFieldPos } from "../Game/gameFunctions";
+import { drawGrid, drawCell } from "./canvasHelper";
 
 interface GameFildProps {
   cellSize: number;
@@ -15,27 +15,29 @@ const Field: FunctionComponent<GameFildProps> = (props: GameFildProps) => {
   const dispatch = useDispatch();
   const canvasRef = useRef(null);
   const ctxRef = useRef(null);
+  const filledCells = useSelector((state: any) => state.game.filledCells);
   const fieldSize = useSelector((state: any) => state.settings.fieldSize);
   const cellSize = useSelector((state: any) => state.settings.cellSize);
 
   useEffect(() => {
     const canvas = canvasRef.current;
     if (canvas) {
-      canvas.width = fieldSize.width;
-      canvas.height = fieldSize.height;
-      canvas.style.width = "${fieldSize.width / 2}px";
-      canvas.style.height = "${fieldSize.height / 2}px";
-      const color = theme.colors.border.default;
-      console.log('ref', ctxRef.current);
+      const width = fieldSize.width * cellSize.width;
+      const height = fieldSize.height * cellSize.height;
+      canvas.width = width * 2;
+      canvas.height = height * 2;
+      canvas.style.width = `${width}px`;
+      canvas.style.height = `${height}px`;
+      console.log("ref", canvas.style.width);
       if (ctxRef.current) {
         ctxRef.current.scale(2, 2);
         drawGrid({
           ctx: ctxRef.current,
-          width: fieldSize.width / 2,
-          height: fieldSize.height / 2,
+          width: width,
+          height: height,
           step: cellSize.width,
           settings: {
-            strokeStyle: color,
+            strokeStyle: theme.colors.border.default,
           },
         });
       }
@@ -50,6 +52,31 @@ const Field: FunctionComponent<GameFildProps> = (props: GameFildProps) => {
       const color = theme.colors.border.default;
     }
   }, []);
+
+  useEffect(() => {
+    const width = fieldSize.width * cellSize.width;
+    const height = fieldSize.height * cellSize.height;
+    ctxRef.current.clearRect(0, 0, width, height)
+    drawGrid({
+      ctx: ctxRef.current,
+      width: width,
+      height: height,
+      step: cellSize.width,
+      settings: {
+        strokeStyle: theme.colors.border.default,
+      },
+    });
+    filledCells.forEach((cell) => {
+      const pos = makeFieldPos({ cell, width: fieldSize.width });
+      drawCell({
+        ...pos,
+        width: cellSize.width,
+        height: cellSize.height,
+        settings: { fillStyle: "white" },
+        ctx: ctxRef.current,
+      });
+    });
+  }, [filledCells]);
 
   return (
     <FieldWrapper>
