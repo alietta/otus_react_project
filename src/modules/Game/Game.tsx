@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import { useTheme, Layer } from "sancho";
 import { GameMenu } from "@/modules/GameMenu";
 import { GameField } from "../GameField";
+import { Field } from "../Field";
 import { preatyArray, randomByPercent } from "./gameFunctions";
 
 const startMock = {
@@ -78,6 +79,7 @@ const Game: FunctionComponent = () => {
         <GameMenu />
       </div>
       <div css={{ width: "100%", textAlign: "center" }}>
+        <Field />
         <GameField
           field={field}
           setField={setField}
