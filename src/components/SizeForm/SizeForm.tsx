@@ -57,7 +57,7 @@ const SizeForm: FunctionComponent<SizeFormProps> = ({
             min={minWidth}
             max={maxWidth}
             name="width"
-            step="1"
+            step="5"
           />
         </InputGroup>
         <InputGroup
@@ -70,7 +70,7 @@ const SizeForm: FunctionComponent<SizeFormProps> = ({
             type="range"
             min={minHeight}
             max={maxHeight}
-            step="1"
+            step="5"
             name="height"
           />
         </InputGroup>
