@@ -16,13 +16,14 @@ export const checkNeighbor = (field: boolean[][], x: number, y: number) => {
       yRule >= 0 && xRule >= 0 && xRule < width && yRule < height;
     return ruleInField && field[yRule][xRule];
   });
-  return [2, 3].includes(neighbor.length);
+  return neighbor.length;
 };
 
 export const getGeneration = (field: boolean[][]): boolean[][] => {
   return field.map((row: boolean[], y: number) => {
     return row.map((life: boolean, x: number) => {
-      return checkNeighbor(field, x, y);
+      const neighbor = checkNeighbor(field, x, y);
+      return life ? neighbor < 4 && neighbor > 1 : neighbor === 3;
     });
   });
 };
