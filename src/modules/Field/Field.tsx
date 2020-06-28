@@ -57,7 +57,7 @@ const Field: FunctionComponent<GameFildProps> = (props: GameFildProps) => {
     const width = fieldSize.width * cellSize.width;
     const height = fieldSize.height * cellSize.height;
     if (ctxRef.current) {
-      ctxRef.current.clearRect(0, 0, width, height)
+      ctxRef.current.clearRect(0, 0, width, height);
       drawGrid({
         ctx: ctxRef.current,
         width: width,
@@ -79,9 +79,8 @@ const Field: FunctionComponent<GameFildProps> = (props: GameFildProps) => {
               ctx: ctxRef.current,
             });
           }
-        })
+        });
       });
-
     }
   }, [field]);
 

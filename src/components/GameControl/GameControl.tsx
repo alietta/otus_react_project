@@ -26,9 +26,9 @@ const GameControl: FunctionComponent<GameControlProps> = ({
   ): (() => void) => {
     return (): void => {
       const round = (num: number): number => {
-        const row = `${num}`.substr(0, 3)
-        return parseFloat(row, 10)
-      }
+        const row = `${num}`.substr(0, 3);
+        return parseFloat(row, 10);
+      };
       const speedCounter = {
         pause: () => 0,
         play: () => 1,
@@ -36,13 +36,13 @@ const GameControl: FunctionComponent<GameControlProps> = ({
           if (speed === 5 || speed === 0) {
             return speed;
           }
-          return speed < 0.5 ? round(speed + 0.1) : speed + 0.5
+          return speed < 0.5 ? round(speed + 0.1) : speed + 0.5;
         },
         fast: (speed: number) => {
           if (speed === 0.1 || speed === 0) {
             return speed;
           }
-          return speed <= 0.5 ? round(speed - 0.1) : speed - 0.5
+          return speed <= 0.5 ? round(speed - 0.1) : speed - 0.5;
         },
       };
       const newSpeed = speedCounter[speedClick](speed);
