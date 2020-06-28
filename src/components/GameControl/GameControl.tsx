@@ -46,7 +46,6 @@ const GameControl: FunctionComponent<GameControlProps> = ({
         },
       };
       const newSpeed = speedCounter[speedClick](speed);
-      console.log("speed", newSpeed);
       changeSpeed(newSpeed);
     };
   };

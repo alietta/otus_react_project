@@ -28,7 +28,6 @@ const SizeForm: FunctionComponent<SizeFormProps> = ({
 }: SizeFormProps) => {
   /* const { minWidth, maxWidth, minHeight, maxHeight, passSize } = props; */
   const theme = useTheme();
-  console.log((maxWidth - minWidth) / 2 + minWidth, maxWidth);
   const [size, setSize] = useState<{ width: number; height: number }>({
     width: minWidth,
     height: minHeight,
