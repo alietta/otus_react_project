@@ -8,7 +8,7 @@ import { mount } from "enzyme";
 import { Provider } from "react-redux";
 import configureMockStore from "redux-mock-store";
 import thunk from "redux-thunk";
-import { Field } from './Field'
+import { Field } from "./Field";
 configure({ adapter: new Adapter() });
 
 const mockStore = configureMockStore([thunk]);

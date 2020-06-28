@@ -39,7 +39,6 @@ const Game: FunctionComponent = () => {
     speed: 0,
     reset: false,
   });
-  useEffect(() => {}, [field]);
 
   useEffect(() => {
     const newField = makeField(fieldSize.width, fieldSize.height, filledCells);

@@ -9,17 +9,20 @@ interface Settings {
   fillStyle?: string;
 }
 
-export const contextSettings = (ctx: CanvasRenderingContext2D, settings: Settings) => {
+export const contextSettings = (
+  ctx: CanvasRenderingContext2D,
+  settings: Settings
+) => {
   const def = {
-    strokeStyle:'black',
+    strokeStyle: "black",
     lineWidth: 1,
-    fillStyle: 'white',
-  }
-  const { strokeStyle, lineWidth, fillStyle } = { ...def, ...settings }
+    fillStyle: "white",
+  };
+  const { strokeStyle, lineWidth, fillStyle } = { ...def, ...settings };
   ctx.strokeStyle = strokeStyle;
   ctx.lineWidth = lineWidth;
   ctx.fillStyle = fillStyle;
-}
+};
 
 interface Grid {
   ctx: CanvasRenderingContext2D;
@@ -29,13 +32,16 @@ interface Grid {
   settings: Settings;
 }
 
-export const drawGrid = ({
-  ctx,
-  width,
-  height,
-  step,
-  settings,
-}: Grid) => {
+export const drawLine = (
+  ctx: CanvasRenderingContext2D,
+  from: Point,
+  to: Point
+) => {
+  ctx.moveTo(from.x, from.y);
+  ctx.lineTo(to.x, to.y);
+};
+
+export const drawGrid = ({ ctx, width, height, step, settings }: Grid) => {
   ctx.beginPath();
   let xPos = 0;
   while (xPos <= width) {
@@ -48,17 +54,8 @@ export const drawGrid = ({
     drawLine(ctx, { x: 0, y: yPos }, { x: width, y: yPos });
     yPos += step;
   }
-  contextSettings(ctx, settings)
+  contextSettings(ctx, settings);
   ctx.stroke();
-};
-
-export const drawLine = (
-  ctx: CanvasRenderingContext2D,
-  from: Point,
-  to: Point
-) => {
-  ctx.moveTo(from.x, from.y);
-  ctx.lineTo(to.x, to.y);
 };
 
 interface Rect {
@@ -70,16 +67,9 @@ interface Rect {
   settings: Settings;
 }
 
-export const drawCell = ({
-  ctx,
-  x,
-  y,
-  width,
-  height,
-  settings = {},
-}: Rect) => {
-  contextSettings(settings)
+export const drawCell = ({ ctx, x, y, width, height, settings = {} }: Rect) => {
+  contextSettings(settings);
   const xPos = x * width + 1;
   const yPos = y * height + 1;
   ctx.fillRect(xPos, yPos, width - 2, height - 2);
-}
+};

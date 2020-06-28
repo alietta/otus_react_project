@@ -72,7 +72,11 @@ const GameMenu: FC<> = () => {
           startGame={startGame}
         />
       ) : (
-        <GameControl speed={speed} resetGame={resetGame} changeSpeed={changeSpeed} />
+        <GameControl
+          speed={speed}
+          resetGame={resetGame}
+          changeSpeed={changeSpeed}
+        />
       )}
     </div>
   );

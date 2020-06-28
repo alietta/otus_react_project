@@ -1,11 +1,3 @@
-export const getGeneration = (field: boolean[][]): boolean[][] => {
-  return field.map((row: boolean[], y: number) => {
-    return row.map((life: boolean, x: number) => {
-      return checkNeighbor(field, x, y);
-    });
-  });
-};
-
 export const checkNeighbor = (field: boolean[][], x: number, y: number) => {
   const rules = [
     [x - 1, y + 1],
@@ -25,4 +17,12 @@ export const checkNeighbor = (field: boolean[][], x: number, y: number) => {
     return ruleInField && field[yRule][xRule];
   });
   return [2, 3].includes(neighbor.length);
+};
+
+export const getGeneration = (field: boolean[][]): boolean[][] => {
+  return field.map((row: boolean[], y: number) => {
+    return row.map((life: boolean, x: number) => {
+      return checkNeighbor(field, x, y);
+    });
+  });
 };
