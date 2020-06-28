@@ -4,7 +4,7 @@ import { useTheme } from "sancho";
 import { FieldWrapper } from "./FieldItems";
 import { actions } from "./duck/reducer";
 import { makeFieldPos } from "../Game/gameFunctions";
-import { drawGrid, drawCell } from "./canvasHelper";
+import { drawGrid, drawField } from "./canvasHelper";
 
 interface GameFildProps {
   cellSize: number;
@@ -57,30 +57,16 @@ const Field: FunctionComponent<GameFildProps> = (props: GameFildProps) => {
     const width = fieldSize.width * cellSize.width;
     const height = fieldSize.height * cellSize.height;
     if (ctxRef.current) {
-      ctxRef.current.clearRect(0, 0, width, height);
-      drawGrid({
+      drawField({
         ctx: ctxRef.current,
-        width: width,
-        height: height,
-        step: cellSize.width,
+        field,
+        width: cellSize.width,
+        height: cellSize.height,
         settings: {
+          fillStyle: 'white',
           strokeStyle: theme.colors.border.default,
-        },
-      });
-      field.forEach((cells: boolean[], y: number) => {
-        cells.forEach((cell: boolean, x: number) => {
-          if (cell) {
-            drawCell({
-              x,
-              y,
-              width: cellSize.width,
-              height: cellSize.height,
-              settings: { fillStyle: "white" },
-              ctx: ctxRef.current,
-            });
-          }
-        });
-      });
+        }
+      })
     }
   }, [field]);
 
