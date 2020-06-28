@@ -63,10 +63,10 @@ const Field: FunctionComponent<GameFildProps> = (props: GameFildProps) => {
         width: cellSize.width,
         height: cellSize.height,
         settings: {
-          fillStyle: 'white',
+          fillStyle: "white",
           strokeStyle: theme.colors.border.default,
-        }
-      })
+        },
+      });
     }
   }, [field]);
 
