@@ -41,7 +41,7 @@ export const drawLine = (
   ctx.lineTo(to.x, to.y);
 };
 
-export const drawGrid = ({ ctx, width, height, step, settings }: Grid) => {
+export const drawGrid = ({ ctx, width, height, step, settings = {} }: Grid) => {
   ctx.beginPath();
   let xPos = 0;
   while (xPos <= width) {
