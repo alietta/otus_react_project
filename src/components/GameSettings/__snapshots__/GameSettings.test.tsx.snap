@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`GameSettings renders GameSettings 1`] = `
-.emotion-26 {
+.emotion-41 {
+  overflow: hidden;
+  padding: 1rem;
+  max-width: 422px;
+}
+
+.emotion-40 {
   position: relative;
   background: white;
   box-shadow: 0 1px 10px 0 hsla(210,10.3%,22.7%,0.15), 0 6px 12px 0 hsla(210,10.3%,22.7%,0.1), 0 6px 15px -2px hsla(210,10.3%,22.7%,0.12);
@@ -28,7 +34,7 @@ exports[`GameSettings renders GameSettings 1`] = `
   margin-bottom: 0.5rem;
 }
 
-.emotion-15 {
+.emotion-27 {
   margin: 15px 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -40,11 +46,17 @@ exports[`GameSettings renders GameSettings 1`] = `
   justify-content: space-between;
 }
 
-.emotion-15 > div {
+.emotion-27 > div {
   width: 47%;
 }
 
-.emotion-7 {
+.emotion-12 {
+  background: white;
+  padding: 0;
+  margin: 0;
+}
+
+.emotion-11 {
   width: 100%;
   max-width: 1200px;
   box-sizing: border-box;
@@ -56,9 +68,19 @@ exports[`GameSettings renders GameSettings 1`] = `
 }
 
 @media (min-width:992px) {
-  .emotion-7 {
+  .emotion-11 {
     padding: 0 1.5rem;
   }
+}
+
+.emotion-4 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .emotion-3 {
@@ -97,7 +119,12 @@ exports[`GameSettings renders GameSettings 1`] = `
   line-height: 1.5;
 }
 
-.emotion-23 {
+.emotion-36 {
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.emotion-35 {
   position: relative;
   background: white;
   box-shadow: 0 0 1px hsla(210,10.3%,22.7%,0.1), 0 0 1px 1px hsla(210,10.3%,22.7%,0.12);
@@ -106,7 +133,7 @@ exports[`GameSettings renders GameSettings 1`] = `
   box-shadow: none;
 }
 
-.emotion-22 {
+.emotion-34 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -117,15 +144,15 @@ exports[`GameSettings renders GameSettings 1`] = `
   align-items: flex-end;
 }
 
-.emotion-19 {
+.emotion-31 {
   margin-top: 1rem;
 }
 
-.emotion-19:first-child {
+.emotion-31:first-child {
   margin-top: 0;
 }
 
-.emotion-18 {
+.emotion-30 {
   display: block;
   width: 100%;
   line-height: 1.5;
@@ -149,39 +176,39 @@ exports[`GameSettings renders GameSettings 1`] = `
   height: 48px;
 }
 
-.emotion-18::-webkit-input-placeholder {
+.emotion-30::-webkit-input-placeholder {
   color: hsla(210,10.8%,14.5%,0.45);
 }
 
-.emotion-18::-moz-placeholder {
+.emotion-30::-moz-placeholder {
   color: hsla(210,10.8%,14.5%,0.45);
 }
 
-.emotion-18:-ms-input-placeholder {
+.emotion-30:-ms-input-placeholder {
   color: hsla(210,10.8%,14.5%,0.45);
 }
 
-.emotion-18::placeholder {
+.emotion-30::placeholder {
   color: hsla(210,10.8%,14.5%,0.45);
 }
 
-.emotion-18:focus {
+.emotion-30:focus {
   box-shadow: 0 0 0 3px hsla(209,75.4%,38.2%,0.1),inset 0 0 0 1px hsla(210,10.8%,14.5%,0.2),inset 0 -1px 1px 0 hsla(210,10.8%,14.5%,0.05);
   outline: none;
 }
 
-.emotion-18:disabled {
+.emotion-30:disabled {
   opacity: 0.8;
   background: #f1f3f5;
   cursor: not-allowed;
   box-shadow: 0 0 0 2px transparent inset,0 0 0 1px hsla(210,10.8%,14.5%,0.12) inset;
 }
 
-.emotion-18:active {
+.emotion-30:active {
   background: #f1f3f5;
 }
 
-.emotion-21 {
+.emotion-33 {
   -webkit-text-decoration: none;
   text-decoration: none;
   background: none;
@@ -224,20 +251,20 @@ exports[`GameSettings renders GameSettings 1`] = `
   box-shadow: inset 0 0 0 1px hsla(210,10.8%,14.5%,0.2),inset 0 -1px 1px 0 hsla(210,10.8%,14.5%,0.2);
 }
 
-.emotion-21:focus {
+.emotion-33:focus {
   outline: 3px auto hsla(208.79999999999995,77.2%,42.9%,0.8);
 }
 
-.emotion-21:focus:not([data-focus-visible-added]) {
+.emotion-33:focus:not([data-focus-visible-added]) {
   outline: none;
 }
 
-.emotion-21[aria-expanded="true"] {
+.emotion-33[aria-expanded="true"] {
   box-shadow: inset 0 0 0 1px hsla(210,10.8%,14.5%,0.5),inset 0 -1px 1px 0 hsla(210,10.8%,14.5%,0.5);
   background-image: linear-gradient(to top,#1864ab,#1971c2);
 }
 
-.emotion-20 {
+.emotion-32 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -245,213 +272,451 @@ exports[`GameSettings renders GameSettings 1`] = `
   margin-left: 0;
 }
 
-<div
-  className="emotion-26"
+<GameSettings
+  changePercent={[MockFunction]}
+  passCellSize={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          Object {
+            "height": 20,
+            "width": 20,
+          },
+        ],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
+  passSize={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          Object {
+            "height": 20,
+            "width": 30,
+          },
+        ],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
+  size={
+    Object {
+      "max": 10,
+      "min": 3,
+    }
+  }
+  startGame={[MockFunction]}
 >
-  <h3
-    className="emotion-0"
-  >
-    Game settings
-  </h3>
-  <div
-    className="emotion-15"
+  <Layer
+    className="emotion-41"
   >
     <div
-      className="emotion-7"
+      className="emotion-40"
     >
-      <form>
-        <div
-          className="emotion-3"
-        >
-          <label
-            className="Label emotion-2"
-            htmlFor=""
-          >
-            <div
-              className="Label__text emotion-1"
-            >
-              Field width
-            </div>
-          </label>
-          <input
-            max={10}
-            min={3}
-            name="width"
-            onChange={[Function]}
-            step="5"
-            type="range"
-            value={30}
-          />
-        </div>
-        <div
-          className="emotion-3"
-        >
-          <label
-            className="Label emotion-2"
-            htmlFor=""
-          >
-            <div
-              className="Label__text emotion-1"
-            >
-              Field height
-            </div>
-          </label>
-          <input
-            max={10}
-            min={3}
-            name="height"
-            onChange={[Function]}
-            step="5"
-            type="range"
-            value={20}
-          />
-        </div>
-      </form>
-    </div>
-    <div
-      className="emotion-7"
-    >
-      <form>
-        <div
-          className="emotion-3"
-        >
-          <label
-            className="Label emotion-2"
-            htmlFor=""
-          >
-            <div
-              className="Label__text emotion-1"
-            >
-              Cell width
-            </div>
-          </label>
-          <input
-            max={20}
-            min={5}
-            name="width"
-            onChange={[Function]}
-            step="5"
-            type="range"
-            value={20}
-          />
-        </div>
-        <div
-          className="emotion-3"
-        >
-          <label
-            className="Label emotion-2"
-            htmlFor=""
-          >
-            <div
-              className="Label__text emotion-1"
-            >
-              Cell height
-            </div>
-          </label>
-          <input
-            max={20}
-            min={5}
-            name="height"
-            onChange={[Function]}
-            step="5"
-            type="range"
-            value={20}
-          />
-        </div>
-      </form>
-    </div>
-  </div>
-  <div
-    className="emotion-23"
-  >
-    <form
-      className="emotion-22"
-      onSubmit={[Function]}
-    >
-      <div
-        className="InputGroup emotion-19"
+      <Component
+        variant="h3"
       >
-        <label
-          className="Label emotion-2"
-          htmlFor=""
+        <h3
+          className="emotion-0"
+        >
+          Game settings
+        </h3>
+      </Component>
+      <div
+        className="emotion-27"
+      >
+        <SizeForm
+          def={
+            Object {
+              "height": 20,
+              "width": 30,
+            }
+          }
+          label="Field"
+          maxHeight={10}
+          maxWidth={10}
+          minHeight={3}
+          minWidth={3}
+          passSize={
+            [MockFunction] {
+              "calls": Array [
+                Array [
+                  Object {
+                    "height": 20,
+                    "width": 30,
+                  },
+                ],
+              ],
+              "results": Array [
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
+              ],
+            }
+          }
+        >
+          <Component
+            className="emotion-12"
+          >
+            <div
+              className="emotion-11"
+            >
+              <form>
+                <Component
+                  className="emotion-4"
+                  label="Field width"
+                >
+                  <div
+                    className="emotion-3"
+                  >
+                    <Component
+                      htmlFor="1"
+                    >
+                      <label
+                        className="Label emotion-2"
+                        htmlFor="1"
+                      >
+                        <Component
+                          className="Label__text"
+                          variant="subtitle"
+                        >
+                          <div
+                            className="Label__text emotion-1"
+                          >
+                            Field width
+                          </div>
+                        </Component>
+                      </label>
+                    </Component>
+                    <input
+                      max={10}
+                      min={3}
+                      name="width"
+                      onChange={[Function]}
+                      step="5"
+                      type="range"
+                      value={30}
+                    />
+                  </div>
+                </Component>
+                <Component
+                  className="emotion-4"
+                  label="Field height"
+                >
+                  <div
+                    className="emotion-3"
+                  >
+                    <Component
+                      htmlFor="2"
+                    >
+                      <label
+                        className="Label emotion-2"
+                        htmlFor="2"
+                      >
+                        <Component
+                          className="Label__text"
+                          variant="subtitle"
+                        >
+                          <div
+                            className="Label__text emotion-1"
+                          >
+                            Field height
+                          </div>
+                        </Component>
+                      </label>
+                    </Component>
+                    <input
+                      max={10}
+                      min={3}
+                      name="height"
+                      onChange={[Function]}
+                      step="5"
+                      type="range"
+                      value={20}
+                    />
+                  </div>
+                </Component>
+              </form>
+            </div>
+          </Component>
+        </SizeForm>
+        <SizeForm
+          def={
+            Object {
+              "height": 20,
+              "width": 20,
+            }
+          }
+          label="Cell"
+          maxHeight={20}
+          maxWidth={20}
+          minHeight={5}
+          minWidth={5}
+          passSize={
+            [MockFunction] {
+              "calls": Array [
+                Array [
+                  Object {
+                    "height": 20,
+                    "width": 20,
+                  },
+                ],
+              ],
+              "results": Array [
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
+              ],
+            }
+          }
+        >
+          <Component
+            className="emotion-12"
+          >
+            <div
+              className="emotion-11"
+            >
+              <form>
+                <Component
+                  className="emotion-4"
+                  label="Cell width"
+                >
+                  <div
+                    className="emotion-3"
+                  >
+                    <Component
+                      htmlFor="3"
+                    >
+                      <label
+                        className="Label emotion-2"
+                        htmlFor="3"
+                      >
+                        <Component
+                          className="Label__text"
+                          variant="subtitle"
+                        >
+                          <div
+                            className="Label__text emotion-1"
+                          >
+                            Cell width
+                          </div>
+                        </Component>
+                      </label>
+                    </Component>
+                    <input
+                      max={20}
+                      min={5}
+                      name="width"
+                      onChange={[Function]}
+                      step="5"
+                      type="range"
+                      value={20}
+                    />
+                  </div>
+                </Component>
+                <Component
+                  className="emotion-4"
+                  label="Cell height"
+                >
+                  <div
+                    className="emotion-3"
+                  >
+                    <Component
+                      htmlFor="4"
+                    >
+                      <label
+                        className="Label emotion-2"
+                        htmlFor="4"
+                      >
+                        <Component
+                          className="Label__text"
+                          variant="subtitle"
+                        >
+                          <div
+                            className="Label__text emotion-1"
+                          >
+                            Cell height
+                          </div>
+                        </Component>
+                      </label>
+                    </Component>
+                    <input
+                      max={20}
+                      min={5}
+                      name="height"
+                      onChange={[Function]}
+                      step="5"
+                      type="range"
+                      value={20}
+                    />
+                  </div>
+                </Component>
+              </form>
+            </div>
+          </Component>
+        </SizeForm>
+      </div>
+      <PercentFilled
+        onSubmit={[MockFunction]}
+      >
+        <Layer
+          className="emotion-36"
+          elevation="xs"
         >
           <div
-            className="Label__text emotion-1"
+            className="emotion-35"
           >
-            Filled percent
+            <form
+              className="emotion-34"
+              onSubmit={[Function]}
+            >
+              <Component
+                label="Filled percent"
+              >
+                <div
+                  className="InputGroup emotion-31"
+                >
+                  <Component
+                    htmlFor="5"
+                  >
+                    <label
+                      className="Label emotion-2"
+                      htmlFor="5"
+                    >
+                      <Component
+                        className="Label__text"
+                        variant="subtitle"
+                      >
+                        <div
+                          className="Label__text emotion-1"
+                        >
+                          Filled percent
+                        </div>
+                      </Component>
+                    </label>
+                  </Component>
+                  <ForwardRef
+                    inputSize="lg"
+                    onChange={[Function]}
+                    placeholder="0"
+                    type="number"
+                    value={50}
+                  >
+                    <input
+                      className="Input emotion-30"
+                      id="5"
+                      onChange={[Function]}
+                      onTouchEnd={[Function]}
+                      onTouchStart={[Function]}
+                      placeholder="0"
+                      type="number"
+                      value={50}
+                    />
+                  </ForwardRef>
+                </div>
+              </Component>
+              <Button
+                intent="primary"
+                size="lg"
+                style={
+                  Object {
+                    "marginLeft": 10,
+                    "marginTop": "1.5rem",
+                  }
+                }
+                type="submit"
+              >
+                <button
+                  className="Button Touchable emotion-33"
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseDownCapture={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchMoveCapture={[Function]}
+                  onTouchStart={[Function]}
+                  onTouchStartCapture={[Function]}
+                  role="button"
+                  style={
+                    Object {
+                      "marginLeft": 10,
+                      "marginTop": "1.5rem",
+                    }
+                  }
+                  tabIndex={0}
+                  type="submit"
+                >
+                  <span
+                    aria-hidden={false}
+                    className="emotion-32"
+                  >
+                    Set
+                  </span>
+                </button>
+              </Button>
+            </form>
           </div>
-        </label>
-        <input
-          className="Input emotion-18"
-          id=""
-          onChange={[Function]}
-          onTouchEnd={[Function]}
-          onTouchStart={[Function]}
-          placeholder="0"
-          type="number"
-          value={50}
-        />
-      </div>
-      <button
-        className="Button Touchable emotion-21"
-        onKeyDown={[Function]}
-        onKeyUp={[Function]}
-        onMouseDown={[Function]}
-        onMouseDownCapture={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchMoveCapture={[Function]}
-        onTouchStart={[Function]}
-        onTouchStartCapture={[Function]}
-        role="button"
+        </Layer>
+      </PercentFilled>
+      <Button
+        intent="primary"
+        onClick={[MockFunction]}
+        size="lg"
         style={
           Object {
-            "marginLeft": 10,
             "marginTop": "1.5rem",
           }
         }
-        tabIndex={0}
-        type="submit"
+        type="button"
       >
-        <span
-          aria-hidden={false}
-          className="emotion-20"
+        <div
+          className="Button Touchable emotion-33"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseDownCapture={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchMoveCapture={[Function]}
+          onTouchStart={[Function]}
+          onTouchStartCapture={[Function]}
+          role="button"
+          style={
+            Object {
+              "marginTop": "1.5rem",
+            }
+          }
+          tabIndex={0}
+          type="button"
         >
-          Set
-        </span>
-      </button>
-    </form>
-  </div>
-  <div
-    className="Button Touchable emotion-21"
-    onKeyDown={[Function]}
-    onKeyUp={[Function]}
-    onMouseDown={[Function]}
-    onMouseDownCapture={[Function]}
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
-    onTouchEnd={[Function]}
-    onTouchMove={[Function]}
-    onTouchMoveCapture={[Function]}
-    onTouchStart={[Function]}
-    onTouchStartCapture={[Function]}
-    role="button"
-    style={
-      Object {
-        "marginTop": "1.5rem",
-      }
-    }
-    tabIndex={0}
-    type="button"
-  >
-    <span
-      aria-hidden={false}
-      className="emotion-20"
-    >
-      Start Game
-    </span>
-  </div>
-</div>
+          <span
+            aria-hidden={false}
+            className="emotion-32"
+          >
+            Start Game
+          </span>
+        </div>
+      </Button>
+    </div>
+  </Layer>
+</GameSettings>
 `;
