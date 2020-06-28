@@ -27,6 +27,7 @@ const Game: FunctionComponent = () => {
   const fieldSize = useSelector((state: any) => state.settings.fieldSize);
   const cellSize = useSelector((state: any) => state.settings.cellSize);
   const filledCells = useSelector((state: any) => state.game.filledCells);
+  const speed = useSelector((state: any) => state.game.speed);
   const field = useSelector((state: any) => state.field);
   /* const [fieldSize, setFieldSize] = useState<{ width: number; height: number }>( */
   /*   { */
@@ -38,27 +39,25 @@ const Game: FunctionComponent = () => {
     speed: 0,
     reset: false,
   });
-  useEffect(() => {
-  }, [field]);
+  useEffect(() => {}, [field]);
 
   useEffect(() => {
-    const newField = makeField(fieldSize.width, fieldSize.height, filledCells)
-    dispatch(fieldActions.setField(newField))
-    const generation = getGeneration(newField);
-    console.log(generation, 'check');
-    setTimeout(() => {
-      dispatch(fieldActions.setField(generation))
-    }, 1000)
+    const newField = makeField(fieldSize.width, fieldSize.height, filledCells);
+    dispatch(fieldActions.setField(newField));
   }, [filledCells]);
 
   useEffect(() => {
-    /* const newField = randomByPercent( */
-    /*   startMock.field.minWidth, */
-    /*   startMock.field.minHeight, */
-    /*   50 */
-    /* ); */
-    /* setField(newField); */
-  }, []);
+    let interval: any = null;
+    if (speed > 0) {
+      interval = setInterval(() => {
+        const generation = getGeneration(field);
+        dispatch(fieldActions.setField(generation));
+      }, 500);
+    }
+    return () => {
+      if (interval) clearInterval(interval);
+    };
+  }, [speed, field]);
 
   const setFieldPercent = (perc: number): void => {
     const newField = randomByPercent(fieldSize.width, fieldSize.height, perc);
