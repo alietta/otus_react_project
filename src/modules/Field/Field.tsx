@@ -29,7 +29,6 @@ const Field: FunctionComponent<GameFildProps> = (props: GameFildProps) => {
       canvas.height = height * 2;
       canvas.style.width = `${width}px`;
       canvas.style.height = `${height}px`;
-      console.log("ref", canvas.style.width);
       if (ctxRef.current) {
         ctxRef.current.scale(2, 2);
         drawGrid({
@@ -57,30 +56,33 @@ const Field: FunctionComponent<GameFildProps> = (props: GameFildProps) => {
   useEffect(() => {
     const width = fieldSize.width * cellSize.width;
     const height = fieldSize.height * cellSize.height;
-    ctxRef.current.clearRect(0, 0, width, height)
-    drawGrid({
-      ctx: ctxRef.current,
-      width: width,
-      height: height,
-      step: cellSize.width,
-      settings: {
-        strokeStyle: theme.colors.border.default,
-      },
-    });
-    field.forEach((cells: boolean[], y: number) => {
-      cells.forEach((cell: boolean, x: number) => {
-        if (cell) {
-          drawCell({
-            x,
-            y,
-            width: cellSize.width,
-            height: cellSize.height,
-            settings: { fillStyle: "white" },
-            ctx: ctxRef.current,
-          });
-        }
-      })
-    });
+    if (ctxRef.current) {
+      ctxRef.current.clearRect(0, 0, width, height)
+      drawGrid({
+        ctx: ctxRef.current,
+        width: width,
+        height: height,
+        step: cellSize.width,
+        settings: {
+          strokeStyle: theme.colors.border.default,
+        },
+      });
+      field.forEach((cells: boolean[], y: number) => {
+        cells.forEach((cell: boolean, x: number) => {
+          if (cell) {
+            drawCell({
+              x,
+              y,
+              width: cellSize.width,
+              height: cellSize.height,
+              settings: { fillStyle: "white" },
+              ctx: ctxRef.current,
+            });
+          }
+        })
+      });
+
+    }
   }, [field]);
 
   return (

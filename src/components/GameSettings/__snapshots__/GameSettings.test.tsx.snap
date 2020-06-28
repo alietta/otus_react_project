@@ -278,7 +278,7 @@ exports[`GameSettings renders GameSettings 1`] = `
             min={3}
             name="width"
             onChange={[Function]}
-            step="1"
+            step="5"
             type="range"
             value={3}
           />
@@ -301,7 +301,7 @@ exports[`GameSettings renders GameSettings 1`] = `
             min={3}
             name="height"
             onChange={[Function]}
-            step="1"
+            step="5"
             type="range"
             value={3}
           />
@@ -326,11 +326,11 @@ exports[`GameSettings renders GameSettings 1`] = `
             </div>
           </label>
           <input
-            max={25}
+            max={20}
             min={5}
             name="width"
             onChange={[Function]}
-            step="1"
+            step="5"
             type="range"
             value={5}
           />
@@ -349,11 +349,11 @@ exports[`GameSettings renders GameSettings 1`] = `
             </div>
           </label>
           <input
-            max={25}
+            max={20}
             min={5}
             name="height"
             onChange={[Function]}
-            step="1"
+            step="5"
             type="range"
             value={5}
           />

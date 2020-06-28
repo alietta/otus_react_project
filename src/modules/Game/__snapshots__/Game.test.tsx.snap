@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Game renders Game 1`] = `
-.emotion-102 {
+.emotion-49 {
   overflow: hidden;
   padding: 1rem;
   display: -webkit-box;
@@ -22,7 +22,7 @@ exports[`Game renders Game 1`] = `
   flex-direction: column;
 }
 
-.emotion-101 {
+.emotion-48 {
   position: relative;
   background: white;
   box-shadow: 0 1px 10px 0 hsla(210,10.3%,22.7%,0.15), 0 6px 12px 0 hsla(210,10.3%,22.7%,0.1), 0 6px 15px -2px hsla(210,10.3%,22.7%,0.12);
@@ -326,57 +326,28 @@ exports[`Game renders Game 1`] = `
   margin-left: 0;
 }
 
-.emotion-100 {
+.emotion-47 {
   width: 100%;
   text-align: center;
 }
 
-.emotion-99 {
-  border-color: hsla(210,10.8%,14.5%,0.12);
-}
-
-.emotion-97 {
+.emotion-45 {
   box-sizing: border-box;
   border: 3px solid gray;
   padding: 3px;
   display: inline-block;
-  border-color: hsla(210,10.8%,14.5%,0.12);
 }
 
-.emotion-57 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-47 {
-  border-color: hsla(210,10.8%,14.5%,0.12);
-  background: white;
-}
-
-.emotion-45 {
-  display: inline-block;
-  border: 1px solid gray;
-  box-sizing: border-box;
-  vertical-align: middle;
-  background: white;
-  width: 10px;
-  height: 10px;
-  border-color: hsla(210,10.8%,14.5%,0.12);
-  background: white;
-}
-
-.emotion-45:hover {
-  border-width: 3px;
+.emotion-45 canvas {
+  display: block;
 }
 
 <Game>
   <Layer
-    className="emotion-102"
+    className="emotion-49"
   >
     <div
-      className="emotion-101"
+      className="emotion-48"
     >
       <div
         className="emotion-44"
@@ -461,7 +432,7 @@ exports[`Game renders Game 1`] = `
                                   min={3}
                                   name="width"
                                   onChange={[Function]}
-                                  step="1"
+                                  step="5"
                                   type="range"
                                   value={3}
                                 />
@@ -498,7 +469,7 @@ exports[`Game renders Game 1`] = `
                                   min={3}
                                   name="height"
                                   onChange={[Function]}
-                                  step="1"
+                                  step="5"
                                   type="range"
                                   value={3}
                                 />
@@ -510,8 +481,8 @@ exports[`Game renders Game 1`] = `
                     </SizeForm>
                     <SizeForm
                       label="Cell"
-                      maxHeight={25}
-                      maxWidth={25}
+                      maxHeight={20}
+                      maxWidth={20}
                       minHeight={5}
                       minWidth={5}
                       passSize={[Function]}
@@ -550,11 +521,11 @@ exports[`Game renders Game 1`] = `
                                   </label>
                                 </Component>
                                 <input
-                                  max={25}
+                                  max={20}
                                   min={5}
                                   name="width"
                                   onChange={[Function]}
-                                  step="1"
+                                  step="5"
                                   type="range"
                                   value={5}
                                 />
@@ -587,11 +558,11 @@ exports[`Game renders Game 1`] = `
                                   </label>
                                 </Component>
                                 <input
-                                  max={25}
+                                  max={20}
                                   min={5}
                                   name="height"
                                   onChange={[Function]}
-                                  step="1"
+                                  step="5"
                                   type="range"
                                   value={5}
                                 />
@@ -756,417 +727,17 @@ exports[`Game renders Game 1`] = `
         </GameMenu>
       </div>
       <div
-        className="emotion-100"
+        className="emotion-47"
       >
-        <GameField
-          cellSize={10}
-          field={
-            Array [
-              Array [
-                false,
-                false,
-                false,
-                false,
-              ],
-              Array [
-                false,
-                false,
-                false,
-                false,
-              ],
-              Array [
-                false,
-                false,
-                false,
-                false,
-              ],
-              Array [
-                false,
-                false,
-                false,
-                false,
-              ],
-            ]
-          }
-          setField={[Function]}
-        >
-          <Field
-            className="emotion-99"
-          >
+        <Field>
+          <FieldWrapper>
             <div
-              className="emotion-97 emotion-98"
+              className="emotion-45 emotion-46"
             >
-              <div
-                className="emotion-57"
-              >
-                <Cell
-                  isFilled={false}
-                  key="y-0_x-0"
-                  onClick={[Function]}
-                  size={10}
-                  x={0}
-                  y={0}
-                >
-                  <CellWrapper
-                    className="emotion-47"
-                    height={10}
-                    onClick={[Function]}
-                    width={10}
-                  >
-                    <div
-                      className="emotion-45 emotion-46"
-                      height={10}
-                      onClick={[Function]}
-                      width={10}
-                    />
-                  </CellWrapper>
-                </Cell>
-                <Cell
-                  isFilled={false}
-                  key="y-0_x-1"
-                  onClick={[Function]}
-                  size={10}
-                  x={1}
-                  y={0}
-                >
-                  <CellWrapper
-                    className="emotion-47"
-                    height={10}
-                    onClick={[Function]}
-                    width={10}
-                  >
-                    <div
-                      className="emotion-45 emotion-46"
-                      height={10}
-                      onClick={[Function]}
-                      width={10}
-                    />
-                  </CellWrapper>
-                </Cell>
-                <Cell
-                  isFilled={false}
-                  key="y-0_x-2"
-                  onClick={[Function]}
-                  size={10}
-                  x={2}
-                  y={0}
-                >
-                  <CellWrapper
-                    className="emotion-47"
-                    height={10}
-                    onClick={[Function]}
-                    width={10}
-                  >
-                    <div
-                      className="emotion-45 emotion-46"
-                      height={10}
-                      onClick={[Function]}
-                      width={10}
-                    />
-                  </CellWrapper>
-                </Cell>
-                <Cell
-                  isFilled={false}
-                  key="y-0_x-3"
-                  onClick={[Function]}
-                  size={10}
-                  x={3}
-                  y={0}
-                >
-                  <CellWrapper
-                    className="emotion-47"
-                    height={10}
-                    onClick={[Function]}
-                    width={10}
-                  >
-                    <div
-                      className="emotion-45 emotion-46"
-                      height={10}
-                      onClick={[Function]}
-                      width={10}
-                    />
-                  </CellWrapper>
-                </Cell>
-              </div>
-              <div
-                className="emotion-57"
-              >
-                <Cell
-                  isFilled={false}
-                  key="y-1_x-0"
-                  onClick={[Function]}
-                  size={10}
-                  x={0}
-                  y={1}
-                >
-                  <CellWrapper
-                    className="emotion-47"
-                    height={10}
-                    onClick={[Function]}
-                    width={10}
-                  >
-                    <div
-                      className="emotion-45 emotion-46"
-                      height={10}
-                      onClick={[Function]}
-                      width={10}
-                    />
-                  </CellWrapper>
-                </Cell>
-                <Cell
-                  isFilled={false}
-                  key="y-1_x-1"
-                  onClick={[Function]}
-                  size={10}
-                  x={1}
-                  y={1}
-                >
-                  <CellWrapper
-                    className="emotion-47"
-                    height={10}
-                    onClick={[Function]}
-                    width={10}
-                  >
-                    <div
-                      className="emotion-45 emotion-46"
-                      height={10}
-                      onClick={[Function]}
-                      width={10}
-                    />
-                  </CellWrapper>
-                </Cell>
-                <Cell
-                  isFilled={false}
-                  key="y-1_x-2"
-                  onClick={[Function]}
-                  size={10}
-                  x={2}
-                  y={1}
-                >
-                  <CellWrapper
-                    className="emotion-47"
-                    height={10}
-                    onClick={[Function]}
-                    width={10}
-                  >
-                    <div
-                      className="emotion-45 emotion-46"
-                      height={10}
-                      onClick={[Function]}
-                      width={10}
-                    />
-                  </CellWrapper>
-                </Cell>
-                <Cell
-                  isFilled={false}
-                  key="y-1_x-3"
-                  onClick={[Function]}
-                  size={10}
-                  x={3}
-                  y={1}
-                >
-                  <CellWrapper
-                    className="emotion-47"
-                    height={10}
-                    onClick={[Function]}
-                    width={10}
-                  >
-                    <div
-                      className="emotion-45 emotion-46"
-                      height={10}
-                      onClick={[Function]}
-                      width={10}
-                    />
-                  </CellWrapper>
-                </Cell>
-              </div>
-              <div
-                className="emotion-57"
-              >
-                <Cell
-                  isFilled={false}
-                  key="y-2_x-0"
-                  onClick={[Function]}
-                  size={10}
-                  x={0}
-                  y={2}
-                >
-                  <CellWrapper
-                    className="emotion-47"
-                    height={10}
-                    onClick={[Function]}
-                    width={10}
-                  >
-                    <div
-                      className="emotion-45 emotion-46"
-                      height={10}
-                      onClick={[Function]}
-                      width={10}
-                    />
-                  </CellWrapper>
-                </Cell>
-                <Cell
-                  isFilled={false}
-                  key="y-2_x-1"
-                  onClick={[Function]}
-                  size={10}
-                  x={1}
-                  y={2}
-                >
-                  <CellWrapper
-                    className="emotion-47"
-                    height={10}
-                    onClick={[Function]}
-                    width={10}
-                  >
-                    <div
-                      className="emotion-45 emotion-46"
-                      height={10}
-                      onClick={[Function]}
-                      width={10}
-                    />
-                  </CellWrapper>
-                </Cell>
-                <Cell
-                  isFilled={false}
-                  key="y-2_x-2"
-                  onClick={[Function]}
-                  size={10}
-                  x={2}
-                  y={2}
-                >
-                  <CellWrapper
-                    className="emotion-47"
-                    height={10}
-                    onClick={[Function]}
-                    width={10}
-                  >
-                    <div
-                      className="emotion-45 emotion-46"
-                      height={10}
-                      onClick={[Function]}
-                      width={10}
-                    />
-                  </CellWrapper>
-                </Cell>
-                <Cell
-                  isFilled={false}
-                  key="y-2_x-3"
-                  onClick={[Function]}
-                  size={10}
-                  x={3}
-                  y={2}
-                >
-                  <CellWrapper
-                    className="emotion-47"
-                    height={10}
-                    onClick={[Function]}
-                    width={10}
-                  >
-                    <div
-                      className="emotion-45 emotion-46"
-                      height={10}
-                      onClick={[Function]}
-                      width={10}
-                    />
-                  </CellWrapper>
-                </Cell>
-              </div>
-              <div
-                className="emotion-57"
-              >
-                <Cell
-                  isFilled={false}
-                  key="y-3_x-0"
-                  onClick={[Function]}
-                  size={10}
-                  x={0}
-                  y={3}
-                >
-                  <CellWrapper
-                    className="emotion-47"
-                    height={10}
-                    onClick={[Function]}
-                    width={10}
-                  >
-                    <div
-                      className="emotion-45 emotion-46"
-                      height={10}
-                      onClick={[Function]}
-                      width={10}
-                    />
-                  </CellWrapper>
-                </Cell>
-                <Cell
-                  isFilled={false}
-                  key="y-3_x-1"
-                  onClick={[Function]}
-                  size={10}
-                  x={1}
-                  y={3}
-                >
-                  <CellWrapper
-                    className="emotion-47"
-                    height={10}
-                    onClick={[Function]}
-                    width={10}
-                  >
-                    <div
-                      className="emotion-45 emotion-46"
-                      height={10}
-                      onClick={[Function]}
-                      width={10}
-                    />
-                  </CellWrapper>
-                </Cell>
-                <Cell
-                  isFilled={false}
-                  key="y-3_x-2"
-                  onClick={[Function]}
-                  size={10}
-                  x={2}
-                  y={3}
-                >
-                  <CellWrapper
-                    className="emotion-47"
-                    height={10}
-                    onClick={[Function]}
-                    width={10}
-                  >
-                    <div
-                      className="emotion-45 emotion-46"
-                      height={10}
-                      onClick={[Function]}
-                      width={10}
-                    />
-                  </CellWrapper>
-                </Cell>
-                <Cell
-                  isFilled={false}
-                  key="y-3_x-3"
-                  onClick={[Function]}
-                  size={10}
-                  x={3}
-                  y={3}
-                >
-                  <CellWrapper
-                    className="emotion-47"
-                    height={10}
-                    onClick={[Function]}
-                    width={10}
-                  >
-                    <div
-                      className="emotion-45 emotion-46"
-                      height={10}
-                      onClick={[Function]}
-                      width={10}
-                    />
-                  </CellWrapper>
-                </Cell>
-              </div>
+              <canvas />
             </div>
-          </Field>
-        </GameField>
+          </FieldWrapper>
+        </Field>
       </div>
     </div>
   </Layer>

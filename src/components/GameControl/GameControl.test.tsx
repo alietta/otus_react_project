@@ -20,7 +20,7 @@ describe("GameControl", () => {
     const resetGame = jest.fn();
     const changeSpeed = jest.fn();
     const element = mount(
-      <GameControl resetGame={resetGame} changeSpeed={changeSpeed} />
+      <GameControl speed={1} resetGame={resetGame} changeSpeed={changeSpeed} />
     );
     element.find("div[name='pause']").simulate("click");
     expect(changeSpeed).toHaveBeenCalled();
@@ -30,7 +30,7 @@ describe("GameControl", () => {
     const resetGame = jest.fn();
     const changeSpeed = jest.fn();
     const element = mount(
-      <GameControl resetGame={resetGame} changeSpeed={changeSpeed} />
+      <GameControl speed={1} resetGame={resetGame} changeSpeed={changeSpeed} />
     );
     element.find("div[name='play']").simulate("click");
     expect(changeSpeed).toHaveBeenCalled();
@@ -40,20 +40,20 @@ describe("GameControl", () => {
     const resetGame = jest.fn();
     const changeSpeed = jest.fn();
     const element = mount(
-      <GameControl resetGame={resetGame} changeSpeed={changeSpeed} />
+      <GameControl speed={1} resetGame={resetGame} changeSpeed={changeSpeed} />
     );
     element.find("div[name='fast']").simulate("click");
     expect(changeSpeed).toHaveBeenCalled();
-    expect(changeSpeed.mock.calls[0][0]).toEqual(2);
+    expect(changeSpeed.mock.calls[0][0]).toEqual(0.5);
   });
   it("should call slow speed with props", () => {
     const resetGame = jest.fn();
     const changeSpeed = jest.fn();
     const element = mount(
-      <GameControl resetGame={resetGame} changeSpeed={changeSpeed} />
+      <GameControl speed={1} resetGame={resetGame} changeSpeed={changeSpeed} />
     );
     element.find("div[name='slow']").simulate("click");
     expect(changeSpeed).toHaveBeenCalled();
-    expect(changeSpeed.mock.calls[0][0]).toEqual(0.5);
+    expect(changeSpeed.mock.calls[0][0]).toEqual(1.5);
   });
 });
