@@ -1,10 +1,12 @@
 import React, { FunctionComponent, useState, useEffect } from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { useTheme, Layer } from "sancho";
 import { GameMenu } from "@/modules/GameMenu";
 import { GameField } from "../GameField";
 import { Field } from "../Field";
-import { preatyArray, randomByPercent } from "./gameFunctions";
+import { actions as fieldActions } from "../Field/duck/reducer";
+import { preatyArray, randomByPercent, makeField } from "./gameFunctions";
+import { getGeneration } from "./engine";
 
 const startMock = {
   field: {
@@ -21,33 +23,33 @@ interface GameState {
 
 const Game: FunctionComponent = () => {
   const theme = useTheme();
+  const dispatch = useDispatch();
   const fieldSize = useSelector((state: any) => state.settings.fieldSize);
   const cellSize = useSelector((state: any) => state.settings.cellSize);
+  const filledCells = useSelector((state: any) => state.game.filledCells);
+  const field = useSelector((state: any) => state.field);
   /* const [fieldSize, setFieldSize] = useState<{ width: number; height: number }>( */
   /*   { */
   /*     width: startMock.minWidth, */
   /*     height: startMock.minHeight, */
   /*   } */
   /* ); */
-  const [field, setField] = useState<boolean[][]>([[]]);
   const [gameState, setGameState] = useState<GameState>({
     speed: 0,
     reset: false,
   });
   useEffect(() => {
-    let newField = preatyArray(field, fieldSize.height, [false]);
-    newField = newField.map((row) => preatyArray(row, fieldSize.width, false));
-    setField(newField);
-  }, [fieldSize]);
+  }, [field]);
 
   useEffect(() => {
-    if (gameState.reset === true) {
-      const empty = Array(fieldSize.height)
-        .fill(false)
-        .map(() => Array(fieldSize.width).fill(false));
-      setField(empty);
-    }
-  }, [gameState]);
+    const newField = makeField(fieldSize.width, fieldSize.height, filledCells)
+    dispatch(fieldActions.setField(newField))
+    const generation = getGeneration(newField);
+    console.log(generation, 'check');
+    setTimeout(() => {
+      dispatch(fieldActions.setField(generation))
+    }, 1000)
+  }, [filledCells]);
 
   useEffect(() => {
     /* const newField = randomByPercent( */

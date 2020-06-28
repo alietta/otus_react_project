@@ -16,6 +16,7 @@ const Field: FunctionComponent<GameFildProps> = (props: GameFildProps) => {
   const canvasRef = useRef(null);
   const ctxRef = useRef(null);
   const filledCells = useSelector((state: any) => state.game.filledCells);
+  const field = useSelector((state: any) => state.field);
   const fieldSize = useSelector((state: any) => state.settings.fieldSize);
   const cellSize = useSelector((state: any) => state.settings.cellSize);
 
@@ -66,17 +67,21 @@ const Field: FunctionComponent<GameFildProps> = (props: GameFildProps) => {
         strokeStyle: theme.colors.border.default,
       },
     });
-    filledCells.forEach((cell) => {
-      const pos = makeFieldPos({ cell, width: fieldSize.width });
-      drawCell({
-        ...pos,
-        width: cellSize.width,
-        height: cellSize.height,
-        settings: { fillStyle: "white" },
-        ctx: ctxRef.current,
-      });
+    field.forEach((cells: boolean[], y: number) => {
+      cells.forEach((cell: boolean, x: number) => {
+        if (cell) {
+          drawCell({
+            x,
+            y,
+            width: cellSize.width,
+            height: cellSize.height,
+            settings: { fillStyle: "white" },
+            ctx: ctxRef.current,
+          });
+        }
+      })
     });
-  }, [filledCells]);
+  }, [field]);
 
   return (
     <FieldWrapper>
