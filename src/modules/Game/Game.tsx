@@ -52,7 +52,7 @@ const Game: FunctionComponent = () => {
       interval = setInterval(() => {
         const generation = getGeneration(field);
         dispatch(fieldActions.setField(generation));
-      }, 500);
+      }, 1000 * speed);
     }
     return () => {
       if (interval) clearInterval(interval);

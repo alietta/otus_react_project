@@ -15,6 +15,7 @@ const GameMenu: FC<> = () => {
   const cellSize = useSelector((state: any) => state.settings.cellSize);
   const fieldSize = useSelector((state: any) => state.settings.fieldSize);
   const gameStatus = useSelector((state: any) => state.game.status);
+  const speed = useSelector((state: any) => state.game.speed);
 
   const passSize = (values: { width: number; height: number }) => {
     dispatch(actions.field(values));
@@ -71,7 +72,7 @@ const GameMenu: FC<> = () => {
           startGame={startGame}
         />
       ) : (
-        <GameControl resetGame={resetGame} changeSpeed={changeSpeed} />
+        <GameControl speed={speed} resetGame={resetGame} changeSpeed={changeSpeed} />
       )}
     </div>
   );

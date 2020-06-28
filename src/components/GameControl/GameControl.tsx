@@ -13,14 +13,40 @@ import {
 export interface GameControlProps {
   resetGame: () => void;
   changeSpeed: (speed: number) => void;
+  speed: number;
 }
 
 const GameControl: FunctionComponent<GameControlProps> = ({
   resetGame,
   changeSpeed,
+  speed,
 }: GameControlProps) => {
-  const speedButtonClick = (newSpeed: number): (() => void) => {
+  const speedButtonClick = (
+    speedClick: "pause" | "play" | "slow" | "fast"
+  ): (() => void) => {
     return (): void => {
+      const round = (num: number): number => {
+        const row = `${num}`.substr(0, 3)
+        return parseFloat(row, 10)
+      }
+      const speedCounter = {
+        pause: () => 0,
+        play: () => 1,
+        slow: (speed: number) => {
+          if (speed === 5 || speed === 0) {
+            return speed;
+          }
+          return speed < 0.5 ? round(speed + 0.1) : speed + 0.5
+        },
+        fast: (speed: number) => {
+          if (speed === 0.1 || speed === 0) {
+            return speed;
+          }
+          return speed <= 0.5 ? round(speed - 0.1) : speed - 0.5
+        },
+      };
+      const newSpeed = speedCounter[speedClick](speed);
+      console.log("speed", newSpeed);
       changeSpeed(newSpeed);
     };
   };
@@ -41,7 +67,7 @@ const GameControl: FunctionComponent<GameControlProps> = ({
         name="pause"
         intent="primary"
         variant="outline"
-        onClick={speedButtonClick(0)}
+        onClick={speedButtonClick("pause")}
       >
         <IconPause />
       </Button>
@@ -50,7 +76,7 @@ const GameControl: FunctionComponent<GameControlProps> = ({
         name="play"
         intent="primary"
         variant="outline"
-        onClick={speedButtonClick(1)}
+        onClick={speedButtonClick("play")}
       >
         <IconPlay />
       </Button>
@@ -59,7 +85,7 @@ const GameControl: FunctionComponent<GameControlProps> = ({
         name="slow"
         intent="primary"
         variant="outline"
-        onClick={speedButtonClick(0.5)}
+        onClick={speedButtonClick("slow")}
       >
         <IconRewind />
       </Button>
@@ -68,7 +94,7 @@ const GameControl: FunctionComponent<GameControlProps> = ({
         name="fast"
         intent="primary"
         variant="outline"
-        onClick={speedButtonClick(2)}
+        onClick={speedButtonClick("fast")}
       >
         <IconFastForward />
       </Button>
