@@ -29,12 +29,6 @@ const Game: FunctionComponent = () => {
   const filledCells = useSelector((state: any) => state.game.filledCells);
   const speed = useSelector((state: any) => state.game.speed);
   const field = useSelector((state: any) => state.field);
-  /* const [fieldSize, setFieldSize] = useState<{ width: number; height: number }>( */
-  /*   { */
-  /*     width: startMock.minWidth, */
-  /*     height: startMock.minHeight, */
-  /*   } */
-  /* ); */
   const [gameState, setGameState] = useState<GameState>({
     speed: 0,
     reset: false,
