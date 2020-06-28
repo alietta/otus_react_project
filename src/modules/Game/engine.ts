@@ -1,7 +1,6 @@
 export const getGeneration = (field: boolean[][]): boolean[][] => {
   return field.map((row: boolean[], y: number) => {
     return row.map((life: boolean, x: number) => {
-      console.log('field', life, 'check', checkNeighbor(field, x, y))
       return checkNeighbor(field, x, y);
     });
   });
