@@ -27,7 +27,7 @@ const GameControl: FunctionComponent<GameControlProps> = ({
     return (): void => {
       const round = (num: number): number => {
         const row = `${num}`.substr(0, 3);
-        return parseFloat(row, 10);
+        return parseFloat(row);
       };
       const speedCounter = {
         pause: () => 0,

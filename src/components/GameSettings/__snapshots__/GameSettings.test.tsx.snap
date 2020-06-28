@@ -280,7 +280,7 @@ exports[`GameSettings renders GameSettings 1`] = `
             onChange={[Function]}
             step="5"
             type="range"
-            value={3}
+            value={30}
           />
         </div>
         <div
@@ -303,7 +303,7 @@ exports[`GameSettings renders GameSettings 1`] = `
             onChange={[Function]}
             step="5"
             type="range"
-            value={3}
+            value={20}
           />
         </div>
       </form>
@@ -332,7 +332,7 @@ exports[`GameSettings renders GameSettings 1`] = `
             onChange={[Function]}
             step="5"
             type="range"
-            value={5}
+            value={20}
           />
         </div>
         <div
@@ -355,7 +355,7 @@ exports[`GameSettings renders GameSettings 1`] = `
             onChange={[Function]}
             step="5"
             type="range"
-            value={5}
+            value={20}
           />
         </div>
       </form>
