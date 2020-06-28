@@ -40,6 +40,7 @@ const GameSettings: FC<GameSettingsProps> = ({
           maxHeight={size.max}
           label="Field"
           passSize={passSize}
+          def={{ width: 30, height: 20 }}
         />
         <SizeForm
           label="Cell"
@@ -48,6 +49,7 @@ const GameSettings: FC<GameSettingsProps> = ({
           minHeight={5}
           maxHeight={20}
           passSize={passCellSize}
+          def={{ width: 20, height: 20 }}
         />
       </div>
       <PercentFilled onSubmit={changePercent} />
