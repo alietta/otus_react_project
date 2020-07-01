@@ -1,6 +1,6 @@
 import React from "react";
 import { mount } from "enzyme";
-import { App } from "@/features/App";
+import { App } from "@/modules/App";
 import { Provider } from "react-redux";
 import configureMockStore from "redux-mock-store";
 import thunk from "redux-thunk";
@@ -17,6 +17,21 @@ const storeWithAuth = mockStore({
     isAuth: true,
     name: "Helen",
   },
+  settings: {
+    fieldSize: { width: 4, height: 4 },
+    cellSize: { width: 10, height: 10 },
+  },
+  game: {
+    status: "settings",
+    speed: 0,
+    filledCells: [],
+  },
+  field: [
+    [false, false, false, false],
+    [false, false, false, false],
+    [false, false, false, false],
+    [false, false, false, false],
+  ],
 });
 
 const storeWithoutAuth = mockStore({
