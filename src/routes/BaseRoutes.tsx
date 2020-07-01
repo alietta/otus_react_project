@@ -1,13 +1,15 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Switch, Route, Redirect, withRouter } from "react-router-dom";
 import { LoginPage } from "@/pages/LoginPage";
 import { GamePage } from "@/pages/GamePage";
 import { Lesson17Page } from "@/pages/Lesson17Page";
 import { PrivateRoute } from "./PrivateRoute";
-import { AppContext } from "@/AppContext";
 
-const Routes: React.FC<{}> = () => {
-  const [{ isAuth }] = useContext(AppContext);
+const Routes: React.FC<{ isAuth: boolean }> = ({
+  isAuth,
+}: {
+  isAuth: boolean;
+}) => {
   return (
     <Switch>
       <PrivateRoute isAuth={isAuth} path="/" exact>

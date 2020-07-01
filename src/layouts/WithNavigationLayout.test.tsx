@@ -1,8 +1,16 @@
 import React from "react";
 import { mount } from "enzyme";
 import { WithNavigationLayout } from "./WithNavigationLayout";
-import { AppContext } from "@/AppContext";
+import { Provider } from "react-redux";
+import configureMockStore from "redux-mock-store";
+import thunk from "redux-thunk";
 
+const mockStore = configureMockStore([thunk]);
+const store = mockStore({
+  user: {
+    name: "Helen",
+  },
+});
 describe("WithNavigationLayout", () => {
   const Component: React.FC<> = () => <h1>Test</h1>;
   it("render", () => {
@@ -11,9 +19,9 @@ describe("WithNavigationLayout", () => {
         <Component />
       </WithNavigationLayout>,
       {
-        wrappingComponent: AppContext.Provider,
+        wrappingComponent: Provider,
         wrappingComponentProps: {
-          value: [{ isAuth: true, loader: false, name: "Bob" }, jest.fn()],
+          store,
         },
       }
     );

@@ -1,15 +1,15 @@
-import React, { FC, useContext } from "react";
+import React, { FC } from "react";
 import { useTheme, Container, Text, IconLogOut } from "sancho";
-import { AppContext } from "@/AppContext";
+import { useSelector, useDispatch } from "react-redux";
+import { actions } from "@/features/login/duck/reducer";
 
-interface HeadbarProps {
-  onLogout: () => void;
-}
-
-const Headbar: FC<HeadbarProps> = (props: HeadbarProps) => {
-  const { onLogout } = props;
+const Headbar: FC = () => {
   const theme = useTheme();
-  const [{ name }] = useContext(AppContext);
+  const dispatch = useDispatch();
+  const name = useSelector((state: any) => state.user.name);
+  const onLogout = () => {
+    dispatch(actions.logout());
+  };
 
   return (
     <div
