@@ -8,7 +8,7 @@ import {
   IconPlay,
   IconRewind,
   IconRefreshCw,
-  Button
+  Button,
 } from "sancho";
 
 export interface GameControlProps {
@@ -19,7 +19,7 @@ export interface GameControlProps {
 const GameControl: FunctionComponent<GameControlProps> = ({
   resetGame,
   changeSpeed,
-  speed
+  speed,
 }: GameControlProps) => {
   const speedButtonClick = (speedClick: Speed): (() => void) => {
     return (): void => {
