@@ -1,7 +1,7 @@
 import React, { FC, useEffect } from "react";
 import { Spinner, Text, Button } from "sancho";
 import { useSelector, useDispatch } from "react-redux";
-import { colors } from "../../duck/reducer";
+import { actions } from "../../duck/reducer";
 
 const Square: FC = () => {
   const dispatch = useDispatch();
@@ -9,15 +9,21 @@ const Square: FC = () => {
   const status = useSelector((state: any) => state.square.status);
 
   const onClick = () => {
-    dispatch(colors());
+    dispatch(actions.colors());
   };
 
   return (
     <div>
       <Button onClick={onClick}>Random color</Button>
       <Text>it will be square</Text>
-      <div css={{ width: 200, height: 200, background: color }}>
-        {status === "loading" && <Spinner />}
+      <div
+        css={{
+          width: 200,
+          height: 200,
+          background: `#${color}`,
+        }}
+      >
+        {status === "loading" && <Spinner center />}
       </div>
     </div>
   );

@@ -2,8 +2,8 @@ import { Square } from "./types";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 const squareInitialState: Square = {
-  status: "success",
-  color: "white",
+  status: "loading",
+  color: "ffffff",
 };
 export const squareSlice = createSlice({
   name: "square",
@@ -22,4 +22,4 @@ export const squareSlice = createSlice({
     },
   },
 });
-export const { actions, reducer  } = squareSlice;
+export const { actions, reducer } = squareSlice;
