@@ -9,7 +9,7 @@ const sagaMiddleware = createSagaMiddleware();
 
 function* rootSaga() {
   yield fork(loginSaga);
-  yield fork(squareSaga)
+  yield fork(squareSaga);
 }
 const middleware = [...getDefaultMiddleware(), sagaMiddleware];
 
