@@ -1,39 +1,24 @@
-import { User, Users } from "./types";
+import { Square } from "./types";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-const userInitialState: Users = {
+const squareInitialState: Square = {
   status: "success",
-  users: [],
+  color: "white",
 };
-export const userSlice = createSlice({
-  name: "users",
-  initialState: userInitialState,
+export const squareSlice = createSlice({
+  name: "square",
+  initialState: squareInitialState,
   reducers: {
-    getUsersLoading: (state) => {
+    colors: (state) => state,
+    loading: (state) => {
       state.status = "loading";
     },
-    getUsersSuccess: (state, { payload }: PayloadAction<Array<User>>) => {
-      state.users = payload;
+    success: (state, { payload }: PayloadAction<string>) => {
+      state.color = payload;
       state.status = "success";
     },
-    getUsersError: (state) => {
+    error: (state) => {
       state.status = "error";
-    },
-  },
-});
-
-export const counterSlice = createSlice({
-  name: "conter",
-  initialState: 0,
-  reducers: {
-    increment: {
-      reducer: (state) => {
-        return state + 1;
-      },
-      prepare: (probability: number) => ({
-        payload: {},
-        meta: { probability },
-      }),
     },
   },
 });

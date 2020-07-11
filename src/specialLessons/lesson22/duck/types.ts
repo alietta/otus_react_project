@@ -1,8 +1,4 @@
-export interface User {
-  name: string;
-}
-
-export interface Users {
+export interface Square {
   status: string;
-  users: User[];
+  color: string;
 }
