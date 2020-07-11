@@ -1,5 +1,6 @@
 import React, { FunctionComponent } from "react";
 import { LayerStyle } from "./GameControlStyle";
+import { Speed } from "@/modules/Game/duck/types";
 import {
   Layer,
   IconPause,
@@ -7,7 +8,7 @@ import {
   IconPlay,
   IconRewind,
   IconRefreshCw,
-  Button,
+  Button
 } from "sancho";
 
 export interface GameControlProps {
@@ -15,38 +16,14 @@ export interface GameControlProps {
   changeSpeed: (speed: number) => void;
   speed: number;
 }
-
 const GameControl: FunctionComponent<GameControlProps> = ({
   resetGame,
   changeSpeed,
-  speed,
+  speed
 }: GameControlProps) => {
-  const speedButtonClick = (
-    speedClick: "pause" | "play" | "slow" | "fast"
-  ): (() => void) => {
+  const speedButtonClick = (speedClick: Speed): (() => void) => {
     return (): void => {
-      const round = (num: number): number => {
-        const row = `${num}`.substr(0, 3);
-        return parseFloat(row);
-      };
-      const speedCounter = {
-        pause: () => 0,
-        play: () => 1,
-        slow: (speed: number) => {
-          if (speed === 5 || speed === 0) {
-            return speed;
-          }
-          return speed < 0.5 ? round(speed + 0.1) : speed + 0.5;
-        },
-        fast: (speed: number) => {
-          if (speed === 0.1 || speed === 0) {
-            return speed;
-          }
-          return speed <= 0.5 ? round(speed - 0.1) : speed - 0.5;
-        },
-      };
-      const newSpeed = speedCounter[speedClick](speed);
-      changeSpeed(newSpeed);
+      changeSpeed(speedClick);
     };
   };
 
