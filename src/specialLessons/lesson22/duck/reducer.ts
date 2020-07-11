@@ -22,3 +22,4 @@ export const squareSlice = createSlice({
     },
   },
 });
+export const { actions, reducer  } = squareSlice;
