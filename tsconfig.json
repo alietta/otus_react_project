@@ -1,11 +1,25 @@
 {
   "compilerOptions": {
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "moduleResolution": "node",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "forceConsistentCasingInFileNames": false,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "checkJs": false,
     "target": "es5",
     "module": "commonjs",
+    "downlevelIteration": true,
     "allowJs": true,
     "jsx": "react",
     "sourceMap": true,
     "strict": true,
     "esModuleInterop": true
-  }
+  },
+  "include": ["./src/**/*"],
+  "exclude": ["node_modules"]
 }
