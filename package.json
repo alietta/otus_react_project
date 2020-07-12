@@ -78,6 +78,7 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.8.7",
+    "@emotion/cache": "^10.0.29",
     "@emotion/core": "^10.0.28",
     "@emotion/css": "^10.0.27",
     "@emotion/styled": "^10.0.27",
