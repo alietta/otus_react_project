@@ -1,4 +1,4 @@
-import { ISettingState, ISize } from "./types";
+import { ISize } from "./types";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 const settingsInitialState: SettingState = {

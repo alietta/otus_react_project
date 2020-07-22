@@ -13,7 +13,7 @@ export const gameSlice = createSlice({
     fillCells: (state, { payload }: PayloadAction<Array<number>>) => {
       state.filledCells = payload;
     },
-    changeStatus: (state, { payload }: PayloadAction<TGameStatus>) => {
+    changeStatus: (state, { payload }: PayloadAction<GameStatus>) => {
       state.status = payload;
     },
     changeSpeed: (state, { payload }: PayloadAction<Speed>) => {

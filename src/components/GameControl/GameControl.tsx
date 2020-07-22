@@ -13,13 +13,11 @@ import {
 
 export interface GameControlProps {
   resetGame: () => void;
-  changeSpeed: (speed: number) => void;
-  speed: number;
+  changeSpeed: (speed: Speed) => void;
 }
 const GameControl: FunctionComponent<GameControlProps> = ({
   resetGame,
   changeSpeed,
-  speed,
 }: GameControlProps) => {
   const speedButtonClick = (speedClick: Speed): (() => void) => {
     return (): void => {

@@ -7,8 +7,6 @@ import thunk from "redux-thunk";
 
 const mockStore = configureMockStore([thunk]);
 
-const logout = () => ({ type: "user/logout" });
-
 describe("Headbar", () => {
   let store;
   beforeEach(() => {
