@@ -1,10 +1,12 @@
 import React, { FunctionComponent, useState, useEffect } from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { useTheme, Layer } from "sancho";
 import { GameMenu } from "@/modules/GameMenu";
 import { GameField } from "../GameField";
 import { Field } from "../Field";
-import { preatyArray, randomByPercent } from "./gameFunctions";
+import { actions as fieldActions } from "../Field/duck/reducer";
+import { preatyArray, randomByPercent, makeField } from "./gameFunctions";
+import { getGeneration } from "./engine";
 
 const startMock = {
   field: {
@@ -21,42 +23,34 @@ interface GameState {
 
 const Game: FunctionComponent = () => {
   const theme = useTheme();
+  const dispatch = useDispatch();
   const fieldSize = useSelector((state: any) => state.settings.fieldSize);
   const cellSize = useSelector((state: any) => state.settings.cellSize);
-  /* const [fieldSize, setFieldSize] = useState<{ width: number; height: number }>( */
-  /*   { */
-  /*     width: startMock.minWidth, */
-  /*     height: startMock.minHeight, */
-  /*   } */
-  /* ); */
-  const [field, setField] = useState<boolean[][]>([[]]);
+  const filledCells = useSelector((state: any) => state.game.filledCells);
+  const speed = useSelector((state: any) => state.game.speed);
+  const field = useSelector((state: any) => state.field);
   const [gameState, setGameState] = useState<GameState>({
     speed: 0,
     reset: false,
   });
-  useEffect(() => {
-    let newField = preatyArray(field, fieldSize.height, [false]);
-    newField = newField.map((row) => preatyArray(row, fieldSize.width, false));
-    setField(newField);
-  }, [fieldSize]);
 
   useEffect(() => {
-    if (gameState.reset === true) {
-      const empty = Array(fieldSize.height)
-        .fill(false)
-        .map(() => Array(fieldSize.width).fill(false));
-      setField(empty);
+    const newField = makeField(fieldSize.width, fieldSize.height, filledCells);
+    dispatch(fieldActions.setField(newField));
+  }, [filledCells]);
+
+  useEffect(() => {
+    let interval: any = null;
+    if (speed > 0) {
+      interval = setInterval(() => {
+        const generation = getGeneration(field);
+        dispatch(fieldActions.setField(generation));
+      }, 1000 * speed);
     }
-  }, [gameState]);
-
-  useEffect(() => {
-    /* const newField = randomByPercent( */
-    /*   startMock.field.minWidth, */
-    /*   startMock.field.minHeight, */
-    /*   50 */
-    /* ); */
-    /* setField(newField); */
-  }, []);
+    return () => {
+      if (interval) clearInterval(interval);
+    };
+  }, [speed, field]);
 
   const setFieldPercent = (perc: number): void => {
     const newField = randomByPercent(fieldSize.width, fieldSize.height, perc);

@@ -76,7 +76,7 @@ exports[`SizeForm renders SizeForm 1`] = `
         min={3}
         name="width"
         onChange={[Function]}
-        step="1"
+        step="5"
         type="range"
         value={3}
       />
@@ -99,7 +99,7 @@ exports[`SizeForm renders SizeForm 1`] = `
         min={3}
         name="height"
         onChange={[Function]}
-        step="1"
+        step="5"
         type="range"
         value={3}
       />

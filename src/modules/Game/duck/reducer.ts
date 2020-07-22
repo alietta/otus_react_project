@@ -1,4 +1,4 @@
-import { GameState, GameStatus } from "./types";
+import { GameState, GameStatus, Speed } from "./types";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 const gameInitialState: GameState = {
@@ -16,8 +16,29 @@ export const gameSlice = createSlice({
     changeStatus: (state, { payload }: PayloadAction<TGameStatus>) => {
       state.status = payload;
     },
-    changeSpeed: (state, { payload }: PayloadAction<number>) => {
-      state.speed = payload;
+    changeSpeed: (state, { payload }: PayloadAction<Speed>) => {
+      const round = (num: number): number => {
+        const row = `${num}`.substr(0, 3);
+        return parseFloat(row);
+      };
+      const speedCounter = {
+        pause: () => 0,
+        play: () => 1,
+        slow: (speed: number) => {
+          if (speed === 5 || speed === 0) {
+            return speed;
+          }
+          return speed < 0.5 ? round(speed + 0.1) : speed + 0.5;
+        },
+        fast: (speed: number) => {
+          if (speed === 0.1 || speed === 0) {
+            return speed;
+          }
+          return speed <= 0.5 ? round(speed - 0.1) : speed - 0.5;
+        },
+      };
+      const newSpeed = speedCounter[payload](state.speed);
+      state.speed = newSpeed;
     },
   },
 });

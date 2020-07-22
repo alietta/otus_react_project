@@ -1,5 +1,6 @@
 import React, { FunctionComponent } from "react";
 import { LayerStyle } from "./GameControlStyle";
+import { Speed } from "@/modules/Game/duck/types";
 import {
   Layer,
   IconPause,
@@ -13,15 +14,16 @@ import {
 export interface GameControlProps {
   resetGame: () => void;
   changeSpeed: (speed: number) => void;
+  speed: number;
 }
-
 const GameControl: FunctionComponent<GameControlProps> = ({
   resetGame,
   changeSpeed,
+  speed,
 }: GameControlProps) => {
-  const speedButtonClick = (newSpeed: number): (() => void) => {
+  const speedButtonClick = (speedClick: Speed): (() => void) => {
     return (): void => {
-      changeSpeed(newSpeed);
+      changeSpeed(speedClick);
     };
   };
 
@@ -41,7 +43,7 @@ const GameControl: FunctionComponent<GameControlProps> = ({
         name="pause"
         intent="primary"
         variant="outline"
-        onClick={speedButtonClick(0)}
+        onClick={speedButtonClick("pause")}
       >
         <IconPause />
       </Button>
@@ -50,7 +52,7 @@ const GameControl: FunctionComponent<GameControlProps> = ({
         name="play"
         intent="primary"
         variant="outline"
-        onClick={speedButtonClick(1)}
+        onClick={speedButtonClick("play")}
       >
         <IconPlay />
       </Button>
@@ -59,7 +61,7 @@ const GameControl: FunctionComponent<GameControlProps> = ({
         name="slow"
         intent="primary"
         variant="outline"
-        onClick={speedButtonClick(0.5)}
+        onClick={speedButtonClick("slow")}
       >
         <IconRewind />
       </Button>
@@ -68,7 +70,7 @@ const GameControl: FunctionComponent<GameControlProps> = ({
         name="fast"
         intent="primary"
         variant="outline"
-        onClick={speedButtonClick(2)}
+        onClick={speedButtonClick("fast")}
       >
         <IconFastForward />
       </Button>
