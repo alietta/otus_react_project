@@ -1,21 +1,13 @@
 import React, { FunctionComponent, useEffect, useRef } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import { useTheme } from "sancho";
 import { FieldWrapper } from "./FieldItems";
-import { actions } from "./duck/reducer";
-import { makeFieldPos } from "../Game/gameFunctions";
 import { drawGrid, drawField } from "./canvasHelper";
 
-interface GameFildProps {
-  cellSize: number;
-}
-
-const Field: FunctionComponent<GameFildProps> = (props: GameFildProps) => {
+const Field: FunctionComponent = () => {
   const theme = useTheme();
-  const dispatch = useDispatch();
   const canvasRef = useRef(null);
   const ctxRef = useRef(null);
-  const filledCells = useSelector((state: any) => state.game.filledCells);
   const field = useSelector((state: any) => state.field);
   const fieldSize = useSelector((state: any) => state.settings.fieldSize);
   const cellSize = useSelector((state: any) => state.settings.cellSize);
@@ -49,13 +41,10 @@ const Field: FunctionComponent<GameFildProps> = (props: GameFildProps) => {
     if (canvas) {
       const context = canvas.getContext("2d");
       ctxRef.current = context;
-      const color = theme.colors.border.default;
     }
   }, []);
 
   useEffect(() => {
-    const width = fieldSize.width * cellSize.width;
-    const height = fieldSize.height * cellSize.height;
     if (ctxRef.current) {
       drawField({
         ctx: ctxRef.current,

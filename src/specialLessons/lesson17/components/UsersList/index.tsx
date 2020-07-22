@@ -1,5 +1,5 @@
 import React, { FC, useEffect } from "react";
-import { useTheme, Container, Text, Button } from "sancho";
+import { Text, Button } from "sancho";
 import { useSelector, useDispatch } from "react-redux";
 import { getUsers, incrementCounter } from "../../duck/actions";
 

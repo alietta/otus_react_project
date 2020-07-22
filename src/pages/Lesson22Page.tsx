@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useCallback } from "react";
+import React, { FC } from "react";
 import { WithoutNavigationLayout } from "@/layouts/WithoutNavigationLayout";
 import { Square } from "@/specialLessons/lesson22";
 

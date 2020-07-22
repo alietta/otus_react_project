@@ -1,4 +1,4 @@
-import React, { FC, useEffect } from "react";
+import React, { FC } from "react";
 import { Spinner, Text, Button } from "sancho";
 import { useSelector, useDispatch } from "react-redux";
 import { actions } from "../../duck/reducer";

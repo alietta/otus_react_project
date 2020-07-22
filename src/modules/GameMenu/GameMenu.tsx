@@ -1,14 +1,13 @@
 import React, { FC, useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { useTheme, Layer, Text, Button } from "sancho";
 import { GameSettings } from "@/components/GameSettings";
 import { GameControl } from "@/components/GameControl";
+import { Speed } from "@/modules/Game/duck/types";
 import { actions } from "./duck/reducer";
 import { actions as gameActions } from "../Game/duck/reducer";
 import { randomByPercent } from "../Game/gameFunctions";
 
-const GameMenu: FC<> = () => {
-  const theme = useTheme();
+const GameMenu: FC = () => {
   const dispatch = useDispatch();
   const [size, setSize] = useState({ min: 3, max: 10 });
 
@@ -49,7 +48,7 @@ const GameMenu: FC<> = () => {
     dispatch(gameActions.changeStatus("settings"));
   };
 
-  const changeSpeed = (speed: number): void => {
+  const changeSpeed = (speed: Speed): void => {
     dispatch(gameActions.changeSpeed(speed));
   };
 

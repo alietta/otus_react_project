@@ -1,5 +1,4 @@
 import { checkNeighbor, getGeneration } from "./engine";
-import { uniq } from "ramda";
 
 describe("Engine", () => {
   describe("checkNeighbor", () => {

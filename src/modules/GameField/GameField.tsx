@@ -17,7 +17,7 @@ const GameField: FunctionComponent<GameFildProps> = (props: GameFildProps) => {
   const field = useSelector((state: any) => state.field);
   const filledCells = useSelector((state: any) => state.game.filledCells);
   const fieldSize = useSelector((state: any) => state.settings.fieldSize);
-  const onClick = (x: number, y: number, isFilled? = false): void => {
+  const onClick = (): void => {
     console.log("click");
   };
 

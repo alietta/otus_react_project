@@ -12,6 +12,7 @@
     "react/jsx-uses-vars": "error",
     "react/prop-types": 0,
     "@typescript-eslint/explicit-function-return-type": 0,
+    "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/camelcase": 0
   },
   "parserOptions": {
