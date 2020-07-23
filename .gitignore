@@ -53,3 +53,7 @@ dist
 storybook-static
 
 .DS_Store
+
+reports
+# stryker temp files
+.stryker-tmp
