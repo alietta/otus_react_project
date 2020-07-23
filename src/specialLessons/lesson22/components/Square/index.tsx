@@ -17,6 +17,7 @@ const Square: FC = () => {
       <Button onClick={onClick}>Random color</Button>
       <Text>it will be square</Text>
       <div
+        name="square"
         css={{
           width: 200,
           height: 200,
