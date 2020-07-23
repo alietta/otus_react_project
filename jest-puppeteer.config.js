@@ -5,6 +5,7 @@ module.exports = {
   browser: "chromium",
   server: {
     command: "npm run start",
+    port: 3030,
     debug: true,
   },
 };
