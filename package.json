@@ -13,7 +13,8 @@
     "build-storybook": "build-storybook",
     "loki:update": "npm run build-storybook && npx loki update --requireReference --reactUri file:./storybook-static",
     "loki:approve": "npx loki approve",
-    "test:loki": "npm run build-storybook && npx loki --requireReference --reactUri file:./storybook-static"
+    "test:loki": "npm run build-storybook && npx loki --requireReference --reactUri file:./storybook-static",
+    "e2e": "npx jest -c jest.e2e.config.js e2e"
   },
   "repository": {
     "type": "git",

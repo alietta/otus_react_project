@@ -14,4 +14,5 @@ module.exports = {
     "^@/(.*)$": "<rootDir>/src/$1",
   },
   setupFiles: ["jest-localstorage-mock", "jest-canvas-mock"],
+  testPathIgnorePatterns: ["e2e"],
 };
