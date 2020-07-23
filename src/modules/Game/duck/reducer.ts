@@ -4,6 +4,7 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 const gameInitialState: GameState = {
   status: "settings",
   speed: 0,
+  lastSpeed: 0,
   filledCells: [],
 };
 export const gameSlice = createSlice({
@@ -15,6 +16,7 @@ export const gameSlice = createSlice({
     },
     changeStatus: (state, { payload }: PayloadAction<GameStatus>) => {
       state.status = payload;
+      state.lastSpeed = 0;
     },
     changeSpeed: (state, { payload }: PayloadAction<Speed>) => {
       const round = (num: number): number => {
@@ -23,7 +25,7 @@ export const gameSlice = createSlice({
       };
       const speedCounter = {
         pause: () => 0,
-        play: () => 1,
+        play: () => (state.lastSpeed > 0 ? state.lastSpeed : 1),
         slow: (speed: number) => {
           if (speed === 5 || speed === 0) {
             return speed;
@@ -38,6 +40,7 @@ export const gameSlice = createSlice({
         },
       };
       const newSpeed = speedCounter[payload](state.speed);
+      state.lastSpeed = state.speed;
       state.speed = newSpeed;
     },
   },
