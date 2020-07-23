@@ -15,6 +15,7 @@ export const gameSlice = createSlice({
     },
     changeStatus: (state, { payload }: PayloadAction<GameStatus>) => {
       state.status = payload;
+      state.speed = 0;
     },
     changeSpeed: (state, { payload }: PayloadAction<Speed>) => {
       const round = (num: number): number => {
