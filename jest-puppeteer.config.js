@@ -4,7 +4,7 @@ module.exports = {
   },
   browser: "chromium",
   server: {
-    command: "npm run start",
+    command: "npm run start:e2e",
     port: 3030,
     debug: true,
   },

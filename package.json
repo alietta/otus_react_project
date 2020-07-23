@@ -8,6 +8,7 @@
     "test:watch": "npx jest --watch",
     "build": "npx webpack --mode production",
     "start": "webpack-dev-server --config ./webpack.config.js --mode development --open --hot",
+    "start:e2e": "webpack-dev-server --config ./webpack.config.js --mode development --hot",
     "lint": "npx eslint --ext .js,.jsx,.ts,.tsx --fix src/",
     "storybook": "start-storybook -p 6008",
     "build-storybook": "build-storybook",
