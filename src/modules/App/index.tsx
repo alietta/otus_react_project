@@ -4,6 +4,12 @@ import { useSelector } from "react-redux";
 import { Loader } from "components/Loader";
 import { DarkMode } from "sancho";
 import { BaseRoutes } from "@/routes/BaseRoutes";
+import ApolloClient from "apollo-boost";
+import { ApolloProvider } from "react-apollo";
+
+const client = new ApolloClient({
+  uri: "https://kittengram-server.glitch.me/",
+});
 
 export const App: React.FC<{}> = () => {
   const status = useSelector((state: any) => state.app.status);
@@ -15,9 +21,11 @@ export const App: React.FC<{}> = () => {
         {status === "loading" ? (
           <Loader />
         ) : (
-          <BrowserRouter>
-            <BaseRoutes isAuth={isAuth} />
-          </BrowserRouter>
+          <ApolloProvider client={client}>
+            <BrowserRouter>
+              <BaseRoutes isAuth={isAuth} />
+            </BrowserRouter>
+          </ApolloProvider>
         )}
       </DarkMode>
     </div>

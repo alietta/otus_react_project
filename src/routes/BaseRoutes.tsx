@@ -4,6 +4,7 @@ import { LoginPage } from "@/pages/LoginPage";
 import { GamePage } from "@/pages/GamePage";
 import { Lesson17Page } from "@/pages/Lesson17Page";
 import { Lesson22Page } from "@/pages/Lesson22Page";
+import { LessonApollo } from "@/pages/LessonApollo";
 import { PrivateRoute } from "./PrivateRoute";
 
 const Routes: React.FC<{ isAuth: boolean }> = ({
@@ -21,6 +22,9 @@ const Routes: React.FC<{ isAuth: boolean }> = ({
       </PrivateRoute>
       <PrivateRoute isAuth={isAuth} path="/lesson22" exact>
         <Lesson22Page />
+      </PrivateRoute>
+      <PrivateRoute isAuth={isAuth} path="/lesson_apollo" exact>
+        <LessonApollo />
       </PrivateRoute>
       <Route path="/login" exact>
         <LoginPage />
