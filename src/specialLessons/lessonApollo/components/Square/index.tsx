@@ -3,6 +3,7 @@ import { Query } from "react-apollo";
 import { gql } from "apollo-boost";
 
 const Photos: FC = () => {
+  console.log(window.location);
   return (
     <div>
       <Query
