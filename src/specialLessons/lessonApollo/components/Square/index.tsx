@@ -1,9 +1,15 @@
-import React, { FC } from "react";
+import React, { FC, useEffect } from "react";
+import { useDispatch } from "react-redux";
 import { Query } from "react-apollo";
 import { gql } from "apollo-boost";
+import { actions } from "../../duck/reducer";
 
 const Photos: FC = () => {
-  console.log(window.location);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    console.log(window.location.search)
+    dispatch(actions.getToken());
+  }, []);
   return (
     <div>
       <Query

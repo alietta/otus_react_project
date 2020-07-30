@@ -1,4 +1,6 @@
-export interface Square {
+export interface Instagram {
   status: string;
-  color: string;
+  id: string;
+  code: string;
+  token: string;
 }

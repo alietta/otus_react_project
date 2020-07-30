@@ -1,20 +1,23 @@
-import { Square } from "./types";
+import { Instagram } from "./types";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-const squareInitialState: Square = {
+const instagramInitialState: Instagram = {
   status: "loading",
-  color: "ffffff",
+  code: "",
+  token: "",
+  id: ""
 };
-export const squareSlice = createSlice({
-  name: "square",
-  initialState: squareInitialState,
+export const instagramSlice = createSlice({
+  name: "apollo",
+  initialState: instagramInitialState,
   reducers: {
-    colors: (state) => state,
+    getToken: (state) => state,
     loading: (state) => {
       state.status = "loading";
     },
-    success: (state, { payload }: PayloadAction<string>) => {
-      state.color = payload;
+    tokenSuccess: (state, { payload }: PayloadAction<{ token: string; id: string }>) => {
+      state.token = payload.token;
+      state.id = payload.id;
       state.status = "success";
     },
     error: (state) => {
@@ -22,4 +25,4 @@ export const squareSlice = createSlice({
     },
   },
 });
-export const { actions, reducer } = squareSlice;
+export const { actions, reducer } = instagramSlice;

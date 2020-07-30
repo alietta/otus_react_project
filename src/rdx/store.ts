@@ -4,12 +4,14 @@ import createSagaMiddleware from "redux-saga";
 import { fork } from "redux-saga/effects";
 import { loginSaga } from "@/modules/login/duck/saga";
 import { squareSaga } from "@/specialLessons/lesson22/duck/saga";
+import { instaSaga } from "@/specialLessons/lessonApollo/duck/saga";
 
 const sagaMiddleware = createSagaMiddleware();
 
 function* rootSaga() {
   yield fork(loginSaga);
   yield fork(squareSaga);
+  yield fork(instaSaga);
 }
 const middleware = [...getDefaultMiddleware(), sagaMiddleware];
 
