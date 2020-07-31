@@ -8,7 +8,6 @@ import ApolloClient from "apollo-boost";
 import { ApolloProvider } from "react-apollo";
 
 const client = new ApolloClient({
-  /* uri: "https://kittengram-server.glitch.me/", */
   uri: "https://test-server-o.glitch.me/",
 });
 
