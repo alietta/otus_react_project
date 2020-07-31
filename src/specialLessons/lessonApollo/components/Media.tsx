@@ -1,5 +1,5 @@
 import React, { FC, useEffect, MouseEvent } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Query, useQuery } from "react-apollo";
 import { gql } from "apollo-boost";
 import { Layer, IconFastForward, IconRewind, Button } from "sancho";
@@ -7,9 +7,8 @@ import { actions } from "../duck/reducer";
 import { Post } from "./Post";
 
 const Media: FC = () => {
+  const token = useSelector((state) => state.instagram.token);
   const dispatch = useDispatch();
-  const token =
-    "IGQVJXQ05OMS1VXzBaRWMtcDI5Wi1oRm0yN05raTB4MktBcHpjdGhIWEozb3k3WExZASXBzb3V6cnlkQTQ4SllZAcE1OdjZAxOURuelJ4MFFYRWg4NC1fWXEwUXo2RjgwYjNmNjBoVG5vMVNCVU85czFSNk5CNG05QWFUVGlr";
   const GET_MEDIA = gql`
     query GetMedia($token: String!, $limit: Int, $after: String) {
       user(token: $token) {
@@ -59,6 +58,7 @@ const Media: FC = () => {
   useEffect(() => {
     dispatch(actions.getToken());
   }, []);
+
   return (
     <div>
       {loading && <p>Loading...</p>}
@@ -76,9 +76,7 @@ const Media: FC = () => {
             <Post {...post} key={post.id} />
           ))}
           {data.user.mediaCount !== data.media.posts.length && (
-            <Button onClick={onButtonClick}>
-              Add more
-            </Button>
+            <Button onClick={onButtonClick}>Add more</Button>
           )}
         </div>
       )}

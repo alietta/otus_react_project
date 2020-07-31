@@ -14,6 +14,7 @@ export function* tokenWorker() {
     }
   } catch {
     yield put(actions.error());
+    window.location.pathname = '/auth'
   }
 }
 

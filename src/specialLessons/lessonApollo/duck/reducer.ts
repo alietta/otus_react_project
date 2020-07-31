@@ -17,7 +17,7 @@ export const instagramSlice = createSlice({
     },
     tokenSuccess: (
       state,
-      { payload }: PayloadAction<{ token: string; id: string }>
+      { payload }: PayloadAction<{ access_token: string; user_id: string }>
     ) => {
       state.token = payload.access_token;
       state.id = payload.user_id;

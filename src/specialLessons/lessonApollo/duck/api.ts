@@ -5,7 +5,7 @@ export const getToken = (code: string) => {
     client_id: "1351887201675738",
     client_secret: "77afc4751d2051755519d7af1c711900",
     grant_type: "authorization_code",
-    redirect_uri: "https://alietta.github.io/lesson_apollo",
+    redirect_uri: "https://otus-react-project.glitch.me/lesson_apollo",
     code,
   };
 
