@@ -3,9 +3,10 @@ import { useDispatch } from "react-redux";
 import { Query, useQuery } from "react-apollo";
 import { gql } from "apollo-boost";
 import { Layer, IconFastForward, IconRewind, Button } from "sancho";
-import { actions } from "../../duck/reducer";
+import { actions } from "../duck/reducer";
+import { Post } from "./Post";
 
-const Photos: FC = () => {
+const Media: FC = () => {
   const dispatch = useDispatch();
   const token =
     "IGQVJXQ05OMS1VXzBaRWMtcDI5Wi1oRm0yN05raTB4MktBcHpjdGhIWEozb3k3WExZASXBzb3V6cnlkQTQ4SllZAcE1OdjZAxOURuelJ4MFFYRWg4NC1fWXEwUXo2RjgwYjNmNjBoVG5vMVNCVU85czFSNk5CNG05QWFUVGlr";
@@ -19,6 +20,8 @@ const Photos: FC = () => {
         posts {
           caption
           media_url
+          permalink
+          id
         }
         cursor {
           after
@@ -70,16 +73,10 @@ const Photos: FC = () => {
           }}
         >
           {data.media.posts.map((post) => (
-            <Layer>
-              <img
-                css={{ width: 300, height: 300 }}
-                src={post.media_url}
-                alt={post.caption}
-              />
-            </Layer>
+            <Post {...post} key={post.id} />
           ))}
           {data.user.mediaCount !== data.media.posts.length && (
-            <Button variant="ghost" onClick={onButtonClick}>
+            <Button onClick={onButtonClick}>
               Add more
             </Button>
           )}
@@ -88,4 +85,4 @@ const Photos: FC = () => {
     </div>
   );
 };
-export { Photos };
+export { Media };

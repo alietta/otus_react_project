@@ -7,7 +7,7 @@ export const WithoutNavigationLayout: React.FC = (props) => {
     <div
       css={{
         width: "100vw",
-        height: "100vh",
+        height: "100%",
         background: theme.colors.background.default,
       }}
     >
