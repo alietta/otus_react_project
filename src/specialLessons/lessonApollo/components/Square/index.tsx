@@ -1,35 +1,40 @@
 import React, { FC, useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { Query } from "react-apollo";
+import { Query, useQuery } from "react-apollo";
 import { gql } from "apollo-boost";
 import { actions } from "../../duck/reducer";
 
 const Photos: FC = () => {
   const dispatch = useDispatch();
+  const GET_MEDIA = gql`
+    query GetMedia($token: String!) {
+      user(token: $token) {
+        name
+      }
+      media(token: $token) {
+        caption
+        media_url
+      }
+    }
+  `;
+  const { loading, error, data } = useQuery(GET_MEDIA, {
+    variables: {
+      token:
+        "IGQVJYVU5aRzRJNENPMkhQV1ZAqd29wMHZA4V3NYQVk5c0ZAJNlkxQjdQblNpR2stWHA4Sk9pdU5DZA0VaUHVnYl9ZAN1pjNjF1Ny01ckRrSkFhTnRRcHhveUI3V1o0dXRGNlNFc1oxelhUQU1NWE9PTURiUklRNVVVODR6cGNN",
+    },
+  });
+
   useEffect(() => {
-    console.log(window.location.search)
     dispatch(actions.getToken());
   }, []);
   return (
     <div>
-      <Query
-        query={gql`
-          {
-            photos {
-              url
-              author
-            }
-          }
-        `}
-      >
-        {({ loading, error, data }) => {
-          if (loading) return <p>Loading...</p>;
-          if (error) return <p>Error</p>;
-          return data.photos.map((photo) => (
-            <img src={photo.url} alt={photo.author} />
-          ));
-        }}
-      </Query>
+      {loading && <p>Loading...</p>}
+      {error && <p>Error</p>}
+      {data &&
+        data.media.map((media) => (
+          <img src={media.media_url} alt={media.caption} />
+        ))}
     </div>
   );
 };

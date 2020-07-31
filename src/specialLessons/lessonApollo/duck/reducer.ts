@@ -5,7 +5,7 @@ const instagramInitialState: Instagram = {
   status: "loading",
   code: "",
   token: "",
-  id: ""
+  id: "",
 };
 export const instagramSlice = createSlice({
   name: "apollo",
@@ -15,9 +15,12 @@ export const instagramSlice = createSlice({
     loading: (state) => {
       state.status = "loading";
     },
-    tokenSuccess: (state, { payload }: PayloadAction<{ token: string; id: string }>) => {
-      state.token = payload.token;
-      state.id = payload.id;
+    tokenSuccess: (
+      state,
+      { payload }: PayloadAction<{ token: string; id: string }>
+    ) => {
+      state.token = payload.access_token;
+      state.id = payload.user_id;
       state.status = "success";
     },
     error: (state) => {
