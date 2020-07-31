@@ -1,20 +1,17 @@
 import { takeEvery, call, put, delay, all } from "redux-saga/effects";
+import { AnyAction } from "redux";
 import queryString from "query-string";
 import { actions } from "./reducer";
 import { getToken } from "./api";
 
-export function* tokenWorker() {
+export function* tokenWorker(action: AnyAction) {
   yield put(actions.loading());
   try {
-    const code = queryString.parse(window.location.search).code;
-    console.log(code);
-    if (code) {
-      const result = yield call(getToken, code);
-      yield put(actions.tokenSuccess(result.data));
-    }
+    const result = yield call(getToken, action.payload);
+    yield put(actions.tokenSuccess(result.data));
   } catch {
     yield put(actions.error());
-    window.location.pathname = '/auth'
+    window.location.pathname = "/auth";
   }
 }
 

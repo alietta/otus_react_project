@@ -8,6 +8,7 @@ import { MemoryRouter } from "react-router";
 import { LoginPage } from "@/pages/LoginPage";
 import { GamePage } from "@/pages/GamePage";
 
+window.fetch = jest.fn();
 const mockStore = configureMockStore([thunk]);
 const storeWithAuth = mockStore({
   app: {

@@ -1,3 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`WithoutNavigationLayout render 1`] = `"<div class=\\"css-1a2ccbv-WithoutNavigationLayout\\"><div class=\\"css-mvnpm9-WithoutNavigationLayout\\"><h1>Test</h1></div></div>"`;
+exports[`WithoutNavigationLayout render 1`] = `"<div class=\\"css-73e4gw-WithoutNavigationLayout\\"><div class=\\"css-mvnpm9-WithoutNavigationLayout\\"><h1>Test</h1></div></div>"`;

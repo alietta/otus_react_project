@@ -1,5 +1,5 @@
 import axios from "axios-jsonp-pro";
-import queryString from "query-string"
+import queryString from "query-string";
 export const getToken = (code: string) => {
   const data = {
     client_id: "1351887201675738",
@@ -11,11 +11,11 @@ export const getToken = (code: string) => {
 
   const url = "https://api.instagram.com/oauth/access_token";
   return axios({
-    method: 'post',
+    method: "post",
     url,
     data: queryString.stringify(data),
     headers: {
       "Content-Type": "application/x-www-form-urlencoded",
-    }
-  })
+    },
+  });
 };

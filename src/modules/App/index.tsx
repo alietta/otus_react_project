@@ -6,6 +6,7 @@ import { DarkMode } from "sancho";
 import { BaseRoutes } from "@/routes/BaseRoutes";
 import ApolloClient from "apollo-boost";
 import { ApolloProvider } from "react-apollo";
+import "cross-fetch/polyfill";
 
 const client = new ApolloClient({
   uri: "https://test-server-o.glitch.me/",

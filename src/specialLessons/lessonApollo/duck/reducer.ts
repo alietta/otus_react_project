@@ -11,7 +11,7 @@ export const instagramSlice = createSlice({
   name: "apollo",
   initialState: instagramInitialState,
   reducers: {
-    getToken: (state) => state,
+    getToken: (state, { payload }: PayloadAction<string>) => state,
     loading: (state) => {
       state.status = "loading";
     },

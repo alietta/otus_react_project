@@ -1,8 +1,9 @@
 import React, { FC, useEffect, MouseEvent } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Query, useQuery } from "react-apollo";
+import queryString from "query-string";
 import { gql } from "apollo-boost";
-import { Layer, IconFastForward, IconRewind, Button } from "sancho";
+import { Button } from "sancho";
 import { actions } from "../duck/reducer";
 import { Post } from "./Post";
 
@@ -56,7 +57,10 @@ const Media: FC = () => {
   };
 
   useEffect(() => {
-    dispatch(actions.getToken());
+    const code = queryString.parse(window.location.search).code;
+    if (code) {
+      dispatch(actions.getToken(code));
+    }
   }, []);
 
   return (
